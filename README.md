@@ -2,14 +2,14 @@
 
 This repository contains documents related to RWOT7, the seventh
 Rebooting the Web of Trust design workshop, which is to run in the
-Toronto area on the week of September 24th, 2018. The goal of the
+Toronto area on September 26th-September 28th, 2018. The goal of the
 workshop is to generate five technical white papers and/or proposals
 on topics decided by the group that would have the greatest impact on
 the future.
 
 _Please see the [Web of Trust Info
 website](http://www.weboftrust.info/) for more information about our
-community. A link will soon be available to register for this event._
+community. Please visit [Eventbrite](https://rwot7.eventbrite.com/) to register._
 
 ##  Topics & Advance Readings
 
