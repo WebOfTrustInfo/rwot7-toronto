@@ -9,14 +9,14 @@ How we think about these processes and assets is driven by why we use identity i
 
 We’ve identified five distinct mental models for identity, each with its own framing, its own purpose, and its own defining question. These are five valid, independent mental models of identity. By understanding them, we can better understand how apparently disjoint ideas of identity relate to each other, enabling the discussion and engineering of better, more broadly useful identity systems. 
 
-# Security
+## Security
 The security mental model sees identity as resolving the question of the physical individual. This is the dominant perspective in real-world security and advocated by many for online security.
 
 **Is this physical body the person you think it is?**
 
 The security mental model is necessary when enforcement targets the physical body. We put bodies in jail. We keep bodies out of restricted areas and off air planes. If we are going to restrict the liberty of, apply harm to, or even protect a person, it is vital to know the target is in fact the right physical body.
 
-# Liberty
+## Liberty
 
 The liberty mental model sees identity as how we present ourselves to society. This is the mental model behind Vendor Relationship Management, user-centric identity, and self-sovereign identity.
 
@@ -24,14 +24,14 @@ The liberty mental model sees identity as how we present ourselves to society. T
 
 Whether you are gay, a Republican, or a gay Republican, it is your choice how you present yourself to the world. This mental model sees individually expressed identity as fundamental to privacy, self-determination, self-expression, and a free society. Adherents advocate for technical and regulatory systems that allow people to fulfill their own self-actualization, to become who they want to be, rather than simply playing a role assigned by someone else.
 
-# Data
+## Data
 The data mental model sees identity as the set of attributes related to an entity. Enshrined in ISO/IEC 24760-1, an international standard for identity management, this mental model is the primary focus for many engineers.
 
 **Is this data about a particular entity?**
 
 Limiting the model of identity to related data, in a single system, makes it easier to build. It draws a bright line for engineers to focus on the accepted facts and information within the system they are developing. This model ignores the consequences of common identification across different systems for the sake of simplicity and feature management. It is the simplest model for engineering a system and, in part because of that, it is the only mental model that has a formal definition as an international standard.
 
-# Relationship
+## Relationship
 
 The relationship mental model sees identity emerging through our interactions with others. It is the fundamental model in the South African idea of “Ubuntu,” meaning “I am because we are.”
 
@@ -39,7 +39,7 @@ The relationship mental model sees identity emerging through our interactions wi
 
 People change. Young whippersnappers become caring parents. Strangers become friends. Spies become traitors. The relationship mental model embraces change as core to how identity manifests in the world. Notions of “who somebody is” change as people learn and grow; what holds coherence over time and context is our relationships, given and earned through interactions with others, never to be fully perceived by any one observer, never to be fully known or capture at any point in time. The relationship mental model is the only mental model that explicitly embraces the fundamental fluidity of identity, rejecting the objective assessment of static, categorical identity for the emergent societal bonds that define us within our communities.
 
-# Capability
+## Capability
 
 The capability mental model pragmatically defines identity in terms of an individual’s actual ability to perform some task. It is the inevitable approach for anyone in an emergency and core to the Object Capabilities security model.
 
