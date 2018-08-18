@@ -13,17 +13,16 @@ community. Please visit [Eventbrite](https://rwot7.eventbrite.com/) to register.
 
 ##  Topics & Advance Readings
 
-In advance of the design workshop, all participants produced a one-or-two page topic paper to be shared with the other attendees on either:
+In advance of the design workshop, all participants are encouraged to produce a one-or-two page topic paper to be shared with the other attendees on either:
 
-* A specific problem that they wanted to solve with a web-of-trust solution, and why current solutions (PGP or CA-based PKI) can't address the problem?
-* A specific solution related to the web-of-trust that you'd like others to use or contribute to?
+* A specific problem that they wanted to solve with a web-of-trust solution, and why current solutions (PGP or CA-based PKI) can't address the problem
+* A specific solution related to the web-of-trust that you'd like others to use or contribute to
 
 This should be uploaded to [Topics & Advance Readings directory](topics-and-advance-readings).
 
 Here are the advanced readings to date:
 
 ### Primers
-
 These primers overview major topics which are likely to be discussed
 at the design workshop. If you read nothing else, read these. (But
 really, read as much as you can!)
@@ -31,6 +30,11 @@ really, read as much as you can!)
 * [DID Primer](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/did-primer.md) — Decentralized Identifiers ([extended version](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/did-primer-extended.md) also available)
 * [Functional Identity Primer](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/functional-identity-primer.md) — A different way to look at identity
 * [Verifiable Credentials Primer](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/verifiable-credentials-primer.md) — the project formerly known as Verifiable Claims
+
+### Topic Papers
+Written for your consideration and discussion at Rebooting the Web of Trust VII
+
+* [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) — Joe Andrieu <joe@legreq.com>
 
 ## Other Readings of Interest
 
