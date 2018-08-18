@@ -5,7 +5,7 @@ By Joe Andrieu, Legendary Requirements, joe@legreq.com
 
 Identity is how we recognize, remember, and respond to specific people and things. Identity systems acquire, correlate, apply, reason over, and govern information assets of subjects, identifiers, attributes, raw data, and context. That’s the functional approach to identity.
 
-How we think about these processes and assets is driven by why we use identity in the first place; our primary uses of identity shape our internal mental models, which in turn shape the kinds of solutions we build. Differing priorities and perspectives also make it a challenge to discuss identity with people speaking from alternate mental models.
+How we think about these processes and assets is driven by why we use identity in the first place; our primary uses of identity shape our internal mental models, which in turn shape the kinds of solutions we build. Differing priorities and perspectives also make it challenging to discuss identity with people speaking from alternate mental models.
 
 We’ve identified five distinct mental models for identity, each with its own framing, its own purpose, and its own defining question. These are five valid, independent mental models of identity. By understanding them, we can better understand how apparently disjoint ideas of identity relate to each other, enabling the discussion and engineering of better, more broadly useful identity systems. 
 
