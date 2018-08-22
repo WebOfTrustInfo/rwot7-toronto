@@ -98,7 +98,7 @@ did:btcr:my-great-website
 
 One thing is clear: if a DID isn't human-readable, **you are still going to need a human-readable identifier within a secure namespace** to find it.
 
-Why? Why can't you, for example, take the [GNUnet](https://en.wikipedia.org/wiki/GNUnet) approach and create an inconsistent decentralized world, where everyone has their own personal address book, and they somehow discover and save a non-human-readable identifier to a local, human-readable contact card?
+Why? Why can't you, for example, take the [GNUnet](https://en.wikipedia.org/wiki/GNUnet) approach (e.g. ["linked local names"](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust/blob/master/topics-and-advance-readings/linked-local-names.md)) and create an inconsistent decentralized world, where everyone has their own personal address book, and they somehow discover and save a non-human-readable identifier to a local, human-readable contact card?
 
 Well, they certainly *can* do that, but that is not what ***DPKI*** is about.
 
@@ -109,6 +109,20 @@ DPKI has to re-create the usual experience that we're used to, where you type in
 This is important not only for visiting websites, it's also important for making other protocols, like email, secure.
 
 **So whether or not _ALL_ DIDs are human-readable is irrelevant to DPKI — In DPKI, DIDs Are Human-readable.**
+
+In other worsd, identifiers in DPKI have these properties:
+
+- They exist in a namespace secured through decentralized consensus, e.g. a blockchain (see also, [DCS Theorem](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/final-documents/dcs-theorem/The-DCS-Theorem.pdf))
+- They are human-readable
+- They are updateable
+- They can expire
+- They are looked up through a secure lookup mechanism that does not have a SPOF (single-point-of-failure)
+
+### Past Discussion and Related Topics
+
+- [Soverign Identity Namespaces](https://github.com/WebOfTrustInfo/ID2020DesignWorkshop/blob/master/topics-and-advance-readings/SovereignIdentityNamespaces.pdf) - note that none of the concepts described in this document are suitable for DPKI, because DPKI identifiers must be cryptographically secure *and* globally-unique *and* human-readable
+- [DID Names](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2017/blob/master/topics-and-advance-readings/did-names.md) - the `id:` scheme described here might be relevant, but it's also not clear that it's necessary. It could represent unnecessary complexity
+- [Making DIDs invisible: Petnames and their secure user interfaces](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/draft-documents/making-dids-invisible-with-petnames.md) - unclear whether this is relevant to DPKI, but might be worth discussing
 
 ## Next Steps
 
