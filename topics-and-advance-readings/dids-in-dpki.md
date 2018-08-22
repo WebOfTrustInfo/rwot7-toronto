@@ -123,6 +123,7 @@ In other worsd, identifiers in DPKI have these properties:
 - [Soverign Identity Namespaces](https://github.com/WebOfTrustInfo/ID2020DesignWorkshop/blob/master/topics-and-advance-readings/SovereignIdentityNamespaces.pdf) - note that none of the concepts described in this document are suitable for DPKI, because DPKI identifiers must be cryptographically secure *and* globally-unique *and* human-readable
 - [DID Names](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2017/blob/master/topics-and-advance-readings/did-names.md) - the `id:` scheme described here might be relevant, but it's also not clear that it's necessary. It could represent unnecessary complexity
 - [Making DIDs invisible: Petnames and their secure user interfaces](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/draft-documents/making-dids-invisible-with-petnames.md) - unclear whether this is relevant to DPKI, but might be worth discussing
+- [Petnames for Self Sovereign and Human Readable Identifiers](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/topics-and-advance-readings/petnames.md) - unclear whether this is relevant to DPKI, but might be worth discussing
 
 ## Next Steps
 
