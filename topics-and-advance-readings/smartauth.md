@@ -1,5 +1,7 @@
-# Smart Authorization for Self-Sovereign Storage
-***by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan - Digital Bazaar***
+# SmartAuth
+***Smart Authorization for Self-Sovereign Storage***
+
+by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan - ***Digital Bazaar***
 
 As self-sovereign technologies gain marketshare, the question of who,
 when, and how people can access your personal or corporate information
@@ -11,13 +13,13 @@ enable new types of smarter access control to your information.
 
 The concept covered in this document can be expressed by a simple analogy.
 Imagine that you have invited a couple to visit for the weekend and offer
-them the spare bedroom in your home. You only have one key and you give
+them the spare room in your home. You only have one key and you give
 it to them to come and go as they please. In technical terms, you have
 just provided an object capability, the key to your home, to them. You know
 what this key opens (the front door) and doesn't open (the locked safe in your
-room). You know that they have the key now, and won't have the key when
-they return it to you. The couple is free to hand the key off between each
-other without asking for your permission.
+room). You know that they can use the key now, and that they won't be able
+to use the key after they return it to you. The couple is free to hand the
+key off between each other without asking for your permission.
 
 The analogy above is very close to the way many of us would like to provide
 access to our personal and corporate data. The problem is that there are
