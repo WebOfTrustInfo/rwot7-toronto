@@ -211,3 +211,11 @@ the upcoming RWoT7 event:
   be explored?
 * What are the security considerations for this protocol?
 * What are the various ways this protocol could be attacked?
+
+## Acknowledgements
+
+Portions of the work on this document has been funded by the United States
+Department of Homeland Security's Science and Technology Directorate under
+contract HSHQDC-17-C-00019. The content of this specification does not
+necessarily reflect the position or the policy of the U.S. Government and
+no official endorsement should be inferred.
