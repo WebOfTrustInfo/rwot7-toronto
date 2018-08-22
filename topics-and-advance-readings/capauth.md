@@ -1,5 +1,5 @@
-# SmartAuth
-***Smart Authorization for Self-Sovereign Storage***
+# CapAuth
+***Smarter Authorization for Self-Sovereign Storage***
 
 by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan - ***Digital Bazaar***
 
@@ -11,17 +11,24 @@ becomes increasingly important. The existence of
 [Object Capabilities](https://w3c-ccg.github.io/ocap-ld/)
 enable new types of smarter access control to your information.
 
-The concept covered in this document can be expressed by a simple analogy.
-Imagine that you have invited a couple to visit for the weekend and offer
+While the technologies listed above may seem daunting to understand, the
+concept is easily understandable through the following analogy.
+Imagine that you have invited friends to visit for the weekend and offer
 them the spare room in your home. You only have one key and you give
 it to them to come and go as they please. In technical terms, you have
-just provided an object capability, the key to your home, to them. You know
-what this key opens (the front door) and doesn't open (the locked safe in your
-room). You know that they can use the key now, and that they won't be able
-to use the key after they return it to you. The couple is free to hand the
-key off between each other without asking for your permission.
+just given them an object capability, which is the key to your home. You
+instinctively know a number of things about this key:
 
-The analogy above is very close to the way many of us would like to provide
+1. Authority - you know what this key opens (the front door) and
+   doesn't open (the locked safe in your room).
+2. Restrictions - You know that they can use the key now, and that they
+   won't be able to use the key after they return it to you.
+3. Delegation - The couple is free to hand the key off between each other
+   without asking for your permission.
+
+The analogy above is exactly how we protect the most important parts of our
+property be it access to a bank vault or use of our personal vehicles.
+It is also very close to the way many of us would like to provide
 access to our personal and corporate data. The problem is that there are
 technologies that do some of the things above well while failing miserably
 at protecting our data in other ways. While this paper is not intended to go
@@ -38,7 +45,7 @@ At the heart of all access control systems is the following question:
 *What is the safest way to give other people access to the data on this system?*
 
 This document introduces a new access control mechanism for websites called
-**SmartAuth** that combines self-soverign technologies in a way that avoids
+**CapAuth** that combines self-soverign technologies in a way that avoids
 previous pitfalls created by approaches such as
 [Access Control Lists](https://en.wikipedia.org/wiki/Access_control_list),
 [Role Based Access Control](https://en.wikipedia.org/wiki/Role-based_access_control), and
@@ -50,15 +57,17 @@ problem and goes quite far in mitigating
 
 ## Enabling Technologies
 
-As a great deal of the Web is powered by HTTP web servers, the solution is
-intended for client to server and server to server communication over the
-[HTTP protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
-as this will most likely be the common interface used by
-many self-soverign storage servers.
+The Web is built on the
+[HTTP protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
+Since this is the most common interface that applications use to communicate
+over the Internet, this document uses the same mechanism to provide access to
+self-soverign storage servers.
 
 The approach described in this paper also utilizes the
 [Signing HTTP Messages](https://tools.ietf.org/html/draft-cavage-http-signatures-10)
-specification to perform digital signatures on HTTP headers.
+specification, which has a
+[healthy number of implementations](https://github.com/w3c-dvcg/http-signatures/issues/1),
+to perform digital signatures on HTTP headers.
 
 The
 [Object Capabilities for Linked Data](https://w3c-ccg.github.io/ocap-ld/)
@@ -124,9 +133,11 @@ The rest of this section will use the following example:
 :authority: example.com
 :path: /data/puppies.jpg
 date: Tue, 21 Aug 2018 21:38:35 GMT
-object-capability: type="application/ld+json", ocap=BASE64(OCAP_DOCUMENT),
-  action=BASE64("ReadDocument")
-authorization: Signature keyId="did:v1:z279m2...Xk8aC#ocap-invoke-key-1",
+object-capability: type="ocapld",
+  ocap=BASE64URL(OCAP_DOCUMENT),
+  action=BASE64URL("ReadDocument")
+authorization: Signature
+  keyId="did:v1:z279m2...Xk8aC#ocap-invoke-key-1",
   headers="object-capability date host (request-target)",
   signature="P26kEk...o0rBQ=="
 ```
@@ -146,7 +157,8 @@ The `object-capability` header specifies the base64 encoded object capability
 base64-encoded action that is being invoked:
 
 ```
-object-capability: type="application/ld+json", ocap=BASE64(OCAP_DOCUMENT),
+object-capability: type="ocapld",
+  ocap=BASE64(OCAP_DOCUMENT),
   action=BASE64("ReadDocument")
 ```
 
@@ -156,7 +168,8 @@ authorization, the `headers` that are being signed, and finally provides the
 value of `signature`:
 
 ```
-authorization: Signature keyId="did:v1:z279m2...Xk8aC#ocap-invoke-key-1",
+authorization: Signature
+  keyId="did:v1:z279m2...Xk8aC#ocap-invoke-key-1",
   headers="object-capability date host (request-target)",
   signature="P26kEk...o0rBQ=="
 ```
@@ -178,16 +191,18 @@ following:
    object capability.
 
 If all of these steps complete successfully, then the entity invoking the
-object capability is authorized.
+object capability is authorized. The output of the steps above may be cached
+depending on the risk profile of the application using CapAuth.
 
 ## Alternative Representations
 
 It is possible for a more compact representation to be expressed. For example:
 
 ```
-object-capability: type="application/ld+json",
-  ocapMultihash=b250100a4ec6f1629e49262d7093e2f82a3278,
-  actionMultibase=BASE58BTC("ReadDocument")
+object-capability: type="url-ocapld",
+  ocap="https://example.com/ocaps/e49262"
+  ocapMultihash=zZeM3u9YD2obamakRCRczRzJza3,
+  actionMultibase=z2ZBdVRTwAVvVSfUZh
 ```
 
 This approach replaces the direct embedding of the object capability with
@@ -195,18 +210,18 @@ a cryptographically equivalent mechanism that does not require the
 transmission of the entire object capability.
 
 While Decentralized Identifiers are used throughout this document, it is
-possible to not use any decentralized identifiers and instead rely on purely
+possible to not use any Decentralized Identifiers and instead rely on
 HTTP URL-based identifiers and storage for cryptographic key information.
-Similarly, pure cryptographic identifiers may be used instead of
-Decentralized Identifiers or HTTP URL-based identifiers.
+Similarly, pure Cryptographic Identifiers, such as ed25519 public keys, may
+be used instead of Decentralized Identifiers or HTTP URL-based identifiers.
 
 ## Next Steps
 
 The authors of this document would like to explore the following items at
 the upcoming RWoT7 event:
 
-* Would it be possible to re-use this specification for the HIE of One
-  Use Case as well as the Identity Hubs use case?
+* Would it be possible to re-use this specification for the Identity Hubs
+  use case as well as the HIE of One use case?
 * Are there different representations of the message flow above that should
   be explored?
 * What are the security considerations for this protocol?

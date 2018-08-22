@@ -35,7 +35,7 @@ really, read as much as you can!)
 Written for your consideration and discussion at Rebooting the Web of Trust VII
 
 * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) — Joe Andrieu <joe@legreq.com>
-* [SmartAuth](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/smartauth.md) — Manu Sporny, Dave Longley, Chris Webber, Ganesh Annan
+* [CapAuth](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/capauth.md) — Manu Sporny, Dave Longley, Chris Webber, Ganesh Annan
 
 ## Other Readings of Interest
 
