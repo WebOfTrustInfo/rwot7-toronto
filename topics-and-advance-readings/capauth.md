@@ -245,7 +245,7 @@ this document.
 The authors of this document would like to explore the following items at
 the upcoming RWoT7 event:
 
-* Would it be possible to re-use this specification for the Identity Hubs
+* Would it be possible to reuse this specification for the Identity Hubs
   use case as well as the HIE of One use case?
 * Are there different representations of the message flow above that should
   be explored?
