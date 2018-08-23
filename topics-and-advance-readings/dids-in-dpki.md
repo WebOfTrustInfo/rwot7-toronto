@@ -12,7 +12,7 @@ A quick reminder for those who don't:
 
 - DPKI stands for *Decentralized Public-key Infrastructure*
 - DPKI seeks to serve as an improved alternative/replacement for [X.509](https://en.wikipedia.org/wiki/X.509) (that thing securing today's Internet)
-- DPKI changes the web's security model from 1000s of single-points-of-failure to *decentralized consensus groups* that create namespaces together (sorta like what blockchains do!)
+- DPKI changes the web's security model from 1000s of single-points-of-failure to *decentralized consensus groups* that create namespaces (sorta like what blockchains do!)
 - DPKI is not a blockchain — it's a protocol for securely accessing blockchains and similar decentralized consensus systems
 - DPKI has Top-Level Domains (TLDs) representing different blockchains (e.g. `.eth`, `.bit`, `.id` etc.)
 
