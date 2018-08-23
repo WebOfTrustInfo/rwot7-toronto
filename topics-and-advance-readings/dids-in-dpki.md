@@ -52,7 +52,7 @@ Obviously this is not useful (by itself) for dealing with human-readable TLDs.
 
 What are we trying to do here, ultimately?
 
-We are trying [Square Zooko's Triangle](http://www.aaronsw.com/weblog/squarezooko):
+We are trying to [Square Zooko's Triangle](http://www.aaronsw.com/weblog/squarezooko):
 
 ```
     Decentralized
@@ -110,7 +110,7 @@ This is important not only for visiting websites, it's also important for making
 
 **So whether or not _ALL_ DIDs are human-readable is irrelevant to DPKI — In DPKI, DIDs Are Human-readable.**
 
-In other worsd, identifiers in DPKI have these properties:
+In other words, identifiers in DPKI have these properties:
 
 - They exist in a namespace secured through decentralized consensus, e.g. a blockchain (see also, [DCS Theorem](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/final-documents/dcs-theorem/The-DCS-Theorem.pdf))
 - They are human-readable
