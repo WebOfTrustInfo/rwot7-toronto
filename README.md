@@ -22,6 +22,10 @@ This should be uploaded to [Topics & Advance Readings directory](topics-and-adva
 
 Here are the advanced readings to date:
 
+* [CapAuth](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/capauth.md) by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan
+* [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md) by Greg Slepak
+* [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
+
 ### Primers
 These primers overview major topics which are likely to be discussed
 at the design workshop. If you read nothing else, read these. (But
@@ -31,12 +35,6 @@ really, read as much as you can!)
 * [Functional Identity Primer](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/functional-identity-primer.md) — A different way to look at identity
 * [Verifiable Credentials Primer](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/verifiable-credentials-primer.md) — the project formerly known as Verifiable Claims
 * [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/dids-in-dpki.md) - how DIDs fit into Decentralized Public-key Infrastructure
-
-### Topic Papers
-Written for your consideration and discussion at Rebooting the Web of Trust VII
-
-* [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) — Joe Andrieu <joe@legreq.com>
-* [CapAuth](https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/capauth.md) — Manu Sporny, Dave Longley, Chris Webber, Ganesh Annan
 
 ## Other Readings of Interest
 
