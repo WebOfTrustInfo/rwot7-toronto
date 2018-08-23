@@ -12,7 +12,7 @@ A quick reminder for those who don't:
 
 - DPKI stands for *Decentralized Public-key Infrastructure*
 - DPKI seeks to serve as an improved alternative/replacement for [X.509](https://en.wikipedia.org/wiki/X.509) (that thing securing today's Internet)
-- DPKI changes the web's security model from 1000s of single-points-of-failure to *decentralized consensus groups* that create namespaces together (sorta like what blockchains do!)
+- DPKI changes the web's security model from 1000s of single-points-of-failure to *decentralized consensus groups* that create namespaces (sorta like what blockchains do!)
 - DPKI is not a blockchain — it's a protocol for securely accessing blockchains and similar decentralized consensus systems
 - DPKI has Top-Level Domains (TLDs) representing different blockchains (e.g. `.eth`, `.bit`, `.id` etc.)
 
@@ -52,7 +52,7 @@ Obviously this is not useful (by itself) for dealing with human-readable TLDs.
 
 What are we trying to do here, ultimately?
 
-We are trying [Square Zooko's Triangle](http://www.aaronsw.com/weblog/squarezooko):
+We are trying to [Square Zooko's Triangle](http://www.aaronsw.com/weblog/squarezooko):
 
 ```
     Decentralized
@@ -110,7 +110,7 @@ This is important not only for visiting websites, it's also important for making
 
 **So whether or not _ALL_ DIDs are human-readable is irrelevant to DPKI — In DPKI, DIDs Are Human-readable.**
 
-In other worsd, identifiers in DPKI have these properties:
+In other words, identifiers in DPKI have these properties:
 
 - They exist in a namespace secured through decentralized consensus, e.g. a blockchain (see also, [DCS Theorem](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/final-documents/dcs-theorem/The-DCS-Theorem.pdf))
 - They are human-readable
