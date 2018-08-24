@@ -22,6 +22,7 @@ This should be uploaded to [Topics & Advance Readings directory](topics-and-adva
 
 Here are the advanced readings to date:
 
+* [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
 * [CapAuth](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/capauth.md) by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan
 * [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md) by Greg Slepak
 * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
