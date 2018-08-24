@@ -22,10 +22,12 @@ This should be uploaded to [Topics & Advance Readings directory](topics-and-adva
 
 Here are the advanced readings to date:
 
-* [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
+* [Agent to Agent Communication Protocol Overview](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a2a-comm-protocol-overview.md) by Kyle Den Hartog
 * [CapAuth](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/capauth.md) by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan
 * [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md) by Greg Slepak
 * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
+* [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
+* [Zero Trust Computing with DIDs and DADs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md) by Samuel M. Smith
 
 ### Primers
 These primers overview major topics which are likely to be discussed
