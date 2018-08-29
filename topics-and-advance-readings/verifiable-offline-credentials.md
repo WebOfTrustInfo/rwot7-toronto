@@ -41,7 +41,7 @@ allows is shared with a verifier. This paper discusses possible solutions that c
 along with their pros and cons.
 
 ## Considerations
-Before we can detail offline solutions, we need to cover the aspects of offline credentials that will be used to measure solutions
+Before I can detail offline solutions, it is necessary to cover the aspects of offline credentials that will be used to measure solutions
 before a solution is considered viable. Some offline ciphers require more sophistication and are more prone to mistakes but hard to break, while others may be simpler with fewer mistakes possible but not hard enough for an attacker with sufficient resources to break.
 Many of these terms are borrowed from [The quest to replace passwords](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-817.pdf) (particularly concerning usability and security) but adapted to offline credentials.
 Below is a list of those considered relevant for offline credential systems.
@@ -60,7 +60,7 @@ Below is a list of those considered relevant for offline credential systems.
 1. *Efficient-to-Use*: The time the user must spend for each presentation is acceptably short. The time required for enrolling with a new issuer, although possibly longer than presentation to a verifier, is also reasonable.
 1. *Infrequent-Errors*: Process a user must perform should succeed when done by an honest and legitimate person. In other words, the system isn't so hard to use or unreliable that genuine users are routinely rejected (like when performing an authenticated encryption scheme by hand).
 1. *Easy-Recovery-from-Loss*: Users can conveniently regain their credentials if lost or stolen. This combines other aspects like low latency before restored credentials; low user inconvenience (e.g., no requirement for physically standing in line); and assurance that recovery will be possible.
-1. *Selective-disclosure*: Users can easily choose which attributes to present and retain the remainder.
+1. *Selective-disclosure*: Users can easily choose which attributes to present and withhold the rest.
 
 #### Deployability
 1. *Accessible*: Holders are not prevented from using the system by disabilities or other physical (not cognitive) conditions.
@@ -77,6 +77,41 @@ Below is a list of those considered relevant for offline credential systems.
 1. *No-Trusted-Third-Party*: The process does not rely on a trusted third party who could, upon being attacked or otherwise becoming untrustworthy, compromise a holder's security or privacy.
 1. *Unlinkable*: Colluding verifiers cannot determine, whether the same holder is presenting to both.
 
+## Requirements
+We define a set of requirements that a verifiable offline credential system must meet.
+
+1. *Cryptographic keys must remain offline*: We assume once a computer knows the keys, they are compromised.
+1. *Encryption must be performed by humans*: For the previous reason, a person must do encryption/decryption since it requires knowledge of the key.
+1. *Encryption must be performable by humans*: All parties involved must be able to learn the algorithms and compute them by hand without any electronics.
+1. *Encryption must not take unreasonable amount of time by humans*: Honest parties should be able to complete computations in a reasonable time limit, say, a few minutes but not longer than 20.
+1. *Encryption must be hard to break*: A adversary with a computer and the ciphertext should not be able to decrypt it in a reasonable amount of time.
+1. *Credentials must be available offline*: Holder's should be able to present their credentials without any electronics.
+1. *Credentials may be available online*: Holders may choose to backup their credentials online.
+1. *Credential issuance and presentation must require holder involvement*: Otherwise, impersonation becomes easy.
+1. *Parties must be mutually authenticated*: Holder must know they are talking with the Issuer to receive a credential and a Verifier then expect.
+1. *Computers may be used for safeguarding credentials*: Holders may not be able to or want to physically carry their credentials. Computers shoudl only serve as an data only.
+
 ## Options
 
-(Place holder to explore various options and crypto to implement offline credentials and their various tradeoffs)
+Offline credentials cannot use existing public key cryptography as they are based on the difficulty of factoring large primes
+and solving the discrete log problem. If the math were done by hand, the numbers would have to be small which would permit
+computers to easily break the corresponding secrets. Nor can offline credentials use existing symmetric cryptography like AES or 3DES
+as these algorithms were designed to be implemented by computers and would violate the requirement to be performable by humans.
+
+This leaves pen-and-paper methods. We discuss each possibility and outcome.
+
+#### Solitaire Encryption Algorithm
+
+Solitaire was written in 1999 by [Bruce Schneier](https://www.schneier.com/academic/solitaire/) and uses a deck of playing cards. It was designed to be secure
+even against the most well-funded military adveraries with the biggest computers and the smartest cryptanalysts.
+The biggest problem with it is the time it takes to perform encryption. The author describes it requiring most of an evening to encrypt a reasonably long message. It does not offer authenticated encryption.  This violates are requirement that encryption not require unreasonable amounts of time, and how to mutually authenticate each party. See [Problems with Bruce Schneier's "Solitaire"](http://www.ciphergoth.org/crypto/solitaire/) for other reasons why this algorithm will no longer be considered.
+
+#### One-Time-Pad
+
+One-time-pads cannot be cracked provided they are the same size or larger than the message. The problem is creating one with sufficient entropy by hand is difficult. One-time pads cannot be reused either. This makes them very easy to get wrong, and provides no security if done wrong. This violates multiple requirements and will no longer be considered.
+
+#### LC4
+[LC4](https://eprint.iacr.org/2017/339.pdf) is a new cipher that supports authenticated encryption and nonces to prevent key leaks. The algorithm is easy to perform which makes it susceptible to some attacks. It supports up to 36 characters and keys are 36 characters long. Nonce's should be at least 6 characters long per plaintext message. For my first attempt at offline credentials, I choose to use LC4 as it has most of the considerations and allows the scheme to meet all the requirements.
+
+## Scheme
+
