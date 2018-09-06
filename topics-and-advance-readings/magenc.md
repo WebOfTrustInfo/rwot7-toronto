@@ -83,6 +83,13 @@ Let's start it up:
     Your Web application is running at http://localhost:8000.
     Stop this program at any time to terminate the Web Server.
 
+Note that though we use an HTTP server in this demo, any sort of
+storage system that knows how to dereference the eXactTopic links can
+be used, from a local offline database to a full on peer to peer
+network.
+Also note that the magnet URI itself will never be provided to the
+storage system, only the eXactTopic parameter.
+
 This demo server only has two operations&#x2026; a POST request stores
 the content and returns its content-addressed URN:
 
