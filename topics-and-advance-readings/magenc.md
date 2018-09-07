@@ -320,7 +320,10 @@ command multiple times:
 Uhoh&#x2026; each of those uploads creates a new random key, and thus
 a new object.
 Fortunately we can take advantage of a concept called "convergent
-encryption" where instead we use the hash of the file as the key.
+encryption" where instead we use the hash of the decrypted file as
+the key (note that this will be different than the hash of the
+encrypted objects, so having access to the hash of the encrypted
+object used in the eXactTopic will not expose the contents).
 (Note that convergent encryption should be fine in this case but
 may have security risks for [certain data-sharing situations](https://tahoe-lafs.org/hacktahoelafs/drew_perttula.html).)
 Let's see what happens now if we try uploading the same file
