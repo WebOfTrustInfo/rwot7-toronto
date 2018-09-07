@@ -30,4 +30,4 @@ Microsoft is building proof-of-concept decentralized public-key based identity s
 
 Note:  A verstion of this position statement was posted by [Alex Simons](https://twitter.com/Alex_A_Simons), Microsoft VP of Program Management for Identity, at [The role of standards in accelerating innovation](https://cloudblogs.microsoft.com/enterprisemobility/2018/08/29/the-role-of-standards-in-accelerating-innovation/).
 
-**Author:** Michael B. Jones [blog](https://self-issued.info/), [twitter](https://twitter.com/selfissued)
+**Author:** Michael B. Jones [https://self-issued.info/](https://self-issued.info/), [@selfissued](https://twitter.com/selfissued)
