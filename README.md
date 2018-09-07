@@ -28,14 +28,17 @@ Here are the advanced readings to date:
 * [DIDDoc Conventions for Interoperability](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/diddoc-conventions-for-interoperability.md) by Stephen Curran & Olena Mitovska
 * [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md) by Greg Slepak
 * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
+* [Magenc Magnet URIs: Secure Object Permanence for the Web](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/magenc.md) by Christopher Lemmer Webber
+* [Measuring Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/measuring-trust.md) by Tyler Yasaka 
+* [Not-a-Bot: A Use Case for Decentralized Identity using Proximity Verification to generate a Web of Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/not-a-bot.md) by Moses Ma & Claire Rumore
+* [The Political Economy of Naming](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/political-economy-of-naming.md) by Kate Sills
 * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
 * [The Role of Standards in Accelerating Innovation](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/The_Role_of_Standards_in_Accelerating_Innovation.md) by Michael B. Jones
 * [Zero Trust Computing with DIDs and DADs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md) by Samuel M. Smith
-* [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) by Kim Hamilton Duffy, Lucas Parker, and Anthony Ronning
-* [Not-a-Bot: A Use Case for Decentralized Identity using Proximity Verification to generate a Web of Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/not-a-bot.md) by Moses Ma and Claire Rumore, FutureLab
-* [Magenc Magnet URIs: Secure Object Permanence for the Web](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/magenc.md) by Christopher Lemmer Webber
-* [The Political Economy of Naming](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/political-economy-of-naming.md) by Kate Sills
-* [Measuring Trust](./topics-and-advance-readings/measuring-trust.md) by Tyler Yasaka
+* [A Public Web-of-Trust of Public Identities](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a-public-web-of-trust-of-public-identities.md) by Ouri Poupko and Ehud Shapiro
+* [A Trustless Web-of-Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/trustless-web-of-trust.md) by Ouri Poupko
+* [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) by Kim Hamilton Duffy, Lucas Parker & Anthony Ronning
+* [Verifiable Offline Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable-offline-credentials.md) by Michael Lodder
 
 ### Primers
 These primers overview major topics which are likely to be discussed
