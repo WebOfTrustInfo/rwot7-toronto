@@ -1,6 +1,6 @@
 # A Public Web of Trust of Public Identities
 
-By Ehud Shapiro (ehud.shapiro@weizmann.ac.il) and Ouri Poupko (ouri.poupko@weizmann.ac.il)
+By Ouri Poupko (ouri.poupko@weizmann.ac.il) and Ehud Shapiro (ehud.shapiro@weizmann.ac.il)
 
 > In the world of people's public actions, privacy is not the name of the game, it is instead a well-known single public identity. - Tim Berners-Lee
 
