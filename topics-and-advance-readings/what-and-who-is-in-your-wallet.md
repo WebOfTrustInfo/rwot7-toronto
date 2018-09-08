@@ -14,22 +14,22 @@ Digital wallets currently have a pretty simple range of types:
 * Crypto Wallets - containing one or more cryptocurrencies/tokens/coins and allowing you to send/spend (or hodl) and receive them.
 * Credential Wallets - there are few here but they are growing. Allowing you to compile a list of credentials.
 
-Several of Canada's leaders in digital identity are working together to produce a guidance paper that discusses the role of a digital wallet for "regular people" - both today and as the digital wallet evolves into a major new capability that is broadly used.
+Several of Canada's leaders in digital identity are working together to produce a guidance paper that discusses the role of a digital wallet for "regular people" - both today and as the digital wallet evolves into a major new capability that is broadly used. We are just getting started and want to bring the conversation into the RWoT world.
 
 # Outcome of Discussion
 
 This paper and subsequent discussions are intended to accomplish the following:
 
-* spark discussion on areas that either may not have been discussed;
-* raise the priority on key areas that may be getting attention
-* gather information about where groups are headed either in the pure open (open source / open standards) or closed (more proprietary way - to the extent that can be discussed in an open forum).
-* produce a list of active teams and standards efforts
+* spark discussion on areas of importance to current and evolving digital wallets. We anticipate that many have been, but some may not have been, discussed;
+* raise the priority on key areas that may be getting attention;
+* gather information about where groups are headed either in the pure open (open source / open standards) or closed/proprietary (to the extent that can be discussed in an open forum) realms; and
+* produce a list of active teams and standards efforts for the community to be aware of.
 
 # What Do You Want In Your Wallet
 
 In the physical world we make decisions about what we put in our wallets. We don't generally put all of our savings, in cash, into our wallet. Nor do we carry around our home ownership - though we may carry our car ownership. 
 
-In the digital world we could carry everything but the analog world's ideas of vaults, safe deposit boxes, and other secure storage have real value. Carrying everything is terrifying unless you can recover your wallet - while being certain that bad actors can't take over your digital wallet.
+In the digital world we could carry everything with us - but the analog world's ideas of vaults, safe deposit boxes, and other secure storage have real value. Carrying everything is terrifying unless you can recover your wallet - while being certain that bad actors can't take over your digital wallet.
 
 
 # Who Else Has a Role in Your Wallet
@@ -51,4 +51,16 @@ Some cases are pretty clear it seems but it gets murky quickly:
    * When the result of digital loss is catastrophic (e.g. permanent loss of digital assets) what recourse do we have? What could we do to prevent this?
 
 As we look at various organizations and people in our lives what roles can they play.
+
+
+# Proposal
+
+Start open discussion about the state of digital wallets:
+
+* here-and-now - Where are we currently? Who is doing what? What standards are in use, evolving, and needed?
+* the-future - Where do digital wallets need to go? Are they really the "next web browser"? What is blocking us? What would this look like if it was easy (to steal a Tim Ferriss thinking questions)? 
+
+The author will have starting points that are loose enough to take in many directions.
+
+Outputs will include summary of inputs on players in the space, standards (existing and needed), user experience, and many other artifacts for the community.
 
