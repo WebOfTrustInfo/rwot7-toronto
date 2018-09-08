@@ -2,7 +2,7 @@
 
 The following is a digest of my paper [Measuring Trust](../supporting-files/measuring-trust.pdf).
 
-## Introduction
+## Abstract
 
 > “I'm not reading a good review on Yelp.”
 
@@ -12,7 +12,12 @@ This is an excerpt from the Netflix show Love (season 1, episode 5). It’s a tr
 
 The concept of an open and permissionless system is philosophically appealing. However, there are certain applications that require the concept of trusted identities. At a minimum, all systems that involve voting rely on unique, trustworthy identities to cast a vote. This includes any consensus mechanism as well as any rating system. Such systems face a dilemma: how can we filter out bad actors without a centralized authority?
 
-Existing solutions seem to generally rely economic incentives. Bitcoin (and other systems based on proof-of-work), for example, makes influence in the network computationally expensive. Proof-of-stake, as an alternative, requires tokens to be staked in exchange for influence. In other words, these solutions are pay-to-play; Sybil attacks are no longer feasible because they are expensive.
+In this paper, I propose the concept of deriving relative trust scores using a given trust metric, one score for each identity from the perspective of another, in a web of trust. I then offer as examples multiple trust metrics, propose the concept of relative reputation, and explore the the idea of obtaining social consensus from a web of trust using trust scores.
+
+
+## Economic Sybil-resistance
+
+Existing solutions to the Sybil problem seem to generally rely economic incentives. Bitcoin (and other systems based on proof-of-work), for example, makes influence in the network computationally expensive. Proof-of-stake, as an alternative, requires tokens to be staked in exchange for influence. In other words, these solutions are pay-to-play; Sybil attacks are no longer feasible because they are expensive.
 
 However, I am interested in exploring an alternative to economic-based systems. There are a couple of reasons for this. The first is philosophical; pay-to-play systems inherently favor the economically privileged, and are less accessible to those with less economic resources. I believe that true decentralization should not discriminate based on economic privilege.
 
@@ -30,7 +35,7 @@ I will define a trust score as the result of a function that receives at least 3
 
 The implementation of the function itself is left open for now. I will refer to a trust score generation algorithm as a trust metric (borrowing from Advogato’s terminology). This will allow us to discuss the concept of trust scores without being married to a particular implementation of them.
 
-## A Definition of Sybil Resistance
+## A Definition of Sybil-resistance
 
 So far I have been using the term Sybil-resistance rather vaguely. Here I will provide a precise definition that applies to the manipulation of trust scores in a web of trust.
 
