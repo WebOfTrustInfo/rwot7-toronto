@@ -1,0 +1,32 @@
+@startuml
+object "DID Doc 0" as diddoc0
+object "DID = hash0" as h0
+object "DID Doc 1" as diddoc1
+object "hash1" as h1
+object "DID Doc 2" as diddoc2
+object "hash2" as h2
+object "Ledger" as ldg
+
+diddoc0 : mgmtKey = key0
+diddoc0 : timestamp = t0
+
+diddoc1 : parent = hash0
+diddoc1 : mgmtKey = key1
+diddoc1 : timestamp = t1
+diddoc1 : sig of key0
+
+diddoc2 : parent = hash1
+diddoc2 : mgmtKey = key2
+diddoc2 : timestamp = t2
+diddoc2 : sig of key1
+
+ldg : (hash0, key0) -> (hash2, key2)
+
+diddoc0 --> h0
+diddoc1 --> h1
+diddoc2 --> h2
+h0 --> ldg
+
+diddoc2 -left-> diddoc1
+diddoc1 -left-> diddoc0
+@enduml
