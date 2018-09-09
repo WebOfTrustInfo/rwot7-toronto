@@ -23,6 +23,6 @@ Similarly, a cryptocurrency wallet is essentially a digital physical wallet. It 
 In short, cryptocurrency wallets, just like physical wallets, are a form of functional identity on the web. As we near mainstream adoption of blockchain infrastructure, cryptocurrency wallets and physical wallets will merge into a single identity system that people will be able to use both online and offline. Functional identity gives us several ways in which we can improve the experience of handling cryptocurrency wallets and is a powerful tool that can enable us to build robust, secure and privacy-enabling identity systems for the web and the real world. 
 
 ## References
-1.Andrieu Joe, *Functional Identity Primer*. In *Rebooting the Web of Trust Advanced Readings and Primers*. 2017
-2.Andrieu Joe, *Speaking of Identity*. In *joeandrieu.com*. 2017
-3.https://en.wikipedia.org/wiki/Cryptocurrency_wallet
+1. Andrieu Joe, *Functional Identity Primer*. In *Rebooting the Web of Trust Advanced Readings and Primers*. 2017 
+2. Andrieu Joe, *Speaking of Identity*. In *joeandrieu.com*. 2017 
+3. https://en.wikipedia.org/wiki/Cryptocurrency_wallet
