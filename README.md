@@ -21,6 +21,7 @@ In advance of the design workshop, all participants are encouraged to produce a 
 This should be uploaded to [Topics & Advance Readings directory](topics-and-advance-readings).
 
 Here are the advanced readings to date:
+[Cryptocurrency wallets as an application of Functional Identity](https://github.com/WebofTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/Cryptocurrency%20wallets%20a%20an%20application%20of%20Functional%20Identity.md) by Mikerah Quintyne-Collins and Abdulwasay Mehar
 
 * [Agent to Agent Communication Protocol Overview](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a2a-comm-protocol-overview.md) by Kyle Den Hartog
 * [CapAuth](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/capauth.md) by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan
