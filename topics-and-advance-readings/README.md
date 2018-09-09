@@ -24,6 +24,7 @@ Here are the advanced readings to date:
 * [The Political Economy of Naming](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/political-economy-of-naming.md) by Kate Sills
 * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
 * [The Role of Standards in Accelerating Innovation](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/The_Role_of_Standards_in_Accelerating_Innovation.md) by Michael B. Jones
+* [Towards Proof of Person](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/towards-proof-of-person.md) by Peter Watts
 * [Zero Trust Computing with DIDs and DADs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md) by Samuel M. Smith
 * [A Public Web-of-Trust of Public Identities](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a-public-web-of-trust-of-public-identities.md) by Ouri Poupko and Ehud Shapiro
 * [A Trustless Web-of-Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/trustless-web-of-trust.md) by Ouri Poupko
