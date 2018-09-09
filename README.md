@@ -21,6 +21,7 @@ In advance of the design workshop, all participants produced a one-or-two page t
 This should be uploaded to [Topics & Advance Readings directory](topics-and-advance-readings).
 
 Here are the advanced readings to date:
+[Cryptocurrency wallets as an application of Functional Identity](https://github.com/WebofTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/Cryptocurrency%20wallets%20a%20an%20application%20of%20Functional%20Identity.md) by Mikerah Quintyne-Collins and Abdulwasay Mehar
 
 ### Primers
 
