@@ -19,7 +19,8 @@ Here are the advanced readings to date:
 * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
 * [IPLD as a general pattern for DID Documents](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ipld_did_documents.md) by Christian Lundkvist
 * [Magenc Magnet URIs: Secure Object Permanence for the Web](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/magenc.md) by Christopher Lemmer Webber
-* [Measuring Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/measuring-trust.md) by Tyler Yasaka 
+* [Measuring Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/measuring-trust.md) by Tyler Yasaka
+* [More control for Identity Holders](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/more-control-for-identity-holders.md) by Arturo Manzaneda and Ismenia Galvao
 * [Not-a-Bot: A Use Case for Decentralized Identity using Proximity Verification to generate a Web of Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/not-a-bot.md) by Moses Ma & Claire Rumore
 * [The Political Economy of Naming](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/political-economy-of-naming.md) by Kate Sills
 * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
