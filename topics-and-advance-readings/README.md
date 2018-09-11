@@ -19,6 +19,7 @@ Here are the advanced readings to date:
 * [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md) by Greg Slepak
 * [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital Identity for the Homeless.md) by Matthew Wong, T. Tian & CG Chen * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
 * [IPLD as a general pattern for DID Documents](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ipld_did_documents.md) by Christian Lundkvist
+* [Is a Decentralized Collective Identity Possible?](https://github.com/vsnt/rwot7/blob/master/topics-and-advance-readings/RWOT%20Topic%20Paper_%20Collective%20Identity.pdf) by Heather Vescent
 * [Magenc Magnet URIs: Secure Object Permanence for the Web](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/magenc.md) by Christopher Lemmer Webber
 * [Measuring Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/measuring-trust.md) by Tyler Yasaka
 * [More Control for Identity Holders](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/more-control-for-identity-holders.md) by Arturo Manzaneda and Ismenia Galvao
