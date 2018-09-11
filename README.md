@@ -44,6 +44,7 @@ Here are the advanced readings to date:
 * [Cryptocurrency wallets as an application of Functional Identity](https://github.com/WebofTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/Cryptocurrency%20wallets%20a%20an%20application%20of%20Functional%20Identity.md) by Mikerah Quintyne-Collins and Abdulwasay Mehar
 * [JWE/JWT0based DID Auth implementation of RWOT DID Auth Flow #10](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/did-auth-jwe.md) by Henry Tsai, Danny Strockis, Daniel Buchner
 * [Identity Hub Permissions proposal](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/identity-hub-permissions.md) by Danny Strockis, Logan Girvin, Daniel Buchner
+* [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen
 
 ### Primers
 These primers overview major topics which are likely to be discussed
