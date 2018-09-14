@@ -1,5 +1,5 @@
 # Scoped Presentation Request on Verifiable Credentials
-Author: Martin Riedel, Civic Technologies, Inc.
+Martin Riedel, Civic Technologies, Inc.
 
 ## Abstract
 We propose a new Standard for the Verifier - Holder interaction within the Verifiable Credential Ecosystem, where a Verifier can specify a request format towards the Holder of Credential Information that is satisfied by the presentation of the requested Credentials. In this "Presentation Request" a Verifier is able to define requirements towards the kind of Credential, Claims or ZKP Proofs that should be presented and if there are additional side constraints that need to be fulfilled. The proposed request defines a DSL to model constraints in a dynamic way, which the holder of Verifiable Credentials can match against its local store and identify satisfying or missing credentials. Lastly, the verifier utilizes the presentation request to setup an identifiable communication sequence by specifying key material and status endpoints for the transmission of request results (a set of matching Verifiable Presentations).
