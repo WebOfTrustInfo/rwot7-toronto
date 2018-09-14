@@ -54,9 +54,9 @@ As a Holder / Subject the Presentation Request should fulfill the following requ
       "identifier": "credential-civ:Identity:GenericId-v1",
       "constraints": {
         "metadata": {
-		  "issuer": { is: { $eq: 'did:cvc:<validator-did>' } },
-		  "expiry": { is: { $gt: '2018-09-14T21:12:31+00:00' } },	
-		}
+          "issuer": { is: { $eq: 'did:cvc:<validator-did>' } },
+          "expiry": { is: { $gt: '2018-09-14T21:12:31+00:00' } },	
+        }
         "claims": [
           { "path": "name.first", "is": {"$eq": "Martin"} }
         ]
