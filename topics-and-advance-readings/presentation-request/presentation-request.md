@@ -33,7 +33,7 @@ As a Holder / Subject the Presentation Request should fulfill the following requ
 - Secure communication setup for Verifiable Presentation transmission
 - Specify a limited TTL by including a mandatory issuing timestamp (e.g. the holder can be sure that no legacy or replayed request can be fulfilled)
 
-## Proposed Data Format:
+## Proposed Data Format
 
 ```
 {
@@ -85,6 +85,6 @@ The proposed data format contains the following sections:
 - Interaction-Specific Communication Channels to transmit Events and the Return Payload
 - A signature section to proof the authenticity of the request.
 
-## DIDs within a Presentation Request.
+## DIDs within a Presentation Request
 We propose to use of Decentralized Identifiers (DIDs) for the identification of Verifiers and Issuers in order to discover key material for communication and authentication, as well as service endpoints within the Verifiable Credential Ecosystem. (e.g. Issuer Endpoint to request a new Verifiable Credential).
 
