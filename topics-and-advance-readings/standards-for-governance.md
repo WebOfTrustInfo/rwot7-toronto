@@ -46,9 +46,8 @@ major academic medical center that will need to work with it.
 \[HIEofOne\]
 
 ![](media/health-records.png)
-**Fig. 1 - Homeless Health Record Interaction Diagram**
+**Fig. 1 - Homeless Health Record Interaction Diagram**<br>
 _The numbered lines are in order of agent creation (1-4) and agent use (5-10)_
-
 
 #### **Online Presence -** Digital Ocean VM with fixed IP, Self-Hosted Appliance, Intel SGX
 
