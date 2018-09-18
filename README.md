@@ -34,6 +34,7 @@ Here are the advanced readings to date:
 * [Scoped Presentation Request on Verifiable Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/presentation-request/presentation-request.md) by Martin Riedel
 * [Standards for Agency and Decentralized Information Governance - Early Experience](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/standards-for-governance.md) by Adrian Gropper, MD, and Michael Chen, MD
 * [Towards Proof of Person](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/towards-proof-of-person.md) by Peter Watts
+* [Towards a Terminology Concept Map](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/towards-a-terminology-concept-map.md) by Andrew Hughes
 * [A Trustless Web-of-Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/trustless-web-of-trust.md) by Ouri Poupko
 * [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) by Kim Hamilton Duffy, Lucas Parker & Anthony Ronning
 * [Verifiable Offline Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable-offline-credentials.md) by Michael Lodder
