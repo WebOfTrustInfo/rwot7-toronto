@@ -54,49 +54,50 @@ Question 0: does display matter? I.e. is social engineering through the view not
 
 Question 1: how does an issuer ensure that their design is preserved across viewers?
 
-Question 2: how do we reduce social engineering attacks by helping humans to know that the view accurately represents the content? I.e. without forcing them to look at the full, raw certificate JSON?
+Question 2: how do we reduce social engineering attacks by helping humans to know that the view accurately represents the content, i.e. without forcing them to look at the full, raw certificate JSON?
 
 
 ### Spectrum of display use cases
 
-- display doesn't matter (e.g. social engineering of this form is not a concern; device only exchange)
-- issuer requires that certain set of fields are displayed, but doesn't care exactly how (relevant for existing ecosystems, e.g. Open Badges)
-- issuer "blesses" n displays (.pdf / .html / .png / ...) or artifacts / templates in an immutable store
+- The display of fields from within the credential doesn't matter (e.g. social engineering of this form is not a concern; device only exchange).
+- Issuer requires that certain set of fields are displayed, but doesn't care exactly by what mechanism they are presented (relevant for existing ecosystems, e.g. Open Badges).
+- Issuer "blesses" a set of displays (e.g. .pdf, .html, .png, etc.) or artifacts / templates that reside in an immutable store.
 
 ### Additional privacy concerns
 
-If the credential contains sensitive data, neither credential nor displays should not be assumed to be hosted.
+If the credential contains sensitive data, neither the credential nor displays should be assumed to be hosted.
 
 
 ## Solutions that have been considered
 
 
 Some options that have been considered include:
-1. Embed a display template, image, or other view in the certificate
-	- problem: size of the certificate, especially if targeting different devices
-	- problem: possible longevity issues (e.g dated templating technique)
-2. Reference (as linked data) a display template in the certificate
-	- problem: this display template can be altered after issuance and that wouldn't be detected during verification
-3. Display certification: Open Badges already has a certification process to ensure an OB certified viewer is compliant. 
-    - problem: in theory the view could be tampered with after certification
-    - problem: having a certification authority -- even in display -- is a centralization point we'd like to avoid
-4. **Embed hash(es) of the "blessed" display artifact(s)** (currently seen as the most promising approach)
-	- advantage: allows the integrity to be established without size bloat
-	- problem: management of these external artifacts
-5. ("Let the issuers handle it") Over time issuers converge on a well-known set of schemas and corresponding display templates 
-    - approach the problem per use case
-    - e.g. if we restrict the problem to display of a certain type of  credential that belongs to a known alignment framework, perhaps it's easier for issuers to use widely used templates (e.g. EQF framework)
-    - in some cases, the problem may be less critical; i.e. perhaps only the content is being exchanged between devices.
+1. Embed a display template, image, or other view in the certificate.
+    - Problem: the size of the certificate increases significantly with each encoded artifact, especially if targeting different devices.
+	- Problem: there are possible format longevity issues (e.g a dated templating technique).
+	- Problem: the creation of a bevy of disparate artifacts is labor-intensive for developers, and orthogonal to the problem of verifiable credentials (this problem is ubiquitous).
+2. Reference (as linked data) a display template in the certificate.
+	- Problem: the display template may be altered after issuance, which would be undetectable by machine during verification.
+3. Display certification: Open Badges already has a certification process to ensure that an OB certified viewer is compliant. 
+    - Problem: in theory, the view could be tampered with after certification.
+    - Problem: having a certification authority -- even in display -- is a centralization point we'd like to avoid.
+4. **Embed hash(es) of the "blessed" display artifact(s)** (currently seen as the most promising approach).
+	- Advantage: this approach allows integrity to be established without size bloat within the JSON certificate.
+	- Problem: the creation and management of these external artifacts.
+5. ("Let the issuers handle it.") Over time, issuers converge on a well-known set of schemas and corresponding display templates.
+    - Approach the problem per use case.
+    - E.g. if we restrict the problem to display of a certain type of credential that belongs to a known alignment framework, perhaps it's easier for issuers to use widely used templates.  An example of such a framework might be the [European Qualifications Framework](https://ec.europa.eu/ploteus/en/content/descriptors-page) (EQF).
+    - In some cases, the problem may be less critical, i.e. the content is exchanged only between devices.
 
-In a sense, I think it's best to think of #5 as orthogonal or complementary to a cryptographically verifiable display; this mixes reuability with tamper-evidence, which are very different problems.
+In a sense, I think it's best to think of #5 as orthogonal or complementary to a cryptographically verifiable display; this mixes reusability with tamper-evidence, which are very different problems.
 
 ## Current (tentative) proposal
 
 Prototype proposed standards for:
-- (minimum requirement) adding a hash value to a credential to check whether the display has been tampered with
-    - incubate standard vocabulary for use in Verifiable Credentials ecosystem
-    - additional options: metadata, location
-- standard way to create human friendly presentation and embed credential for portability purposes
+- (Minimum requirement) adding a hash value to a credential to check whether the display has been tampered with.
+    - Incubate a standard vocabulary for use in the Verifiable Credentials ecosystem.
+    - Additional options: metadata, location.
+- Propose a standard way to create human friendly presentation and embed credentials for portability purposes.
 
 Tentative proposed form (presented by Bohdan Andriyiv); see discussion
 https://github.com/w3c/vc-data-model/issues/135#issuecomment-410138282
@@ -123,6 +124,6 @@ Example:
 
 ### Questions
 
-- Which are required fields?
-- Can we assume credential is embedded in display artifact, or are they bundled in some way
-- Many more to come
+- Which fields are required?
+- Can we assume that the credential is embedded in the display artifact, or are they bundled in some way?
+- Many more to come.
