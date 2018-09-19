@@ -21,9 +21,9 @@ As an Open Badges v2 extension, Blockcerts' open source viewers display certain 
 
 The current Blockcerts ecosystem allows the display to vary across devices; i.e. the browser displays a larger set of fields than a more abbreviated mobile wallet view. But again, a common set of fields is assumed.
 
-Display customization is enabled in the open source; for example, an issuer can customize their credential display by adding a Flask Themes to the cert-viewer project. All components are open source, so the issuer could extend/customize any component (such as the mobile wallet), although this involved more work.
+Display customization is enabled in the open source; for example, an issuer can customize their credential display by adding a Flask Themes to the cert-viewer project. All components are open source, so the issuer could extend/customize any component (such as the mobile wallet), although this involves more work.
 
-The Blockcerts open source also supports a `displayHtml` field, and the open source viewers understand to parse the HTML from that field. But we do not promote the use of that (it was a tentative compromise solution), and this point we intend to deprecate that field, as it intertwines display and content, bloats the size, and generally is an inelegant solution.
+The Blockcerts open source also supports a `displayHtml` field, and the open source viewers understand to parse the HTML from that field. But we do not promote the use of that (it was a tentative compromise solution). At this point, we intend to deprecate that field, as it intertwines display and content, bloats the size, and is a generally inelegant solution.
 
 These methods allow issuers to customize both the format of credentials (font, field order) and content (e.g. additional custom fields, in the case the issuer has added important extension fields).
 
@@ -44,15 +44,17 @@ A critical part of the Open Badge and Blockcerts ecosystem is the ability to acc
 
 But focusing on display, how can issuers ensure their desired display is preserved in general? They can control the display in their own branded mobile wallet, credential web sites, etc, but what does it look like in another Blockcerts (or more broadly, credential) viewer?
 
-Another question arises: can a malicious party entice people to use a misleading credential viewer for social engineering attacks? Maybe this party adds new fields to the display, removes others, so that the view in no way reflects the credential content. During verification, we check that the presented credential content verifies against the issuer signature, but how does a viewer know that what they see displayed accurately reflects the credential content without looking at the full json credential?
+Another question arises: can a malicious party entice people to use a misleading credential viewer for social engineering attacks? Maybe this party adds new fields to the display and removes others, so that the view in no way reflects the credential content. During verification, we check that the presented credential content verifies against the issuer signature, but how does a viewer know that what they see displayed reflects accurately the credential content without looking at the full JSON credential?
 
 Revisiting the badge baking option, the baked image (content) isn't part of the signed/hashed payload, so in theory it can be tampered with to show a misleading badge.
 
 ## Reducing these concerns to requirements and use cases
 
-Question 0: does display matter? i.e. is social engineering through the view not relevant
-Question 1: how does an issuer ensure their design is preserved across viewers?
-Question 2: how do we reduce social engineering attacks by helping humans know the view accurately represents the content? I.e. without forcing them to look at the fill certificate json
+Question 0: does display matter? I.e. is social engineering through the view not relevant?
+
+Question 1: how does an issuer ensure that their design is preserved across viewers?
+
+Question 2: how do we reduce social engineering attacks by helping humans to know that the view accurately represents the content? I.e. without forcing them to look at the full, raw certificate JSON?
 
 
 ### Spectrum of display use cases
