@@ -18,6 +18,7 @@ Here are the advanced readings to date:
 * [Decentralized Identity: Hub Authentication & Message Encryption](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/did-auth-jwe.md) by Daniel Buchner
 * [DIDDoc Conventions for Interoperability](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/diddoc-conventions-for-interoperability.md) by Stephen Curran & Olena Mitovska
 * [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md) by Greg Slepak
+* [DID Resolution Topics](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/did-resolution-topics.md) by Markus Sabadello
 * [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen 
 * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
 * [Identity Hub Permissions / Authorization](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/identity-hub-permissions.md) by Daniel Buchner
