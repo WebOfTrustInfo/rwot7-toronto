@@ -184,7 +184,7 @@ And the exchange is complete.
 * [PetnameIntro] [An Introduction to Petname Systems, Marc Stiegler, 2005](http://www.skyhunter.com/marcs/petnames/IntroPetNames.html)
 * [LifeHash] [LifeHash on GitHub, Wolf McNally, 2018](https://github.com/wolfmcnally/LifeHash)
 * [ConwaysLife] [Conway’s Game of Life, Wikipedia](https://en.wikipedia.org/wiki/Conway's_Game_of_Life)
-* [HashVisualization] [Hash Visualization􏰁 a New Technique to improve Real􏰀-World Security, Perrig & Song, 1999](http://www.netsec.ethz.ch/publications/papers/validation.pdf)
+* [HashVisualization] [Hash Visualization: a New Technique to improve Real-World Security, Perrig & Song, 1999](http://www.netsec.ethz.ch/publications/papers/validation.pdf)
 * [AvatarsAndIdenticons] [Avatars, identicons, and hash visualization, Jussi Judin, 2018](https://barro.github.io/2018/02/avatars-identicons-and-hash-visualization/)
 * [DIDAuth] [Introduction to DIDAuth, Markus Sabadello et al, 2018](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/did-auth.md)
 
