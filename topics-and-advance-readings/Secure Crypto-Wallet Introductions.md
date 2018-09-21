@@ -40,9 +40,9 @@ After the pattern becomes stable (or begins repeating) the resulting history is 
 
 Some bits of the initial hash are then used to deterministically apply symmetry and color to the icon to increase beauty and quick recognizability. See [LifeHash] for more examples and source code.
 
-![Figure 1](secure-crypto-wallet-intros-images/figure1.png | width=100)
+<img alt="Figure 1" src="secure-crypto-wallet-intros-images/figure1.png" width="400">
 
-Figure 1. Examples of LifeHash
+*Figure 1. Examples of LifeHash*
 
 ### Petnames
 [ZookosTriangle] posits that names cannot be at the same time global, securely unique, and decentralized. [PetnamesIntro] describes petnames as securely unique and decentralized, but not global:
@@ -51,24 +51,23 @@ Figure 1. Examples of LifeHash
 
 Once received, the key is then assigned a petname by the receiving party. Until this happens the key is identified by the fingerprint and an “UNTRUSTED” name with the proposed name of the sender in parentheses.
 
+<img alt="Figure 2" src="secure-crypto-wallet-intros-images/figure2.png" width="500">
 
-![Figure 2](secure-crypto-wallet-intros-images/figure2.png)
-
-Figure 2. Alice’s key before assigning a petname
+*Figure 2. Alice’s key before assigning a petname*
 
 This petname is unique within the crypto-wallet, so although Alice can call Bob’s key “Bob”, there can only be one “Bob” in Alice’s wallet. Similarly, if there is already an “Alice” in Bob’s wallet, Bob will need to pick a more unique name such as “Alice Jones” or “Alice from Joe’s party” for Alice’s petname to distinguish her from the pre-existing “Alice”. Solutions for how to handle petnames that may be confusingly similar are discussed in the literature, but in general it is up to the wallet owner to choose petnames that meaningfully bring to mind the role of the sender in their life. Petnames can be changed over time as this role evolves.
 
-![Figure 3](secure-crypto-wallet-intros-images/figure3.png)
+<img alt="Figure 3" src="secure-crypto-wallet-intros-images/figure3.png" width="500">
 
-Figure 3. Alice’s key after assigning a petname
+*Figure 3. Alice’s key after assigning a petname*
 
 Throughout the app, colors and fonts are used as a convention to indicate the status of an identity. Bob’s view of his own private keys in his wallet show the fingerprints for his public keys along with both his own petnames for his own keys (which are not shared) and his proposed names for each (in parentheses.) These are displayed in bold font and in green. Bob may find it useful to choose petnames that reflect his life role associated with that key, but proposed names that reflect how he would like to be known.
 
 Note also the convention of always showing proposed names in parentheses, both for private keys owned by a sender and received public keys.
 
-![Figure 4](secure-crypto-wallet-intros-images/figure4.png)
+<img alt="Figure 4" src="secure-crypto-wallet-intros-images/figure4.png" width="500">
 
-Figure 4. Bob’s view of his own private keys.
+*Figure 4. Bob’s view of his own private keys.*
 
 ## Exchange Procedures
 Typically two parties meeting in person will want to exchange their public keys. The outline for transmitting Alice’s key to Bob are as follows:
@@ -101,9 +100,9 @@ Encoded as JSON, a request-for-identity might look like this:
 
 And be presented like this:
 
-![Figure 5](secure-crypto-wallet-intros-images/figure5.png)
+<img alt="Figure 5" src="secure-crypto-wallet-intros-images/figure5.png" width="300">
 
-Figure 5. Bob’s request to Alice
+*Figure 5. Bob’s request to Alice*
 
 Alice’s response is also JSON:
 
@@ -125,9 +124,9 @@ DID-Auth [DIDAuth] provides a standardized way to verify ownership of DIDs, but 
 
 Signatures might be presented like this:
 
-![Figure 6](secure-crypto-wallet-intros-images/figure6.png)
+<img alt="Figure 6" src="secure-crypto-wallet-intros-images/figure6.png" width="300">
 
-Figure 6. Alice’s response to Bob
+*Figure 6. Alice’s response to Bob*
 
 The above is all that’s needed to send a public key one way, and have Alice prove to Bob that she controls the private key associated with the identity.
 
@@ -145,9 +144,9 @@ If Alice and Bob want to fully exchange keys, then Alice can include her own cha
 
 It can be displayed this way:
 
-![Figure 7](secure-crypto-wallet-intros-images/figure7.png)
+<img alt="Figure 7" src="secure-crypto-wallet-intros-images/figure7.png" width="300">
 
-Figure 7. Alice’s Response/Request back to Bob.
+*Figure 7. Alice’s Response/Request back to Bob.*
 
 Bob now creates the same sort of response, containing his public key and signed with his private key:
 
@@ -161,9 +160,9 @@ Bob now creates the same sort of response, containing his public key and signed 
 }
 ```
 
-![Figure 8](secure-crypto-wallet-intros-images/figure8.png)
+<img alt="Figure 8" src="secure-crypto-wallet-intros-images/figure8.png" width="300">
 
-Figure 8. Bob’s response back to Alice.
+*Figure 8. Bob’s response back to Alice.*
 
 Alice scans this final response and the keys are fully exchanged.
 
