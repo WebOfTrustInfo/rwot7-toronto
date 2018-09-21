@@ -41,6 +41,7 @@ Here are the advanced readings to date:
 * [What (and Who) Is In Your Wallet](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/what-and-who-is-in-your-wallet.md) by Darrell O'Donnell
 * [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen 
 * [Zero Trust Computing with DIDs and DADs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md) by Samuel M. Smith
+* [Blockcerts -- Where we are and what's next](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/blockcerts_roadmap.md) by Kim Hamilton Duffy, Anthony Ronning, Lucas Parker, and Peter Scott
 
 ### Primers
 These primers overview major topics which are likely to be discussed
