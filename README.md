@@ -27,6 +27,7 @@ Here are the advanced readings to date:
 * [Magenc Magnet URIs: Secure Object Permanence for the Web](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/magenc.md) by Christopher Lemmer Webber
 * [Measuring Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/measuring-trust.md) by Tyler Yasaka
 * [More Control for Identity Holders](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/more-control-for-identity-holders.md) by Arturo Manzaneda and Ismenia Galvao
+* [Nobody REALLY Trusts the Blockchain](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Nobody_REALLY_Trusts_the_Blockchain.md) by Dan Burnett, Shahan Khatchadourian, and Chaals Nevile
 * [Not-a-Bot: A Use Case for Decentralized Identity using Proximity Verification to generate a Web of Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/not-a-bot.md) by Moses Ma & Claire Rumore
 * [The Political Economy of Naming](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/political-economy-of-naming.md) by Kate Sills
 * [A Public Web of Trust of Public Identities](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a-public-web-of-trust-of-public-identities.md) by Ouri Poupko and Ehud Shapiro
