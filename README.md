@@ -44,8 +44,6 @@ Here are the advanced readings to date:
 * [Zero Trust Computing with DIDs and DADs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md) by Samuel M. Smith
 * [Leveraging the eIDAS network for DIDs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/leveraging-eidas-for-did.md) by Oliver Terbu
 
-README.md
-
 ### Primers
 These primers overview major topics which are likely to be discussed
 at the design workshop. If you read nothing else, read these. (But
