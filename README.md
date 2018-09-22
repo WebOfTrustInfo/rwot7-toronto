@@ -33,6 +33,7 @@ Here are the advanced readings to date:
 * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
 * [The Role of Standards in Accelerating Innovation](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/The_Role_of_Standards_in_Accelerating_Innovation.md) by Michael B. Jones
 * [Scoped Presentation Request on Verifiable Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/presentation-request/presentation-request.md) by Martin Riedel
+* [Secure Crypto-Wallet Introductions](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Secure%20Crypto-Wallet%20Introductions.md) by Wolf McNally, Ryan Grant
 * [Standards for Agency and Decentralized Information Governance - Early Experience](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/standards-for-governance.md) by Adrian Gropper, MD, and Michael Chen, MD
 * [Towards Proof of Person](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/towards-proof-of-person.md) by Peter Watts
 * [Towards a Terminology Concept Map](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/towards-a-terminology-concept-map.md) by Andrew Hughes
