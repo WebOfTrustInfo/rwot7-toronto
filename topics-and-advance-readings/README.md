@@ -31,6 +31,7 @@ Here are the advanced readings to date:
 * [The Political Economy of Naming](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/political-economy-of-naming.md) by Kate Sills
 * [A Public Web of Trust of Public Identities](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a-public-web-of-trust-of-public-identities.md) by Ouri Poupko and Ehud Shapiro
 * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) by Ganesh Annan, Manu Sporny, Dave Longley, and David Lehn
+* [RWoT Tribal Knowledge: Cryptographic and Data Model Requirements](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/crypto-data-model-requirements.md) by Manu Sporny, Dave Longley, and Chris Webber
 * [The Role of Standards in Accelerating Innovation](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/The_Role_of_Standards_in_Accelerating_Innovation.md) by Michael B. Jones
 * [Scoped Presentation Request on Verifiable Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/presentation-request/presentation-request.md) by Martin Riedel
 * [Standards for Agency and Decentralized Information Governance - Early Experience](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/standards-for-governance.md) by Adrian Gropper, MD, Michael Chen, MD, and Lydia Fazzio, MD
