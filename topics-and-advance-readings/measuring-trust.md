@@ -2,6 +2,8 @@
 
 The following is a digest of my paper [Measuring Trust](../supporting-files/measuring-trust.pdf).
 
+I created a visualizer to accompany this paper: https://wot-vis.firebaseapp.com/
+
 ## Abstract
 
 > “I'm not reading a good review on Yelp.”
