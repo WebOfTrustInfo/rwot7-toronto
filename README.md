@@ -12,6 +12,7 @@ In advance of the design workshop, all participants produced a one-or-two page t
 Here are the advanced readings to date:
 
 * [Agent to Agent Communication Protocol Overview](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a2a-comm-protocol-overview.md) by Kyle Den Hartog
+* [Can Curation Markets Establish a Sustainable Technology Commons](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/CanCurationMarketsEstablishSustainableTechnologyCommons.pdf) by Sam Chase
 * [CapAuth](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/capauth.md) by Manu Sporny, Dave Longley, Chris Webber, and Ganesh Annan
 * [Cryptocurrency Wallets as a Form of Functional Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Cryptocurrency%20wallets%20a%20an%20application%20of%20Functional%20Identity.md) by Mikerah Quintyne-Collins and Abdulwasay Mehar
 * [Decentralized Error Reporting](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/decentralized-error-reporting.md) by Jack Poole
