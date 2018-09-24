@@ -20,7 +20,7 @@ Here are the advanced readings to date:
 * [DIDDoc Conventions for Interoperability](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/diddoc-conventions-for-interoperability.md) by Stephen Curran & Olena Mitovska
 * [DIDs In DPKI](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md) by Greg Slepak
 * [DID Resolution Topics](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/did-resolution-topics.md) by Markus Sabadello
-* [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen 
+* [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen
 * [Five Mental Models of Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) by Joe Andrieu
 * [Identity Hub Permissions / Authorization](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/identity-hub-permissions.md) by Daniel Buchner
 * [IPLD as a general pattern for DID Documents](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ipld_did_documents.md) by Christian Lundkvist
@@ -42,9 +42,10 @@ Here are the advanced readings to date:
 * [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) by Kim Hamilton Duffy, Lucas Parker & Anthony Ronning
 * [Verifiable Offline Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable-offline-credentials.md) by Michael Lodder
 * [What (and Who) Is In Your Wallet](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/what-and-who-is-in-your-wallet.md) by Darrell O'Donnell
-* [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen 
+* [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen
 * [Zero Trust Computing with DIDs and DADs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md) by Samuel M. Smith
 * [Blockcerts -- Where we are and what's next](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/blockcerts_roadmap.md) by Kim Hamilton Duffy, Anthony Ronning, Lucas Parker, and Peter Scott
+* [Exploring Browser Web of Trust Use Cases](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/exploring-browser-wot-use.md) by Peter Snyder and Ben Livshits
 
 ### Primers
 These primers overview major topics which are likely to be discussed
