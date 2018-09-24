@@ -46,6 +46,7 @@ Here are the advanced readings to date:
 * [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen
 * [Zero Trust Computing with DIDs and DADs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md) by Samuel M. Smith
 * [Leveraging the eIDAS network for DIDs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/leveraging-eidas-for-did.md) by Oliver Terbu
+* [Exploring Browser Web of Trust Use Cases](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/exploring-browser-wot-use.md) by Peter Snyder and Ben Livshits
 
 ### Primers
 These primers overview major topics which are likely to be discussed
