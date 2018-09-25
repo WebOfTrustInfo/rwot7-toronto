@@ -11,6 +11,7 @@ In advance of the design workshop, all participants produced a one-or-two page t
 
 Here are the advanced readings to date:
 
+* [Addressing Global/Local Barriers to Adoption of Decentralized Identity Systems](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Adoption.md) by Eric Brown
 * [Agent to Agent Communication Protocol Overview](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/a2a-comm-protocol-overview.md) by Kyle Den Hartog
 * [Blockcerts -- Where we are and what's next](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/blockcerts_roadmap.md) by Kim Hamilton Duffy, Anthony Ronning, Lucas Parker, and Peter Scott
 * [Can Curation Markets Establish a Sustainable Technology Commons](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/CanCurationMarketsEstablishSustainableTechnologyCommons.pdf) by Sam Chase
