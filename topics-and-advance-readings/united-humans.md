@@ -97,7 +97,7 @@ Beside, already described tools to exchange value (money and ownership) we can h
 There is an especially big opportunities to improve Social Networking Services (in particular Facebook), if we re-design it based on Humane Design principals. Humane re-design will fix psychological, cognitive, and democracy-related issues of the current social networking services (see discussion about this topic at [Humane Tech Forum](https://community.humanetech.com/t/is-it-all-about-envy-trying-to-flash-out-the-main-beef-the-root-cause-of-issues-that-people-have-with-social-media/2456/19)).
 
 
-## Effects of wide adoption of Self-Sovereign Cooperation Tools
+## Effects of the wide adoption of Self-Sovereign Cooperation Tools
 *TL;DR: Wide adoption of Sovereignty Enabling Technologies will make human cooperation more efficient, especially on a global scale. It will improve protection of human rights and well-being.*
 
 - Effects on human cooperation 
