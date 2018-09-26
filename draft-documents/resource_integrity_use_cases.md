@@ -1,0 +1,5 @@
+# Resource Integrity Use Cases
+
+Authors: Ganesh Annan and Kim Hamilton Duffy
+
+Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via hyperlinks. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/resource-integrity-proofs.md) describes a general solution for enabling verification of any representation of a resource from any type of link. This paper describes how RIP solves use cases inspired by production deployments of the self-sovereign ecosystem. One is the problem of [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), which seeks to ensure the rendering of the VC content matches what the issuer intended. The other is verifying integrity of referenced data; for example, if the referenced data is in a mutable store.
