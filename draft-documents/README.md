@@ -10,6 +10,10 @@ DIDs are only the base layer of decentralized identity infrastructure. The next 
    
 *Abstract:* The term agent has been used in many context within the self sovereign identity world. But what exactly we mean by an agent? This paper will try to summarize the agent concept and at the same time identify the main phases and messages they need to exchange in order to be able to connect, receive credentials and share proofs between each other. We will start by assuming the discoverability of those agents.
 
+   * [Digital Credential Wallet Design](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet%20Design.md)
+   
+*Abstract:* Digital Credential Wallet Outline What is it? (Define it) A credential issued by a peer Existing solutions to doing credential wallets Centralized (Apple wallets, AndroidPay) What does it do?/Requirements Request a credential from a peer Share a credential Revoke a credential Message Manage Keys Consumer requirements vs Enterprise requirements vs NPE wallet requirements (Digital Twins) How do I take ownership for that thing I just bought? Applications Use Cases Identify some use cases What solutions are already there // Point out ones that are already there 3Rs of key management - let’s point at DPKI, DKMS … Depth - this is about the broad picture. General guideline is to stop at pointing at current (and needed) work. Avoid useless Rabbit Holes Future work
+
    * [How to Convince Dad\* of the Importance of Self-Sovereign Identity](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/convincing-dad.md)
    
 *Abstract:* One of the major problems with bootstrapping self-sovereign identity is that it requires adoption by a large number of people. Pushing self-sovereign identity from the top down is most likely to result in a technology that’s not actually used, while instead encouraging the average person to demand self-sovereign identity from the bottom up will result in the organic development of a vibrant, well-utilized ecosystem.
