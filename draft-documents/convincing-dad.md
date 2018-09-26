@@ -1,4 +1,4 @@
-**How to Convince Dad* of the Importance of Self-Sovereign Identity**
+**How to Convince Dad\* of the Importance of Self-Sovereign Identity**
 
 *And mom, and your daughter, and Aunt Susie, and that guy who works at
  Subway, and yourself*
