@@ -45,7 +45,8 @@ Here are the advanced readings to date:
 * [Standards for Agency and Decentralized Information Governance - Early Experience](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/standards-for-governance.md) by Adrian Gropper, MD, Michael Chen, MD, and Lydia Fazzio, MD
 * [Towards Proof of Person](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/towards-proof-of-person.md) by Peter Watts
 * [A Trustless Web-of-Trust](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/trustless-web-of-trust.md) by Ouri Poupko
-* [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) by Kim Hamilton Duffy, Lucas Parker & Anthony Ronning
+* [The United Humans](https://github.com/WebOfTrustInfo/rwot7/blob/master/united-humans.md) by Bohdan Andriyiv
+* [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) by Kim Hamilton Duffy, Bohdan Andriyiv, and Lucas Parker
 * [Verifiable Offline Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable-offline-credentials.md) by Michael Lodder
 * [What (and Who) Is In Your Wallet](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/what-and-who-is-in-your-wallet.md) by Darrell O'Donnell
 * [Digital Identity for the Homeless](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) by Matthew Wong, T. Tian & CG Chen
