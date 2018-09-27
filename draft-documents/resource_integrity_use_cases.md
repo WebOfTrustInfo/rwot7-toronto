@@ -28,7 +28,6 @@ This example shows how we might use a RIP to address the problem of proving that
     "verifiableDisplay": {
       "type": "ResourceIntegrityProof",
       "id": "https://raw.githubusercontent.com/WebOfTrustInfo/rwot7/master/draft-documents/images/exampleVerifiableDisplay.png",
-      "contentType": "image/png",
       "proof": {
         "type": "Multihash2018",
         "digestValue": "41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8"
@@ -55,3 +54,7 @@ RIPs enable snapshot integrity proofs for general linked data; this can be used 
 The above example uses `ResourceIntegrityProof` type as is, but in general implementors could subclass this type with context-relevant metadata.
 
 In a credentialing ecosystem aware of this convention, one can envision tooling enabling an icon (e.g. a green checkmark) signifying the targeted image has not been tampered with.
+
+### Future Directions
+
+
