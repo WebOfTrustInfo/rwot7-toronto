@@ -1,4 +1,4 @@
-# Moms, Dads, and Dan Burnett's Wife
+# Moms, DADs, and Dan Burnett's Wife
 
 Authors: Kim Hamilton Duffy, Heather Vescent, and Daniel Pape
 
