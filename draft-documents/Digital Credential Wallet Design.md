@@ -23,3 +23,11 @@ What solutions are already there // Point out ones that are already there
 …
 Depth - this is about the broad picture. General guideline is to stop at pointing at current (and needed) work. Avoid useless Rabbit Holes
 Future work
+
+Related work:
+
+DIDs In DPKI (Decentralized Public-key Infrastructure): https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md
+
+Decentralized Autonomic Data: https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/DecentralizedAutonomicData.pdf
+
+
