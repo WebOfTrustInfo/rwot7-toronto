@@ -2,7 +2,7 @@
 
 Authors: Kim Hamilton Duffy, Heather Vescent, and Daniel Pape
 
-A challenge we observe in the self-sovereign identity (SSI) community is explaining the elements of SSI to users who may benefit from SSI technolofies who are not necessarily informed of the SSI tech stack. One challenge we observe is the canonical description of such a user.
+A challenge we observe in the self-sovereign identity (SSI) community is explaining the elements of SSI to users who may benefit from SSI technologies who are not necessarily informed of the SSI tech stack. One challenge we observe is the canonical description of such a user.
 
 The authors of this paper have found themselves confused by the use of the descriptor "mom" applied to such user. We've encountered individuals who identity as female yet nonetheless have active careers in Cryptography, Decentralized Identity, etc. Such individuals have an understanding of the SSI stack that exceeds ours (who are arguably considered experts in the field).
 
