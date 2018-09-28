@@ -1,10 +1,10 @@
 # Models of Identity
 
-Joe Andrieu Legendary Requirements \<joe@legreq.com\>  
-Nathan George Sovrin Foundation \<nathan@sovrin.org\>  
-Christophe Macintosh Clearmatics \<cm@clearmatics.com\>  
-Ouri Poupko Weizmann institute \<ouri.poupko@weizmann.ac.il\>  
-Antoine Rondelet Clearmatics \<ar@clearmatics.com\>  
+Joe Andrieu *Legendary Requirements* \<joe@legreq.com\>  
+Nathan George *Sovrin Foundation* \<nathan@sovrin.org\>  
+Christophe Macintosh *Clearmatics* \<cm@clearmatics.com\>  
+Ouri Poupko *Weizmann institute* \<ouri.poupko@weizmann.ac.il\>  
+Antoine Rondelet *Clearmatics* \<ar@clearmatics.com\>  
 Andrew Hughes
 
 ## Abstract
