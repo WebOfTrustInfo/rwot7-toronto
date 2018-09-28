@@ -19,6 +19,7 @@ Conversion notes:
 
 # Guidance and Standards for Interoperability of Decentralized Identity Systems
 
+Source document: https://docs.google.com/a/cloudcompass.ca/open?id=1tDX6LXJn6KITKIvNbbexHfcdWZ9z9TCElC5cZygaacw
 
 ### Authors:  David Bissessar, Daniel Buchner, Dan Burnett, Stephen Curran, Kyle Den Hartog, Michael B. Jones, Christian Lundkvist, Olena Mitovska, Manu Sporny
 
