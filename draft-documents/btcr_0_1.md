@@ -1,6 +1,6 @@
 # BTCR v0.1 Decisions
 
-Authors: Dan Pape, Ryan Grant, Christopher Allen, Kim Duffy, Wolf McNally
+Authors: Dan Pape, Ryan Grant, Christopher Allen, Kim Duffy, Anthony Ronning, Ganesh Annan, Wolf McNally
 
 ## Goal
 
