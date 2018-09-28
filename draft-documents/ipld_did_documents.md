@@ -18,9 +18,9 @@ Anatomy of a CID:
 Where:
 
 - `<mbase>` is a [multibase](multibase) prefix describing the base that encodes this CID. If binary, this is omitted.
-- `<version> is the version number of the cid.
+- `<version>` is the version number of the cid.
 - `<mcodec>` is a [multicodec-packed](https://github.com/multiformats/multicodec) identifier, from the CID multicodec table
-- `<mhash>` is a cryptographic [multihash](https://github.com/multiformats/multihash), including: <mhash-code><mhash-len><mhash-value>
+- `<mhash>` is a cryptographic [multihash](https://github.com/multiformats/multihash), including: `<mhash-code><mhash-len><mhash-value>`
   
 ## CBOR 
 
@@ -116,13 +116,3 @@ In order to make updates to the IPLD, one could publish the original IPLD to IPN
 - No resolving to the updated version of the document ("following the tip")
   - Requires use of something like IPNS to accomplish this 
 - `@Context` is not a reserved word in IPLD.
-
-Where:
-
-`<mbase>` is a multibase prefix describing the base that encodes this CID. If binary, this is omitted.
-
-`<version>` is the version number of the cid.
-
-`<mcodec>` is a multicodec-packed identifier, from the CID multicodec table.
-
-`<mhash>` is a cryptographic multihash, including: `<mhash-code><mhash-len><mhash-value> `
