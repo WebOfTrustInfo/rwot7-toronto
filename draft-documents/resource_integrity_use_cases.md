@@ -30,7 +30,7 @@ This example shows how we might use a RIP to address the problem of proving that
       "id": "https://raw.githubusercontent.com/WebOfTrustInfo/rwot7/master/draft-documents/images/exampleVerifiableDisplay.png",
       "proof": {
         "type": "Multihash2018",
-        "digestValue": "41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8"
+        "digestValue": "122041dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8"
       }
     }
   },
@@ -38,7 +38,7 @@ This example shows how we might use a RIP to address the problem of proving that
 }
 ```
 
-In this example, we leverage the `ResourceIntegrityProof` type to say that the image identified by `id` is expected to have a sha256 hash matching the value in `digestValue`. 
+In this example, we leverage the `ResourceIntegrityProof` type to say that the image identified by `id` is expected to have a multihash matching the value in `digestValue`.
 
 ### Meeting Regulatory Compliance
 Organizations must provide documentation to regulators in order to maintain compliance. We can implement software to meet the full requirements of this use case by adding RIPs to the already composable Lego-like ecosystem of interoperable decentralized technologies such as DIDs, VCs, and OCAPs -- and by combining this ecosystem with a cryptographically auditable system, such as a blockchain. When an organization is preparing supporting documentation to meet compliance, they can post one or more RIPs and an OCAP for accessing each resource to a blockchain. This OCAP only grants access to the regulator and only to the specific items and for the duration that they need. Posting the RIP to a blockchain enables discoverability of the resource and establishes a proof of existence. The tamper-evident characteristics of the blockchain prove that the data existed as some point in the past, establishing trust via the cryptosystem rather than requiring it in the organization. The regulator then invokes the delegated OCAP to dereference the url in the RIP and to ensure the data was not changed since the time of submission.
