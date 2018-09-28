@@ -26,29 +26,23 @@ Introduction
 
 -   Objective:
 
-    -   To portray the importance of Self-sovereign identity for the
-        > mainstream audience
+    -   To portray the importance of Self-sovereign identity for the mainstream audience
 
     -   To drive adoption
 
     -   Envision use-cases based on technology not so far in the future.
 
--   Five individuals living in the first world over a variety of age
-    > groups and profiles
+-   Five individuals living in the first world over a variety of age groups and profiles
 
-    -   Why these five people? \[Spectrum of first-world society, who
-        > can drive adoption\]
+    -   Why these five people? \[Spectrum of first-world society, who can drive adoption\]
 
--   In many cases, we can give examples of existing tech specifics, what
-    > is lacking is interoperable layers ?
+-   In many cases, we can give examples of existing tech specifics, what is lacking is interoperable layers ?
 
-    -   Some of these uses of DIDs are immediately available, but some
-        > require development
+    -   Some of these uses of DIDs are immediately available, but some require development
 
     -   Aim for developers to start thinking about implementations
 
--   A self-sovereign identity can create a Paradigm shift in an
-    > data-centric world!!!!
+-   A self-sovereign identity can create a Paradigm shift in an data-centric world!!!!
 
 -   SECTION 2: A Few Definitions
 
@@ -234,6 +228,7 @@ She immediately activates this feature to better control access to her
 personal information.
 
 Your Best Friend is a Content Creator
+-------------------------------------
 
 Your best friend is working in a non-Western country. He’s an
 entrepreneur who regularly vlogs about the local startup scene.
@@ -295,6 +290,7 @@ use signed videos of this sort; though the propaganda network continues
 using the out-of-context video, no one else replicates it.
 
 Your Nephew Runs a Convenience Store
+------------------------------------
 
 Your Nephew has decided to open his first business! But, he wants to do
 more than just run any convenience store, he wants to run a convenience
