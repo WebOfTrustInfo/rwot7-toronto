@@ -10,8 +10,7 @@ Currently, the Web provides a simple yet powerful mechanism for the disseminatio
 
 This paper proposes a hyperlinking solution that decouples integrity information from link and resource syntaxes, enabling verification of any representation of a resource from any type of link. We call this approach Resource Integrity Proofs (RIPs). RIPs provide a succinct way to link to resources with cryptographically verifiable content integrity. RIPs can be combined with blockchain technology to create discoverable proofs of existence to off-chain resources.
 
-TODO kim: tone down
-This paper describes how RIPs solves use cases inspired by production deployments of self-sovereign technologies.
+This paper describes use cases benefitting from RIPs, such as enabling Verifiable Displays and meeting regulatory compliance.
 
 ## Features
 
@@ -132,16 +131,13 @@ _:b0 <https://w3id.org/security#digestValue> "I1HMBrf9_K9aprW11YTQrKefEzmjpI6OW0
 
 ## Use Cases
 
-TODO kim: tone down
+There are many compelling applications of RIPs in a decentralized ecosystem. We will first dive into the problem of [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), which seeks to ensure the rendering of the Verifiable Credential content matches what the issuer intended. Next, we will envision a new age regulatory compliance system built on top of Decentralized Identifiers, Verifiable Credentials, and Object Capabilities.
 
-We will first dive into the problem of [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), which seeks to ensure the rendering of the Verifiable Credential content matches what the issuer intended. Next, we will envision a new age regulatory compliance system built on top of Decentralized Identifiers, Verifiable Credentials, and Object Capabilities. To conclude, we will explore additional applications leveraging RIPs.
-
-### Verifiable Displays in EDU/OCC
+### Verifiable Displays
 
 In the Educational/Occupational Credentials space, RIPs allow issuers to specify a set of approved visual renderings associated with a signed claim. This enables any viewer of the claim to determine if the visual rendering differs from what was intended by the issuer -- an ability that's critical for detecting social engineering attacks introduced by tampering with the rendered image.The "verifiability" of a Verifiable Credential applies to the content of the claim -- not necessarily the human-readable display. As described in [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), this risk has been generally been addressed in an ad-hoc, use case dependent way. But there is no clear standard or convention for tamper detection across different credential schemas and use cases. 
 
 This example shows how we might use a RIP to address the problem of proving that a png file hashes to the value expected by a referencing Verifiable Credential:
-
 
 ```
 {
@@ -167,18 +163,15 @@ This example shows how we might use a RIP to address the problem of proving that
 }
 ```
 
-In this example, we leverage the `ResourceIntegrityProof` type to say that the image identified by `id` is expected to have a multihash matching the value in `digestValue`.
-
-### TODO kim: transition
-
-Expanding on linked visual data examples, this method enables a pharmacist to ensure the prescription they are viewing matches the associated machine-readable content. If the credential contained sensitive data, we wouldn't want the image to be publicly-hosted. But this is also supported: `id` can be any URI, so the referenced visual rendering could be stored offline.
+In this example, we leverage the `ResourceIntegrityProof` type to say that the image identified by `id` is expected to have a multihash matching the value in `digestValue`. While the above example uses `ResourceIntegrityProof` type as is, implementors could subclass this type with context-relevant metadata.
 
 In a credentialing ecosystem aware of this convention, one can envision tooling enabling an icon (e.g. a green checkmark) signifying the targeted image has not been tampered with.
 
+### Extensions to General Linked Data
+
+Expanding on linked visual data examples, this method enables a pharmacist to ensure the prescription they are viewing matches the associated machine-readable content. If the credential contained sensitive data, we wouldn't want the image to be publicly-hosted. But this is also supported: `id` can be any URI, so the referenced visual rendering could be stored offline.
+
 RIPs enable snapshot integrity proofs for general linked data; this can be used for credentials bridging legacy systems where data is stored in a mutable store.
-
-
-The above example uses `ResourceIntegrityProof` type as is, but in general implementors could subclass this type with context-relevant metadata.
 
 ### Meeting Regulatory Compliance
 
