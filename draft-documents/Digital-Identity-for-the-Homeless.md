@@ -1,13 +1,19 @@
 # Digital Identity for the Homeless
 
+##Authors
+
+Mike Varley
+Matthew Wong
+
 ## Abstract
 
 This paper explores the possibilities and practicalities of leveraging a digital decentralized identity for helping homeless, distressed, or under-serviced populations.
 
 Some points that will be covered:
-* homeless does not mean 'disconnected'
-* reliable identity is still essential for providing services to help these people
-* the valuable services which need to made available to this group
+* homeless does not mean 'disconnected'.
+* reliable identity is still essential for providing services to help these people.
+* the valuable services which need to made available to this group.
+* we don't need 100% converage of affected people to have value.
 * how decentralized ID networks support the creation of online communities with real-world capabilities.
 
 ## Background
