@@ -2,9 +2,17 @@
 
 Authors: Dan Pape, Ryan Grant, Christopher Allen, Kim Duffy, Anthony Ronning, Ganesh Annan, Wolf McNally
 
-## Goal
+## Abstract
 
-Lock down BTCR v0.1. Decisions follow.
+This paper describes the authors' design decisions that will enable us to lock down BTCR v0.1. These decisions will apply to the upcoming v0.1 BTCR method specification and the v0.1 BTCR reference implemmentation.
+
+These decisions are largely scope-cutting in nature, but also are conventions/design decisions to simplify open questions of past papers, described TODO: link.
+
+The designs include:
+- What's out of scope
+- Credential schema and content
+- Wallet functionality
+- BTCR semantics
 
 ## Out of scope
 
@@ -28,7 +36,7 @@ Why? Finding public key is harder
 
 ### 4. Testnet only
 
-## Credentials 
+## Credential schema and content
 
 ### 1. Use JSON-LD 1.1 javascript lib, because 0.1 doesn't need hardcore verifiers
 ### 2. Restrict to schema.org schemas. Can use Christopher's test cases
@@ -53,7 +61,7 @@ About BIP 157/158
 - Lightning branch of Go code
 - Not as efficient as SPV: SPV requests lists of addresses it cares about. Neutro slower because it attempts to hide addresses it cares about.
 
-## BTCR behavior decisions
+## BTCR semantics
 
 ### 1. Verification keys
 
