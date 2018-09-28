@@ -1,4 +1,4 @@
-<!----- Conversion time: 4.699 seconds.
+<!----- Conversion time: 5.186 seconds.
 
 
 Using this Markdown file:
@@ -11,24 +11,17 @@ Using this Markdown file:
 Conversion notes:
 
 * GD2md-html version 1.0β12
-* Thu Sep 27 2018 13:21:36 GMT-0700 (PDT)
+* Fri Sep 28 2018 13:26:55 GMT-0700 (PDT)
 * Source doc: https://docs.google.com/a/civic.com/open?id=1sFbjb6CuTR6F1LPmlBW3AV0HgI80gQgmzhTMUIUeerk
 * This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server.
 ----->
 
 
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 2.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
 
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
+<!-- [https://github.com/WebOfTrustInfo/rwot7](https://github.com/WebOfTrustInfo/rwot7) -->
 
 
-[https://github.com/WebOfTrustInfo/rwot7](https://github.com/WebOfTrustInfo/rwot7)
-
-# A DID for Everything:
+# A DID for Everything
 
 **Attribution, Verification and Provenance for Entities and Data Items**
 
@@ -38,22 +31,25 @@ Submitted to the 7th Rebooting the Web of Trust Technical Workshop
 
 September 24-26, 2018, Toronto
 
-Keywords: decentralized identity, Internet of Things, autonomic data, verified claims, identity, blockchain, self-sovereign, proximity computing, botnet, sockpuppet, catfishing, proof of personhood
-
-**ABSTRACT**
-
-The decentralized identifier (DID) is a new type of globally unique identifier that offers a model for lifetime scope, portable digital identity that does not depend on any centralized authority and that can never be taken away by third-parties. DIDs are the "atomic units" of a new layer of decentralized identity infrastructure. DIDs can be extended from identifiers of people, to identify _everything_. We can use DIDs to help us identify and manage objects, machines or agents through their digital twins, to locations, to events, and even to autonomic data. The paper will present novel use-cases for DIDs that relate to the field of every author.
-
-DIDs are only the base layer of decentralized identity infrastructure. The next higher layer -- where most of the value is unlocked -- is verifiable credentialsclaims. This is the technical term for a digitally signed electronic data structure that conforms to the interoperability standards being developed by the W3C Verifiable Claims Working Group. When a DID is extended to machines and autonomic data, those DIDs can also hold verifiable claims and attestations.
+Keywords: decentralized identity, Internet of Things, autonomic data, verified claims, identity, blockchain, self-sovereign, fog computing, industry 4.0, digital twinning, data chain provenance, audit trails
 
 
+## Abstract
 
-**WHY THIS MATTERS **[Carsten] \
+The decentralized identifier (DID) is a new type of globally unique identifier that offers a model for lifetime scope, portable digital identity that does not depend on any centralized authority and that can never be taken away by third-parties. DIDs are the "atomic units" of a new layer of decentralized identity infrastructure. DIDs can be extended from identifiers of people, to any entity, thus to identify _everything_. We can use DIDs to help us identify and manage objects, machines or agents through their digital twins, to locations, to events, and even to pure data objects, which we refer to as decentralized autonomic data (DAD) items[^1]. 
+
+The paper will present novel use-cases for DIDs and DADs and propose a new cryptographic data structure that is a self contained blockchain of DADs. This enables the verification of the provenance of a given data flow. 
+
+DIDs are only the base layer of decentralized identity infrastructure. The next higher layer -- where most of the value is unlocked -- is verifiable claims. This is the technical term for a digitally signed electronic data structure that conforms to the interoperability standards being developed by the W3C Verifiable Credentials Working Group. When a DID and hence DADs of the resultant data are extended to machines and autonomic data, the provenance chain of the data flow can provide the basis for verifiable claims and attestations about the data flow as well as the basis for a reputation.
 
 
-Today, the Internet is probably best described as a network comprised of all interconnected objects, traditionally referring to human users and computers. When we add connected objects and devices in the so-called Internet of Things (IoT), the number of addressable elements is in the tens of billions, with an estimate of 75 bn connected IoT devices in 2025[^1]. Software services, such as algorithms and bots, further extend this universe of identifiable entities.
 
-The resulting combinatorics of possible connections between any given entities is an impossibly large number. Yet in today's user journeys or business environments, agents (whether human, machine, or software) increasingly need to communicate, access or transact with a diverse group of these interconnected objects to achieve their goals in both the digital and physical worlds. This requires a straightforward and ubiquitous method to address, verify and connect these elements together.
+## Why this matters
+
+
+Today, the Internet is probably best described as a network comprised of all interconnected entities, traditionally referring to human users and computers. When we add connected entities and devices in the so-called Internet of Things (IoT), the number of addressable elements is in the tens of billions, with an estimate of 75 bn connected IoT devices in 2025[^2]. Software services, such as algorithms and bots, further extend this universe of identifiable entities.
+
+The resulting combinatorics of possible connections between any given set of entities is an impossibly large number. Yet in today's user journeys or business environments, agents (whether human, machine, or software) increasingly need to communicate, access or transact with a diverse group of these interconnected objects to achieve their goals in both the digital and physical worlds. This requires a straightforward and ubiquitous method to address, verify and connect these elements together.
 
 **Definition of Entity:** Something that has a distinct and independent existence either in the real or the digital world. Examples of an entity are:
 
@@ -61,8 +57,9 @@ The resulting combinatorics of possible connections between any given entities i
 
 *   Living Organism
 *   Physical Object
-*   Machines, Internet of Things (IoT) Devices
-*   Digital Asset. Data Set or Agent
+*   Locations or Events
+*   Machines and Devices in the Internet of Things (IoT) 
+*   Digital Asset, Data Set or Agent
 
 Human or object identities are stored in multiple centralised or federated systems such as government, ERP, IoT or manufacturing systems. From the standpoint of cryptographic trust verification, each of these centralised authorities serves as its own root of trust. 
 
@@ -70,64 +67,59 @@ An entity trailing along a value chain is interacting with multiple systems. Con
 
 To be a truly global solution, easy to use and still safe from hacking and sovereign interference, such a scheme must include: preservation of privacy, security from tampering, reliable trust verification, assurance of risk, and independence from any vendor-defined naming API, yet still be one-to-one mappable onto it. 
 
-Therefore, a universal addressing, trust verification system and associated interoperable protocol must be utilised. 
+Therefore, a universal addressing, trust verification system and associated interoperable protocol must be utilised, empowering every form of entity.
 
-_Why it Matters for People_
 
-Today when people want their identities to be confirmed they transfer information such as birth certificate, physical address or social security number to multiple third parties start to validate the same data in different contexts for KYC and authentication processes. 
+### Why it Matters for People
 
-The parties to which they sent that information retains it, meaning the data is out there in silos, creating risks in terms of data loss, privacy breaches, use of inconsistent data and forcing companies that might not want to be in that position to store that information. It also enables businesses to harvest peoples' personal data for commercial purposes that do not necessarily reflect the intentions the individual person.
+Today when entities want their identities to be confirmed they transfer information such as birth certificate, physical address or social security number to multiple third parties, who start to validate the same data in different contexts for KYC and authentication processes. 
 
-This situation results in big problems for humans such as broken health care records. There is no universally addressable health care record system that is controlled by a human, that consistently stores all relevant verified health care data and is able to share these data with doctors that need to connect with it.
+The parties to which they sent that information retains it, meaning the data is out there in silos, creating risks in terms of data loss, privacy breaches, use of inconsistent data and forcing companies that might not want to be in that position to store that information. It also enables businesses to harvest people's personal data for commercial purposes,  that do not necessarily reflecting the intentions the individual person.
 
-_Why it Matters for Businesses_
+This situation results in big problems for humans such as broken health care records. Patients will need a universally addressable healthcare record system that is controlled by the patient itself, that consistently stores all relevant verified health care data and is able to share these data with doctors that need to connect with it. To enable the doctors or algorithms they need a data flow provenance to verify the integrity, quality or reputation of a healthcare record to decide on treatments and give the patient confidence about the proposed treatments.  
 
-The notion of digital twinning for objects, machines and agent is becoming relevant to an increasing number of human services and industrial use cases. This is the result of the growth in digital services, connections and data streams from the Internet of Things (IoT) devices that increasingly drive integration with intelligent agents.
 
-**Definition of a Digital Twin:** A digital twin is a digital representation of either a real-world or digital entity. A digital twin exists over the life-cycle of an entity from planning, manufacturing, testing, birth and operations to decommissioning and reuse. The more past and present data are related and analysed, the more knowledge can be deployed to drive significant improvements on an individual entity or system level. It is estimated that by 2022 the IoT powered by digital twins will save consumers and businesses worth $1 trillion a year in asset maintenance[^2].
+### Why it Matters for Businesses
 
-Today digital twins are captured in siloed, proprietary IoT solutions by individual corporates that do not own the physical object over the life-cycle and even do not interact with parties using the object further down a value chain. Decentral solutions are liberating the digital twins out of the silos and establish more valuable and interoperable verifiable attributes and claims about the objects.
+**Definition of a Digital Twin:** A digital twin is a digital representation of either a real-world or digital entity. A digital twin exists over the life-cycle of an entity from planning, manufacturing, testing, birth and operations to decommissioning and reuse. The more past and present data are related and analysed, the more knowledge can be deployed to drive significant improvements on an individual entity or system level. 
 
-_Why it Matters for Objects, Machines and Agents_
+It is estimated that by 2022 the IoT powered by digital twins will save consumers and businesses worth $1 trillion a year in asset maintenance[^3].
 
-There is no widely adopted authentication or verification systems for non-human entities in place to provide KYA, KYB, KYM, or KYO or provenance services[^3]. 
+The notion of digital twinning for objects, machines and agent is becoming relevant to an increasing number of human services and Industry 4.0 use cases. This is the result of the growth in digital services, connections and data streams from the Internet of Things (IoT) devices that increasingly drive integration with machine learning algorithms resulting in graph-type data chains for processing the IoT data streams.
 
-In a world when humans, objects and machines are connected with intelligent agents that transaction on behalf of the entity the number of agent-to-agent transactions will outgrow the number of human transactions by many orders.  
+Today digital twins are captured in siloed, proprietary IoT solutions by individual corporates that do not own the physical object over the life-cycle and even do not interact with parties using the object further down a value chain. Decentral solutions are liberating the digital twins out of the silos and establish more valuable and interoperable verifiable attributes about entities and the data chains they connect with.
 
-All of that is possible once the entity itself is in control of its decentralised identifier, data, verifiable attributes and root of trust. The entity can decide and control to share the information they want, when they want and with whom they want. An agent transacting with this entity can independently verify the identifier of the entity and its attributes enabling a very dynamic agent economy. 
 
-_Why it Matters for the World_
+### Why it Matters for Objects, Machines and Agents
 
-[Martin]
+There is no widely adopted authentication or verification systems for non-human entities in place to provide KYA, KYB, KYM, or KYO or provenance services[^4]. 
 
-Managing the sustainability of the commons requires mechanisms to value natural capital and to account for the externalities that arise from human activities. This should attribute extractions from and contributions to the commons by organisations, organisms, machines and information. We need to identify these entities and we must identify both positive and negative impacts they are having on the commons.
+In a world when objects and machines are connected with datastreams and intelligent agents that perform transaction on behalf of the entity the number of agent-to-agent transactions will outgrow the number of human transactions by many orders. An agent transacting with another party can independently verify the identifier of the this party, its attributes and the provenance of the date sets that are involved in the transaction.
 
-Knowing what these impacts are enables us to count what matters and to put a value on what counts
+An example are digital twins of 3D printed objects for safety critical parts such as a turbine of an airplane. For these parts it is important to have an precise audit trail about the 3D printing process to prove that the object was manufactured in accordance to stringent specifications. The digital twin stores design, manufacturing, post processing and quality assurance data about the 3D printed object. These data are coming from multiple systems resulting in a variety of data chains. With DIDs and DADs the integrity of the data chains can be verified. The verification of the datachains and the underlying data results in important proofs about the provenance of 3D printed object.  
 
-_-------_
+
+### Why it Matters for the World
 
 The diverse application of decentralized identifiers (DIDs) will have substantial influences in broader applications on a global scale. The seamless provenance of physical objects or data items through any value chain has major implications on the risk and value properties of the processed data.
 
 Within any dynamic process, participating entities have substantial interest in the authenticity and trustworthiness in any individual step. Data that is accumulated with an unforgeable audit trail that references decentralized identifying information (Person, Device or any other Entity) for any transformation step holds greater value then it would have without such property.
 
-This prevalence is a prerequisite for implementing utility tokens on human commons, like carbon production, water consumption, (de-)forestation or similar. 
+Managing the sustainability of the commons requires mechanisms to value natural capital and to account for the externalities that arise from human activities. This should attribute extractions from and contributions to the commons by organisations, organisms, machines and information. We need to identify these entities and we must identify both positive and negative impacts these entities are having on the commons.
+
+Knowing what these impacts are enables us to count what matters and to put a value on what counts. 
+
+As an example, carbon production or carbon emission reduction activities must be identified in order to generate carbon credits that put a price on carbon in the economy. 
+
+The promise of a overarching prevalence through the broad use of DIDs also is the key component for achieving the vision of a _circular economy_, a regenerative system in which resource input and waste, emission, and energy leakage are minimized by slowing, closing, and narrowing energy and material loops. This can be achieved through long-lasting design, maintenance, repair, reuse, remanufacturing, refurbishing, recycling, and upcycling. This contrasts with a linear economy which is a self-destructing, catastrophic 'take, make, dispose' model of production.
+
+[Moses: I think we should create a definitions section here, and move all the definitions into this section?]
 
 
+## Comprehensive Solution
 
-*   _Risk Reduction_
-*   _Increased Data Value _
-*   _Carbon Token (higher value due to providence)_
-*   _Circular Economy_
 
-_-------_
-
-The digital twin is the key component for achieving the vision of a _circular economy_, a regenerative system in which resource input and waste, emission, and energy leakage are minimized by slowing, closing, and narrowing energy and material loops. This can be achieved through long-lasting design, maintenance, repair, reuse, remanufacturing, refurbishing, recycling, and upcycling. This contrasts with a linear economy which is a self-destructing, catastrophic 'take, make, dispose' model of production.
-
-**COMPREHENSIVE SOLUTION**
-
-[Sam]
-
-Anything that is referenced by a URL could instead be reference by a DID or DDID
+### Motivation
 
 The [Decentralized Autonomic Data](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/DecentralizedAutonomicData.pdf) paper from the RWOT Spring 2018 introduced three new concepts related to DIDs. 
 
@@ -144,11 +136,11 @@ This paper extends these concepts with a new one, that is,
 *   Data flows may be provenanced via a self referential blockchain (list of signed DAD items where each subsequent DAD item includes the DID or dDID and associated signature of previous item)
 
 
-##### Data Provenance
+### Data Provenance
 
 These concepts lay the groundwork for data flow provenance that is the focus of this paper. In this context provenance is used in a general sense. By data flow provenance we mean a mechanism for tracing data item content and control through a processing system including any transformations to the data item or its governance. This includes flows with multiple sources and sinks of data, independently and in combination. To restate, _data flow provenance_ means not just tracing control but also verifying the end-to-end integrity of every data flow including any transformations (additions, deletions, modifications, and combinations).
 
-An important insight is from the viewpoint of a distributed application an entity's influence on the application is solely based on the digital data flows that move between the entity and the other components of the distributed application.  We choose to call those data flows the entity's _projection_ onto the distributed application. If  those projections consist of DADs and every interaction of internal components consists of DADs then we have a universal approach for implementing decentralized applications with total  provenance of control and data within the application.
+An important insight from the viewpoint of a distributed application is that an entity's influence on the application is solely based on the digital data flows that move between the entity and the other components of the distributed application.  We choose to call those data flows the entity's _projection_ onto the distributed application. If those projections consist of DADs and every interaction of internal components consists of DADs then we have a universal approach for implementing decentralized applications with total  provenance of control and data within the application.
 
 A major motivation for establishing data flow provenance is to support building and architecting decentralized processing systems that use a _zero trus_t or more correctly diffuse trust perimeterless security model.  The emerging decentralized processing paradigm for distributed applications where the sources and sinks of data may be controlled by multiple entities, i.e. decentralized governance, means that traditional perimeter security models are at best problematic. Indeed, even the newer  perimeterless security model as originally formulated ( see [Developing a Framework to Improve Critical Infrastructure Cybersecurity](https://www.nist.gov/sites/default/files/documents/2017/06/05/040813_forrester_research.pdf) and  [Zero Trust Networks](https://www.amazon.com/Zero-Trust-Networks-Building-Untrusted-ebook/dp/B072WD347M/ref=sr_1_1?ie=UTF8&qid=1535124339&sr=8-1&keywords=zero+trust+networking)) assumes singular governance of the network hosts and associated data. We extend that model herein to include hosts and DADs with decentralized governance via DIDs. 
 
@@ -188,7 +180,10 @@ This additional principle allows governance over the data using a decentralized 
 This remainder of this section in the paper will explore salient issues in using DIDs and DADs to maintain provenance over each step in a data processing flow including transformations of the data to enable credible uses of the data for various applications while maintaining a zero or difuse trust security model.
 
 
-##### Background
+### Decentralized Autonomic Data
+
+
+#### Definition
 
 First introduced in more detail here ([Decentralized Autonomic Data](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/DecentralizedAutonomicData.pdf)) a _decentralized autonomic data_ (DAD) item is associated with a decentralized identifier, ([DID](https://w3c-ccg.github.io/did-spec/)). This paper does not provided a detailed definition of DIDs but does describe how DIDs are used by a DAD. The DID syntax specification is a modification of standard URL syntax per [RFC-3986](https://www.ietf.org/rfc/rfc3986.txt). As such, it benefits from familiarity, which is a boon to adoption. One of the features of a DID is that it is a self certifying identifier in that a DID includes either a public key or a fingerprint of a public key from a cryptographic public/private key pair. Thereby a signature created with the private key can be verified using the public key provided by the DID. The inclusion of the public part of a cryptographic key pair in the DID gives the DID other desirable properties. These include universal uniqueness and pseuodnynmity. Another way to describe a DID is that it is a cryptonym, a cryptographically derived pseudonym.
 
@@ -205,17 +200,29 @@ Associated with a DID is a DID Document (DDO). The DDO provides meta-data about 
 
 A DID or dDID has the following required syntax:
 
-did:_method_:_idstring_
+
+```
+did:method:idstring
+```
+
 
 The _method_ is some short string that namespaces the DID and provides for unique behavior in the associated method specification. In this paper we will use the method _dad_.
 
 The  _idstring_ must be universally unique. The _idstring_ can have multiple colon ":" separated parts, thus allowing for namespacing. In this document the first part of the _idstring_ is linked to the public member of a cryptographic key pair that is defined by the method. In this paper we will use a 44-character Base64 URL-File safe encoding as per [RFC-4648](https://tools.ietf.org/html/rfc4648), with one trailing pad byte of the 32-byte public verification key for an EdDSA (Ed25519) signing key pair. Unless otherwise specified Base64 in this document refers to the URL-File safe version of Base64. The URL-File safe version of Base64 encoding replaces plus "+" with minus "-" and slash "\" with underscore "_". A DID may have optional parts including a path, query, or fragment. These use the same syntax as a URL, that is, the path is delimited with slashes, _/_, the query with a question mark, _?_, and the fragment with a pound sign, _#_. When the path part is provided then the query applies to the resource referenced by the path and the fragment refers to an element in the document referenced by the path. An example follows:
 
+
+```
 did:dad:Xq5YqaL6L48pf0fu7IUhL0JRaU2_RxFP0AL43wYn148=/mom?who=me#blue
+```
+
 
 In contrast, when the path part is missing but either the query or fragment part is provided then the query and/or fragment parts have special meaning. A query without a path means the the query is an operation on either the DID itself or the DID document (DDO). Likewise when a fragment is provided then the fragment is referencing an element of the DDO. An example of a DID without a path but with a query follows:
 
+
+```
 did:dad:Xq5YqaL6L48pf0fu7IUhL0JRaU2_RxFP0AL43wYn148=?who=me
+```
+
 
 As will be described later, a query part on a DID expression without a path part will enable the generation of _dDIDs _(derived DIDs).
 
@@ -228,242 +235,240 @@ DIDs form a new class of identifiers that can be used to replace the identifiers
 *   Decentralized Self-Certifying Identifier:   A Self-Certifying Identifier contains the fingerprint of a public member of cryptographic public/private key pair. A decentralized Self-Certifying Identifier contains the fingerprint of a public/private key pair that is generated by the user not a central registry. A Hierarchical Deterministic Self-Certifying Identifier of the form  selfcertroot:/path/to/related/data provides a way to reproduce private keys without having to store them. 
 *   Tupleizable Identifier. A tupleizable identifier  of the form (channel, host, process, data) tenables a routing overlay on top of IP that can be provenanced.
 
+Indeed any computing infrastructure that is now using UUIDs and URLs could beneficially replace them with DIDs.
+
 
 #### Minimal DAD
 
-A minimal DAD (decentralized autonomic data) item is a data item that contains a DID or dDID that helps uniquely identify that data item or affiliated data stream. In this paper JSON is used to represent serialized DAD items but other formats could be used instead. To ensure data integrity (i.e. that the data has not been tampered with) a signature that is verifiable as being generated by the private key associated with the public key in the _id_ field value is appended to the DAD item. This signature verifies that the DAD item was created by the holder of the associated private key The DAD item is both self-identifying and self-certifying because the identifier value given by the _id_ field is included in the signed data and is verifiable against the private key associated with the public key obtained from the associated DID in the _id_ field. The signature is separated from the JSON serialization with characters that may not appear in the JSON. An example DAD with a payload follows:
+A minimal DAD (decentralized autonomic data) item is a data item that contains a DID or dDID that helps uniquely identify that data item or affiliated data stream. In this paper JSON is used to represent serialized DAD items but other formats could be used instead. To ensure non-repudiable data integrity (i.e. that the data has not been tampered with and can be assigned to a given signing entity) a signature is appended to the DAD item that is verifiable as being generated by the private key associated with the public key in the _id_ field value. This signature verifies that the DAD item was created by the holder of the associated private key. The DAD item is thereby both self-identifying and self-certifying because the identifier value given by the _id_ field is included in the signed data and is verifiable against the private key associated with the public key obtained from the associated DID in the _id_ field. The signature is separated from the JSON serialization with characters that may not appear in the JSON. An example DAD with a payload follows:
 
+
+```
 {
-
     "id": "did:dad:Xq5YqaL6L48pf0fu7IUhL0JRaU2_RxFP0AL43wYn148=",
-
     "data":
-
     {
-
         "name": "John Smith",
-
         "nation": "USA"
-
     }
-
 }
-
 \r\n\r\n
-
 u72j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
+```
 
-As previously mentioned, the motivating use case of DADs it to support distributed steaming data applications. These could entail the creation of a large number of DIDs thus simplifying the reproduction the associated public/private key pairs is an important consideration. One way to accomplish this is with a deterministic procedure for generating new public/private keys pairs where the private keys may be reproduced securely from some public information without having to be stored. A hierarchically deterministic (HD) key-generation algorithm does this by using a master or root private key and then generating new key pairs using a deterministic key-derivation algorithm. A derived key is expressed as a branch in a tree of parent/child keys. Each public key includes the path to its location in the tree. The private key for a given public key in the tree can be securely regenerated using the root private key and the key path, also called a chain code. Only one private key, the root, needs to be stored.
+
+As previously mentioned, the motivating use case of DADs is to support distributed streaming data applications. These could entail the creation of a large number of DIDs thus simplifying the reproduction the associated public/private key pairs is an important consideration. One way to accomplish this is with a deterministic procedure for generating new public/private keys pairs where the private keys may be reproduced securely from some public information without having to be stored. A hierarchically deterministic (HD) key-generation algorithm does this by using a master or root private key and then generating new key pairs using a deterministic key-derivation algorithm. A derived key is expressed as a branch in a tree of parent/child keys. Each public key includes the path to its location in the tree. The private key for a given public key in the tree can be securely regenerated using the root private key and the key path, also called a chain code. Only one private key, the root, needs to be stored.
 
 The query part of the DID syntax may be used to represent an HD chain code for an HD key that is derived from a root DID. This provides an economical way to specify derived DIDs (dDIDs) that are used to identify DADS. An example follows:
 
+
+```
 did:dad:Xq5YqaL6L48pf0fu7IUhL0JRaU2_RxFP0AL43wYn148=?chain=0\1\2
+```
+
 
 The expression above discloses the root public DID as well as the key derivation path via the query part. For the sake of brevity this will be call an extended DID. The actual derived dDID is created by applying the HD algorithm with the result:
 
+
+```
 did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=
+```
+
 
 Thus a database of dDIDs could be indexed by dDID expressions with each value being the extended DID. Looking up the extended DID allows the holder to recreate on the fly the associated private key for the dDID without ever having to store the private key. An entry in the database might look like the following:
 
+
+```
 {
-
     "did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=":    "did:dad:Xq5YqaL6L48pf0fu7IUhL0JRaU2_RxFP0AL43wYn148=?chain=0\1\2",
-
    ... 
-
 }
+```
 
-The namespacing of the DID idstring also provides information that could be used to help formulate an HD path to generate a dDID. The following example shows two different DDIDs using the same public key and the same chain code but with a different extended idstring.
 
+The namespacing of the DID idstring also provides information that could be used to help formulate an HD path to generate a dDID. The following example shows two different dDIDs using the same public key and the same chain code but with a different extended idstring.
+
+
+```
 did:dad:Xq5YqaL6L48pf0fu7IUhL0JRaU2_RxFP0AL43wYn148=:blue?chain=0/1
-
 did:dad:Xq5YqaL6L48pf0fu7IUhL0JRaU2_RxFP0AL43wYn148=:red?chain=0/1
+```
+
 
 Some refinements to this approach may be useful. One is the granularity of dDID allocation. A unique dDID could be used for each unique DAD or a unique dDID could be used for each unique destination party that is receiving a data stream. In this case each DAD would need an additional identifier to disambiguate each DAD sent to the same party. This can be provided with an additional field or by using the DID path part to provide a sequence number. This is shown in the following example:
 
+
+```
 did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/10057
+```
+
 
 The associated DAD is as follows:
 
+
+```
 {
-
     "id": "did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/10057",
-
     "data":
-
     {
-
         "temp": 50,
-
         "time": "12:15:35"
-
     }
-
 }
-
 \r\n\r\n
-
 u72j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
+```
 
 
-##### Change Detection
+
+#### Change Detection
 
 Stale DAD items must often be detectable to prevent replay attacks. A later re-transmission of an old copy of the DAD item must not supercede a newer copy. Using a sequence number or some other identifier could provide change detection. Another way to provide change detection is for the DAD item to include a _changed_ field whose value is monotonically increasing and changes every time the data is changed. The source of the data can enforce that the _changed_ field value is monotonically increasing. Typical approaches include a monotonically increasing date-time stamp or sequence number. Any older data items resent or replayed would have older date-time stamps or lower sequence numbers and would thus be detectable as stale.
 
 Below is an example of an non-trivial data item that has a _changed_ field for change detection.
 
+
+```
 {
-
     "id": "did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/10057",
-
     "changed" : "2000-01-01T00:00:00+00:00",
-
     "data":
-
     {
-
         "temp": 50,
-
         "time": "12:15:35"
-
     }
-
 }
-
 \r\n\r\n
-
 u72j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
+```
+
 
 Change detection prevents replay attacks in the following manner. A second party receives DAD updates that are each signed by the associated private key. Each update has a monotonically increasing changed field. The source signer controls the contents of the data wrapped by the signature. Therefore the signer controls any changed field. A consistent signer will use a monotonically increasing changed value whenever the data wrapped by the signature is changed. Thus a malicious third party cannot replay earlier instances of the DAD wrapped by a valid signature to the original second party because the second party knows to discard any receptions that have older changed fields than the latest one they have already received.
 
 
-##### On the Fly dDIDS in DADs
+#### On the Fly dDIDs in DADs
 
 One important use case for dDIDs in DADs is to identify data that is received from a source that is not providing identifying information with the data. The receiver then creates an associated DID and dDIDs to identify the data. At some later point the receiver may be able to link this data with some other identifying information or the source may "claim" this data by supplying identifying information. In this case the dDIDs are private to the receiver but can later be used to credibly provenance the internal use of the data. This may be extremely beneficial when shared amongst the entities in the processing chain as a way to manage the entailed proliferation of keys that may all be claimed later as a hierarchical group. The DIDs and associated derivation operations for dDIDS may be shared amongst a group of more-or-less trusted entities that are involved in the processing chain.
 
 
-##### 
+#### Data-uniqe dDIDs 
+
+Every DAD MUST have a unique DID. A database of DADs could be addressable either their DID or their signature as for content-addressability.  \
+ \
+It might happen that an entity accidentally uses a public private key pair to create a dDID and use it two or more times. 
+
+One way to ensure uniqueness is to use a random number as UUID or a timestamp and concatenate it as an extension in the DID path. 
+
+
+```
+did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/UUID
+```
+
+
+Another way would be to use the signature in a content-addressable database to resolve the DAD. 
+
+
+#### 
 Public Derivation
 
 Another important used case for dDIDS in DADS is to avoid storing even the dDID with its derivation chain. This may be an issue when a client wishes to communicate with a potentially very large number of public services. Each public service would be a new pairing with a unique dDID. If the derivation algorithm for an HD-Key dDID could use the public key or public DID of the public service to generate the dDID then the client need not store the actual dDID but can recover the dDID by using the public DID of the server to re-derive the associated dDID. This can be done by creating a hash of the root DID private key and the remote server public DID to create the seed used to generate the dDID for the DAD. This also means that the dDIDs or chain codes do not have to be included in the keys preserved by a key-recovery system.
 
-Chaining DADs
+
+### Chaining DADs
 
 The provenance of data in a data flow through a data processing system with transformation can be established by forming a literal block chain of the data. When using DAD items to represent the data, the chain of DADs can be represented simply in a self contained manner. At each step in the data flow of the originating DAD,  where the contained data is transformed in any way, a new DAD is generated by the controlling entity of the transformation. This entity assigns a new DID (or dDID) to this DAD. The new DAD payload includes the DID of the DAD prior to transformation as well as the signature of the prior DAD. This links the new DAD to the prior DAD. The signature of the prior DAD provides both a hash that establishes the content integrity of the prior DAD as well a non-repudiation of the controller of the embedded prior DID. All the DADs in the data flow need to be stored someplace indexed by their DIDs. Given this storage, any single DAD can then be used to recall the string of prior DADs back to the originating DAD or DADs.  An example of an originating DAD and transformed DAD follows:
 
-Originating:
+**Originating:**
 
+
+```
 {
-
     "id": "did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/alpha/10057",
-
     "changed" : "2000-01-01T00:00:00+00:00",
-
     "data":
-
     {
-
         "temp": 50,
-
         "time": "12:15:35"
-
     }
-
 }\r\n\r\n
-
 u72j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
+```
 
-Transformed:
 
+**Transformed:**
+
+
+```
 {
-
     "id": "did:dad:AbC7fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/beta/10057",
-
     "changed" : "2000-01-01T00:00:02+00:00",
-
     "data":
-
     {
-
         "temp": 50,
-
         "humid": 87,
-
         "time": "12:15:37"
-
-        "prior", 
-
+           }
+ "prior", 
          {
-
                 "id":  "did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/alpha/10057",
-
                "sig": u72j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
 
-    }
-
 }\r\n\r\n
-
 wbcj9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
+```
 
-This approach is then repeated until the data flow reaches the final consumer of sink of the data.  
+
+This approach is then repeated until the data flow reaches the final consumer or sink of the data as shown in the following diagram.
+
+
+![alt_text](A_DID_for_everything_media/A-DID0.png "image_tooltip")
+
+
+  
 
 In the case where multiple data flows are aggregated or combined in some way such as a moving average or some type of statistical operation then the resultant DAD payload would include a list of the contributing or combined prior DADs. An example follows:
 
 Combined:
 
-{
 
+```
+{
     "id": "did:dad:AbC7fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/gamma/10057",
-
     "changed" : "2000-01-01T00:00:03+00:00",
-
     "data":
-
     {
-
         "Avg temp": 55,
-
         "time": "12:15:39"
-
-        "priors", 
-
+  }
+      "priors", 
          [
-
            {
-
                 "id":  "did:dad:Qt27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/alpha/10057",
-
                "sig": u72j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
-
       },
-
 {
-
                 "id":  "did:dad:WA27fThWoNZsa88VrTkep6H-4HA8tr54sHON1vWl6FE=/beta/10058",
-
                "sig": j78j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
-
       },
-
 ]
-
 }\r\n\r\n
-
 dy3j9aKHgz99f0K8pSkMnyqwvEr_3rpS_z2034L99sTWrMIIJGQPbVuIJ1cupo6cfIf_KCB5ecVRYoFRzAPnAQ==
+```
 
-Because each DAD embeds a DID and is signed by the associated private key belonging to the DID, provenance of both the controller of the transformation step and the integrity of the associated data can be determined.  Because each subsequent DAD in a processing flow or DAD chain contains the DID and signature of the prior DAD or DADs full traceability can be established back to the originating DAD or DADs that preserves both data integrity and proof of control.  This then is a critically enabling capability for diffuse trust computing.
 
-[Decentralized Autonomic Data](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/DecentralizedAutonomicData.pdf) 
+This can be extended to any arbitrarily complicated tree of processing transformations as shown in the following diagram.
 
- [Didery Server](https://github.com/reputage/didery), 
 
-[Didery Javascript Client](https://github.com/reputage/didery.js), and 
+![alt_text](A_DID_for_everything_media/A-DID1.png "image_tooltip")
 
-[Didery Python Client](https://github.com/reputage/didery.py). 
 
-[SeedQuest](https://github.com/reputage/seedQuest). 
+Because each DAD embeds a DID and is signed by the associated private key belonging to the DID, provenance of both the controller of the transformation step and the integrity of the associated data can be determined.  Because each subsequent DAD in a processing flow or DAD chain contains the DID and signature of the prior DAD or DADs, full traceability can be established back to the originating DAD or DADs that preserves both data integrity and proof of control.  This then is a critically enabling capability for decentralized computing infrastructure.
 
-**USE CASES**
+
+## Use Cases
+
+
+### General
 
 When working with people, the proposed system could use proximity verification, implemented with software toolkits such as Google Nearby and p2pkit, to bind virtual identities to real people. This could be useful in many situations. For example, if two people met over Craigslist to sell a used bicycle, then the system could verify that the two parties actually met and transacted. If two people found each other through a dating site, and followed up with a face to face meeting, then the system could verify that these people were actually in the stated city and not catfishers from Ukraine or Nigeria. Similarly, transactional events could build trust in a similar manner for machines. For example, a certified mechanic performing a tune up on a car with a digital twin can also provide an attestation for the DID for that automobile. A complete history of the automobile's maintenance would add value for its owner.
 
@@ -471,7 +476,7 @@ When working with people, the proposed system could use proximity verification, 
 It should be noted that a single instance of meeting is not as trustable as an entire history of meeting many people. For a state actor generating a legend for a sockpuppet, this would entail an unattainable level of work to prove personhood. For a regular human being, it's relatively effortless to use the system in an organic and unobtrusive manner. Furthermore, these histories of meetings and verifications — using location data to prove it was not in Nigeria, and time data to prove it wasn't in the middle of the night — would be aggregated to increase the trustability of the personhood assessment.  \
 
 
-Every resource that is reference by a URL could instead be referenced by a DID or DDID.
+Every resource that is reference by a URL could instead be referenced by a DID or dDID.
 
 
 
@@ -488,9 +493,8 @@ Every resource that is reference by a URL could instead be referenced by a DID o
 *   Sensors: Thermostat measuring the ambient temperature in a home
 *   Messaging: Peer-to-peer chat application
 *   Machines: Wind turbine generating clean energy
-*   Digital Media: Adult entertainment video
+*   Digital Media: Video recording of a news report
 *   Store of value: Bank account
-*   Application programming interfaces: 
 *   Software containers: 
 *   Microprocessors: Computational cloud server
 *   Validator nodes: A blockchain network
@@ -500,14 +504,25 @@ Every resource that is reference by a URL could instead be referenced by a DID o
 *   An array or matrix of other DIDs
 
 
+### Use case: Medical Imaging Workflow
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/A-DID0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/A-DID0.png "image_tooltip")
+[Carsten]
 
 
-_Use case: Proof of Personhood (by Moses)_
+### 
+
+![alt_text](A_DID_for_everything_media/A-DID2.png "image_tooltip")
+
+
+
+### Use case: Blockchain-based Mobile Phone 
+
+[Moses]
+
+
+### Use case: Proof of Personhood 
+
+[Moses]
 
 The root use case is to help us identify and manage our identity interactions with other people. But to do so more effectively, we need to know that an identifier is accurately associated with an actual person. The fraudulent misuse of identity has a significant negative impact on society. At an individual level, fraudulent users could cheat others in commercial transaction, become catfishers on dating sites, or worse. At a societal level, the fraudulent misuse of identity through  bots and sockpuppets have caused havoc in elections and through the manipulation of public opinion through weaponized propaganda. 
 
@@ -515,29 +530,44 @@ The highest purpose of the blockchain is as a kind of "truth machine". For decen
 
 One use case would be to use proximity verification, implemented with software toolkits such as Google Nearby and p2pkit, to bind virtual identities to real people, in a way that preserves privacy, non-correlation, zero-knowledge proofs and pseudonymous operations. We're currently building a technology called Not_a_Bot, which provides proof of personhood through a variety of techniques. One technique is to verify that the user has actually met another actual person, in physical space… and is not a catfisher, not a scammer, and "not a bot". 
 
-It should be noted that a single instance of meeting is not as trustable as an entire history of meeting many people. For a state actor generating a legend for a sockpuppet, this would entail an unattainable level of work to prove personhood. For a regular human being, it's relatively effortless to use the system in an organic and unobtrusive manner. Once a root personhood verification could be insured, then trustable pseudonyms could be generated. Adding this verification to decentralized identifiers, aka "DIDs", would provide trust in a trustless environment, as the DID could then provide identity and credentialing services in an environments that support, or even require, pseudonymity. 
+It should be noted that a single instance of meeting is not as trustable as an entire history of meeting many people. For a state actor generating a legend for a sockpuppet, this would entail an unattainable level of work to prove personhood. For a regular human being, it's relatively effortless to use the system in an organic and unobtrusive manner. 
 
-**NEXT STEPS**
+Once a root personhood verification could be insured, then trustable pseudonyms could be generated. Adding this verification to decentralized identifiers, aka "DIDs", would provide trust in a trustless environment, as the DID could then provide identity and credentialing services in an environments that support, or even require, pseudonymity. 
+
+
+### Decentralized Fog Computing Infrastructure
+
+[Sam]
+
+The coming tidal wave of digital data due to the proliferation of digital devices will require an exponential increase in computing capacity for data integration and analysis. Currently data integration and analysis is handled predominantly in the cloud. This is not efficient as it requires transport of data from the edge of the internet where it is created to remote data centers that are the cloud for processing and then transport back to the edge of the results of processing. In many cases the data processing can be performed in a hierarchical tree like bottom up fashion which is more cost effectively done in the edge close to the data. Likewise new applications benefit from low latency processing of data near the sources and sinks of the data. These applications also benefit from processing the data in the edge. Currently there is little capacity to perform processing in the edge. Consequently an opportunity exists to build a public decentralized edge computing infrastructure. Edge computing infrastructure is called the _fog_.  A public decentralized fog computing infrastructure provides an opportunity to scale capacity using two sided network effects where a large number of entities can cooperatively participate in the two sided network both as consumers and as importantly producers of compute. This is in contrast to the highly centralized nature of cloud computing where a handful of producers control most of the public computing infrastructure. This stifles innovation and raises costs. A public decentralized fog computing infrastructure could enable the monetization of pre-existing spare capacity in the form of bandwidth, space, energy, and compute devices. This would provide lower costs and incentivize innovation.
+
+
+## Future Direction
 
 Data flows can be provenanced by verifying the end-to-end integrity of data with DIDs. By enabling DIDs to sign claims about other DIDs, the fidelity of these data flows can be increased further. There are several ideas we would like to explore:
 
-1. 	Examine how a DID can utilize verifiable credentials to prove verified aspects of their identity when signing claims. Such a use case could enable verified inspectors to sign a claim with their DID that they have serviced an IoT sensor, and certify what software and hardware upgrades the sensor is using.
+1. 	Examine how a DID can utilize verifiable credentials to prove verified aspects of their identity when signing claims about other DIDs. Such a use case could enable verified inspectors to sign a claim with their DID that they have serviced an IoT sensor, and certify what software and hardware upgrades the sensor is using.
 
 2.	Examine how verifiable claims and credentials can be issued for location verification.
 
 3.	Examine the social/network interactions between DIDs that sign attestations about other DIDs.
 
-4.	Examine how pairwise unique DIDs and zero-knowledge proofs could empower users to make pseudo-anonymous claims in a privacy respecting manner. 
+4.	Examine how pairwise unique DIDs and zero-knowledge proofs could empower users to make contentious counterfactual claims in a privacy respecting manner. 
 
 5.	Examine how the system could help to drive non-correlation functionality.
 
 6.	Open discussion on other issues, such as cognitive models, optimization and AI models, the potential use of tokenization to drive behavioral economics
 
-**CONCLUSION**
+7. 	Examine how attestations or other types of claims on a DID can build an attribution graph that increases the value of the credentials associated with a DID.
+
+
+## Conclusion
 
 Imagine a world where this proposed technology has been deployed and globally adopted. Let us paint a picture for how this might be achieved. Imagine that this approach becomes part of a decentralized identity solution, driven by a robust and active developer community. The vision is to generate technologies that would be integrated into applications that are used in e-commerce, social interaction, banking, healthcare, and so on. Now imagine that mobile telephony companies agree to embed the technology into the operating systems for all smartphones, and the dominant social network providers agree to use proof of personhood in their algorithms for determining which content to propel.
 
-This would mean the end of phishing. The end of fake news. And the beginning of new era for society built on an interconnecting web of trust. This is greatly needed as trust in media is at an all time low, and centralized, algorithmic distribution have created a perfect storm for the rise of misinformation, disinformation and fake news. This is driving polarization while simultaneously undermining public trust in institutions.
+This would mean the end of phishing. The end of fake news. This is the beginning of new era for society, built on an interconnecting web of trust. A world in which we know what impacts we are having. The emergent property of this new data fabric is Knowing.
+
+This is greatly needed as trust in media is at an all time low, and centralized, algorithmic distribution have created a perfect storm for the rise of misinformation, disinformation and fake news. This is driving polarization while simultaneously undermining public trust in institutions.
 
 However, realistically, most of society's greatest challenges have no silver bullet solution. Consider the problem of using sock puppets to weaponize propaganda. Proximity verification is one component of a multi-pronged solution that might help mitigate the problem. Consider that certain highly problematic diseases can be treated with drug combinations consisting of antiretroviral compounds mixed with transcriptase inhibitors and steroids. The combinations are called "cocktails," and they're so effective that they're called the "Lazarus Effect," named for the biblical figure who was raised from the dead. Cocktails can turn an HIV death sentence into a manageable chronic condition. 
 
@@ -545,26 +575,14 @@ Just as complex and evolving health challenges must be addressed with complex an
 
 The Internet's current capacity to support democratic societies in making well-informed decisions is being subverted by globally networked state actors. However, there are additional benefits for this technology in social networking, connected governmental services, and e-commerce — where the use of sockpuppets is more of an aggravation than a grave danger. For example, in terms of government service, we envision a system where elected officials could verify how many people they actually meet and how much time was spent with them, to back up claims of being a "man of the people". For a fully transparent politics, this system should could provide the electorate with an accurate sense of whether a politician has actually met with leaders of social movements, or is spending the majority of time with donors, lobbyists and political action committees.
 
-**REFERENCES**
+
+## References
 
 1.	https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/did-primer.md
 
 2.	Proof-of-Personhood: Redemocratizing Permissionless Cryptocurrencies, by Maria Borge, Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly, Bryan Ford. 2017 IEEE European Symposium on Security and Privacy Workshops (EuroS&PW), April 2017
 
 [ZeroTrustComputingWithDidsAndDads.md](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/ZeroTrustComputingWithDidsAndDads.md)
-
- 
-
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/A-DID1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/A-DID1.png "image_tooltip")
-
-
-
-# References
 
 [https://www.nist.gov/sites/default/files/documents/2017/06/05/040813_forrester_research.pdf](https://www.nist.gov/sites/default/files/documents/2017/06/05/040813_forrester_research.pdf)
 
@@ -587,12 +605,15 @@ The Internet's current capacity to support democratic societies in making well-i
 ## Notes
 
 [^1]:
-     Source: Statista, [https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/](https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/) 
+     Decentralized Autonomic Data items (DADs) https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/DecentralizedAutonomicData.pdf
 
 [^2]:
-     Source: Gartner
+     Source: Statista, [https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/](https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/) 
 
 [^3]:
+     Source: Gartner
+
+[^4]:
      KYA: know your agent, KYB: know your bot, KYM: know your machine, KYO: know your object.
 
 
