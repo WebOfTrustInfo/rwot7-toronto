@@ -1,3 +1,19 @@
+# RWOT7 Drafts
+
+## Pandoc
+
+_Please produce a .MD file of your document as it exists toward the end of Friday. If you're planning to continue working in a Google Doc or on some other cooperative platform, that's fine, but we want a current status of the document._
+
+[Pandoc](https://pandoc.org/) is an easy program that does a decent job of converting files to .MD. You can [install for Windows, Mac, or UNIX](https://pandoc.org/installing.html).
+
+If you have a Google doc, the following methodology should convert your file:
+
+   1. In Google Docs, `File -> Download As -> Microsoft Word (docx)`, to download yourfile.docx
+   2. On your local machine, run pandoc: `pandoc yourfile.docx -o yourfile.md`
+   3. You can then upload the MD file using a pull request
+
+## Draft Abstracts
+
 This will be the location for papers created over the course of the design workshop.
 
    * [A DID for Everything](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md)
