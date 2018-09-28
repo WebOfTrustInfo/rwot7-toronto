@@ -54,8 +54,8 @@ The Resource Integrity Proof (RIP) is a data model built using the [Linked Data 
 **N-Quads Syntax**
 ```
 <https://example.com/storage/ndBRHU8gqjRzkcRdrPC2XQ> <https://w3id.org/security#proof> _:b0 .
-_:b0 <http://schema.org/contentType> "application/json" .
 _:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/security#Multihash2018> .
+_:b0 <http://schema.org/contentType> "application/json" .
 _:b0 <https://w3id.org/security#digestValue> "MkNGMjREQkE1RkIwQTMwRTI2RTgzQjJBQzVCOUUyOUUxQjE2MUU1QzFGQTc0MjVFNzMwNDMzNjI5MzhCOTgyNA==" .
 ```
 
@@ -96,6 +96,20 @@ _:b0 <https://w3id.org/security#digestValue> "MkNGMjREQkE1RkIwQTMwRTI2RTgzQjJBQz
         _:b0
       </td>
     </tr>
+    <tr>
+      <td>
+        _:b1
+      </td>
+      <td>
+        <a href="http://schema.org/contentType">http://schema.org/contentType</a>
+      </td>
+      <td>
+        application/pdf
+      </td>
+      <td>
+        _:b0
+      </td>
+    </tr>  
     <tr>
       <td>
         _:b1
