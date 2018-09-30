@@ -50,15 +50,9 @@ This paper addresses that need by offering arguments to a variety of people who 
 
 In this paper we propose a framework for reasoning about reputation using a web of trust. We briefly summarize the history of peer-to-peer reputation, define 3 layers required for peer-to-peer reputation, and explore possible applications of this framework.
 
-   * [Requirements and Standards for Increasing Interoperability of Decentralized Identity Systems](https://github.com/burnburn/rwot7/blob/patch-3/draft-documents/Requirements_and_Standards_for_Increasing_Interoperability_of_Decentralized_Identity_Systems.md)
+   * [Guidance and Standards for Interoperability of Decentralized Identity Systems](Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md)
 
-*Abstract:*
-   1. Identify core high-level requirements for interoperable decentralized identity systems (including data modelling, cryptographic requirements, and data representations)
-   2. Talk about importance of standards and conventions in facilitating interop, increasing adoption, and accelerating innovation
-Come up with top categories of standards for interoperability - conventions for use of DIDDoc elements, key types and purposes, data format, and others
-   3. Identify current applicable standards and specifications
-   4. Identify gaps in current standards and specifications and propose ways to fill them
-   5. Identify the four or five most used cryptographic key types and finalize their descriptions
+*Abstract:* Use of applicable standards is critical to the interoperability of decentralized identity systems.  This paper provides high-level guidance for architects and builders of interoperable decentralized identity systems (including data models, cryptographic requirements, and data representations).  It inventories existing and emerging standards appropriate for building these systems, identifies gaps in the standards, and proposes means to fill them.  These include standards for representation of cryptographic inputs and outputs.  The final section focuses on issues specific to systems using DIDs and the DID specification itself.
 
    * [Resource Integrity Use Cases](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource_integrity_use_cases.md)
 
