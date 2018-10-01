@@ -1,7 +1,7 @@
 How to Convince Dad\* of the Importance of Self-Sovereign Identity
 ==================================================================
 
-### \* and your sister and your daughter and the guy working at the sandwich shop and yourself
+### \* and your sister and your daughter and your best friend and your nephew and yourself
 
 Abstract
 --------
@@ -217,8 +217,8 @@ she can prove her ownership of the photo.
 
 *The Problem.* Daughter has been vocal on the issue of presentation of
 female characters in video games in recent years, and she just heard
-about a few friends getting doxxed because of similar comments online,
-and she is afraid that she might be a target of harassment.
+about a few friends getting doxxed because of similar comments online.
+She is afraid that she might be a target of harassment.
 
 *The Solution.* Daughter’s social media platform has incorporated many
 novel features that have evolved out of the self-sovereign ecosystem.
@@ -230,7 +230,7 @@ personal information.
 Your Best Friend is a Content Creator
 -------------------------------------
 
-Your best friend is working in a non-Western country. He’s an
+Best Friend is working in a non-Western country. He’s an
 entrepreneur who regularly vlogs about the local startup scene.
 Sometimes his comments are opinionated, and this has caused tension with
 the companies and the local government that supports them. His vlogs are
@@ -242,11 +242,11 @@ and western business leaders.
 
 *The Problem.* The local social media network has a reputation for
 following the whims of the local government. Sometimes they arbitrarily
-delete posts that they don’t agree with. Your best friend is concerned
+delete posts that they don’t agree with. Best Friend is concerned
 that when this happens, his followers may now see references and
 citations to his work, but not be able to access the original posts.
 
-*The Solution.* Your best friend uses his self-sovereign identity to
+*The Solution.* Best Friend uses his self-sovereign identity to
 publish all of his videos. They’re posted to his datastore, a
 decentralized file storage system that is accessible through his
 self-sovereign identity and provably attributable to him. Hyperlinked
@@ -258,12 +258,12 @@ media presence.
 
 *“I’m afraid of losing my followers”*
 
-*The Problem.* If your best friend is sufficiently troublesome, the
+*The Problem.* If Best Friend is sufficiently troublesome, the
 local government might delete his social media account entirely. This
 could cost him all the connections and relationship that he’s built on
 the social media network.
 
-*The Solution.* Your best friend created his social media account using
+*The Solution.* Best Friend created his social media account using
 his self-sovereign identity, fundamentally linking them. His western
 followers tended to do the same, while his local followers only have
 localized accounts. If his local social media account is deleted, he
@@ -276,13 +276,13 @@ self-sovereign identity with this information.
 
 *“I don’t want to get arrested for what I write.”*
 
-*The Problem.* The local government has now decided your best friend is
+*The Problem.* The local government has now decided Best Friend is
 troublesome and actively targets him for a smear and disinformation
 campaign, designed to get him arrested. They do so by publishing
 portions of his material that are taken out of context with a negative
 spin.
 
-*The Solution.* All of your best friend’s videos are time-stamped, then
+*The Solution.* All of Best Friend’s videos are time-stamped, then
 signed with his self-sovereign identity. He can refute the
 out-of-context statement by showing the full video, proving that its
 his, and demonstrating its origin. The more reputable news agencies only
@@ -292,7 +292,7 @@ using the out-of-context video, no one else replicates it.
 Your Nephew Runs a Convenience Store
 ------------------------------------
 
-Your Nephew has decided to open his first business! But, he wants to do
+Nephew has decided to open his first business! But, he wants to do
 more than just run any convenience store, he wants to run a convenience
 store that’s sustainable. He’s done a good job of getting it off the
 ground, but he’s a one-man operation, and so sometimes details slip
@@ -302,39 +302,39 @@ he doesn’t plan for this to be his last venture.
 *“I don’t want to accidentally sell products that aren’t sustainable if
 I say they are.”*
 
-*The Problem.* Your nephew is concerned with the claims that various
+*The Problem.* Nephew is concerned with the claims that various
 products make about their sustainability and provenance. There have been
 many recent articles about false claims, and his customers are asking
 questions he can’t answer. For his brand to stand out, he wants some
 degree of confidence about the products he’s selling.
 
 *The Solution.* Independent inspectors can create verifiable credentials
-for the authenticity of the sustainable products that your nephew sells
-in his store. Your nephew is able to authenticate these credentials and
+for the authenticity of the sustainable products that Nephew sells
+in his store. Nephew is able to authenticate these credentials and
 then attests their veracity with his self-sovereign identity. So long as
 his customers trust him, they no longer need to verify the authenticity
 of their goods themselves, though they may if they wish.
 
-*“I want to be able to get the best value for my business when I sell.”
-*
+*“I want to be able to get the best value for my business when I sell.”*
 
-*The Problem.* Your nephew knows that he could open the books of his
+*The Problem.* Nephew knows that he could open the books of his
 business to show its profitability and lay out its money flow to
 potential purchasers. But this information isn’t verifiable!
 
-*The Solution.* Your nephew with the aid of self-sovereign identity is
-able to prove a full-spectrum, well-defined, verifiable suite of
+*The Solution.* With the aid of self-sovereign identity,
+Nephew is able to prove a full-spectrum, well-defined,
+verifiable suite of
 business analytics because every purchase order, every credit card sale,
 every inventory item, and every bill payment is signed with the
 business’ DID. This provability increases the value of his business.
 
 *“I sometimes forget to order things.”*
 
-*The Problem.* Because of his lack of staff, you nephew worries
+*The Problem.* Because of his lack of staff, Nephew worries
 constantly about losing track of inventory, which can result in delays
 of supply that have a negative impact on revenue.
 
-*The Solution.* Your nephew has extended permissions to his smart
+*The Solution.* Nephew has extended permissions to his smart
 refrigerator to use the business’ DID to initiate and sign purchase
 orders on his behalf. Because the refrigerator has sensors that track
 inventory, this automates reordering supplies. The fridge simply issues
