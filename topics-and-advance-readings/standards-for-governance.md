@@ -1,7 +1,7 @@
 **Standards for Agency and Decentralized Information Governance - Early
 Experience**
 
-Adrian Gropper, MD, Michael Chen, MD
+Adrian Gropper, MD, Michael Chen, MD, Lydia Fazzio, MD
 
 #### **Introduction**
 
@@ -44,6 +44,10 @@ the individual. In this paper, we describe the design of a
 self-sovereign health record for the homeless and our interaction with a
 major academic medical center that will need to work with it.
 \[HIEofOne\]
+
+![](media/health-records.png)
+**Fig. 1 - Homeless Health Record Interaction Diagram**<br>
+_The numbered lines are in order of agent creation (1-4) and agent use (5-10)_
 
 #### **Online Presence -** Digital Ocean VM with fixed IP, Self-Hosted Appliance, Intel SGX
 
