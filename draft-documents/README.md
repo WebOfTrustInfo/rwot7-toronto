@@ -1,4 +1,21 @@
-# RWOT7 Drafts
+# Draft Status
+
+Name | Lead | Link | Status
+---|---|---|---
+Agent Communication Protocols | Adrian | [Draft]https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md | 
+BTCR | Ryan | | 
+Concept Map | Andrew, Ouri | | 
+A DID for Everything | Sam | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md) |
+Digital Credential Wallet | Mikerah | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet.md) | 
+Digital Identity for the Homeless | Matt | [Topic](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) | 
+Guidance and Standards for Interoperability of Decentralized Identity Systems | Manu, Mike J. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md) | 
+How to Convince Dad* | Lucas | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/convincing-dad.md) | Nov 9
+IPLD as a General Pattern | Jonny | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/ipld_did_documents.md) | 
+Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | 
+Peer to Peer Degrees of Trust | Tyler | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/peer-to-peer-degrees-of-trust.md)
+Resource Integrity Use Cases | Ganaan | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource_integrity_use_cases.md) | 
+Use Cases and Proposed Solutions for Verifiable Offline Credentials | Mike L. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Use%20Cases%20and%20Proposed%20Solutions%20for%20Verifiable%20Offline%20Credentials.md)
+# Draft Abstracts
 
 ## Pandoc
 
