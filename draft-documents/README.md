@@ -13,7 +13,7 @@ How to Convince Dad* | Lucas | [Draft](https://github.com/WebOfTrustInfo/rwot7/b
 IPLD as a General Pattern | Jonny | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/ipld_did_documents.md) | 
 Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | 
 Peer to Peer Degrees of Trust | Tyler | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/peer-to-peer-degrees-of-trust.md)
-Resource Integrity Use Cases | Ganaan | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource_integrity_use_cases.md) | 
+Resource Integrity Proofs | Ganesh | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource-integrity-proofs.md) | 
 Use Cases and Proposed Solutions for Verifiable Offline Credentials | Mike L. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Use%20Cases%20and%20Proposed%20Solutions%20for%20Verifiable%20Offline%20Credentials.md)
 # Draft Abstracts
 
