@@ -2,7 +2,7 @@
 
 Name | Lead | Link | Status
 ---|---|---|---
-Agent Communication Protocols | Adrian | [Draft]https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md | 
+Agent Communication Protocols | Adrian | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md) | 
 BTCR | Ryan | | 
 Concept Map | Andrew, Ouri | | 
 A DID for Everything | Sam | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md) |
