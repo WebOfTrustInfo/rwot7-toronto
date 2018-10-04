@@ -11,7 +11,7 @@ Digital Identity for the Homeless | Matt | [Topic](https://github.com/WebOfTrust
 Guidance and Standards for Interoperability of Decentralized Identity Systems | Manu, Mike J. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md) | 
 How to Convince Dad* | Lucas | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/convincing-dad.md) | Nov 9
 IPLD as a General Pattern | Jonny | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/ipld_did_documents.md) | 
-Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | 
+Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | Jan 4
 Peer to Peer Degrees of Trust | Tyler | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/peer-to-peer-degrees-of-trust.md)
 Resource Integrity Proofs | Ganesh | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource-integrity-proofs.md) | 
 Use Cases and Proposed Solutions for Verifiable Offline Credentials | Mike L. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Use%20Cases%20and%20Proposed%20Solutions%20for%20Verifiable%20Offline%20Credentials.md)
