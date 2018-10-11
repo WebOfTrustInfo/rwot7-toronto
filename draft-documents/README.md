@@ -5,8 +5,8 @@ Name | Lead | Link | Status
 Agent Communication Protocols | Adrian | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md) | Oct 22
 BTCR | Ryan | | 
 Concept Map | Andrew, Ouri | | 
-A DID for Everything | Sam | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md) |
-Digital Credential Wallet | Mikerah | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet.md) | Dec 1
+A DID for Everything | Sam | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md) | Oct. 22
+Digital Credential Wallet | Mikerah | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet.md) | Feb 1
 Digital Identity for the Homeless | Matt | [Topic](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) | Dec 5
 Guidance and Standards for Interoperability of Decentralized Identity Systems | Manu, Mike J. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md) | Nov 1
 How to Convince Dad* | Lucas | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/convincing-dad.md) | Nov 9
