@@ -6,40 +6,23 @@
 
 Since the emergence of the Decentralized Identifier (DID) specification at the Fall 2016 Rebooting the Web of Trust, numerous DID method specifications have emerged. Each DID method specification defines how to resolve a cryptographically-tied DID document given a method-specific identifier. In this paper, we describe a way to represent an initial DID document as a directed acyclic graph via Interplanetary Linked Data (IPLD). This technique enables more cost-efficient, scaleable creation of DIDs and can be used across different DID method specifications.
 
-## Background / Definitions
+## Why IPLD
 
-> Note: it's possible we should work them into the doc but they seems a bit disjoint in the previous draft. I'm moving these up while working on the main doc flow and then we can determine how to merge them in.
+> I deleted definitions that didn't seem necessary. Double-check the result.
 
-> Some of these definitions don't seem necessary...
+[IPLD](https://ipld.io) is a way of representing hash-linked data to be used in content-addressed data retrieval systems like [IPFS](https://ipfs.io). IPLD enables creation of decentralized data-structures that are universally addressable and linkable. It achieves this through a data model enabling interoperability across protocol boundaries and formats. IPLD relies on [Content Identifiers (CIDs)](https://github.com/ipld/cid) for content addressing. CIDs are self-describing, flexible, and interoperable way of expressing cryptographic hashes. It uses several multiformats to achieve flexible self-description, namely multihash for hashes, multicodec for data content types, and multibase to encode the CID itself into strings.
 
-### IPLD
-
-[IPLD](https://ipld.io) is a way of representing hash-linked data to be used in content-addressed data retrieval systems like [IPFS](https://ipfs.io). 
-
-### CID
-
-[Content Identifiers (CIDs)](https://github.com/ipld/cid) are used for referencing content in distributed information systems, like IPFS. It leverages content addressing, cryptographic hashing, and self-describing formats. It is the core identifier used by IPFS and IPLD.  It uses cryptographic hashes to achieve content addressing. It uses several multiformats to achieve flexible self-description, namely multihash for hashes, multicodec for data content types, and multibase to encode the CID itself into strings.
-
-Anatomy of a CID: 
-`<mbase><version><mcodec><mhash>`
-
-Where:
-
-- `<mbase>` is a [multibase](multibase) prefix describing the base that encodes this CID. If binary, this is omitted.
-- `<version>` is the version number of the cid.
-- `<mcodec>` is a [multicodec-packed](https://github.com/multiformats/multicodec) identifier, from the CID multicodec table
-- `<mhash>` is a cryptographic [multihash](https://github.com/multiformats/multihash), including: `<mhash-code><mhash-len><mhash-value>`
-
-### CBOR 
-
-IPLD makes use of [Concise Binary Object Representation (CBOR)](http://cbor.io/). CBOR is a binary data serialization format loosely based on JSON. Its design goals include the possibility of extremely small code size, fairly small message size, and extensibility without the need for version negotiation.
+This interoperability makes IPLD a valuable structure for an initial DID document that can be used across a variety of DID methods and ledgers.
 
 ## Proposal
 
-We investigate using IPLD as a general pattern for DID creating in DID methods. The main idea is to represent an initial DID document as IPLD data, and then define the DID itself as the hash of this data. This way resolving the initial DID document from the DID is tautological - the DID is merely a representation of the data in the DID document.
+> TODO: need better/consistent terminology
 
-> 
-> TODO: what's the correct terminology for IPID DID Document?
+We describe how IPLD as a general pattern for DID creating in DID methods. 
+
+### Creation
+
+The main idea is to represent an initial DID document as IPLD data, and then define the DID itself as the hash of this data. This way resolving the initial DID document from the DID is tautological - the DID is merely a representation of the data in the DID document.
 
 The IPID DID document is not complete because the DID (identifier) will not be known at time of creation. This is a general issue for immutable storage of DID document material that is addressed by other DID methods during DID resolution. 
 
@@ -54,6 +37,13 @@ The initial DID document needs to contain information about where to discover th
 For instance, in the [muPort](https://github.com/uport-project/muport-core-js) DID method an Ethereum smart contract is used to point to the hash of the latest version of the DID document, and the document can be retrieved using the content-addressed IPFS system. In the [IPID](https://github.com/jonnycrunch/ipid) DID method the IPNS system can used to point to the latest version of the DID document, by means of a published signed statement. The [Sidetree](https://github.com/decentralized-identity/did-methods/blob/master/sidetrees/explainer.md) DID method uses a scalable Merkle data structure that aggregates multiple DID document updates in a Merkle Tree and publishes the root hash in a blockchain such as Bitcoin or Ethereum. A sidetree node can use these data structures to aggregate the updates into a complete DID document.
 
 One large advantage of the IPLD approach described here is that the identity owner does not need to use a blockchain when initially creating an identity, thus making creation of identities fast and low cost (if not free). The DID and DID document will be cryptographically coupled by hashing. Only when the identity owner needs to update their DID document will they need a more costly tool such as a blockchain.
+
+### Updates
+
+> TODO: merge some of the above into here
+
+TODO: must be signed by previous key (see diagram above).
+
 
 ## Examples
 
@@ -137,6 +127,7 @@ Example 1 shows the DID document before resolution. Note that `id` fields are om
 
 
 ## Uses / Examples
+
 ### Use for microledgers and pairwise identifiers
 
 The IPLD pattern may be good to use for pairwise identifiers. A pairwise identifier is a DID that is meant to be used only with one other entity. The idea is that when setting up a pairwise DID you can do it by generating the DID document, and send the DID as well as the DID document to the counterparty.
