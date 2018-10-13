@@ -30,26 +30,24 @@ We address this by including _at most_ the [DID fragment](https://w3c-ccg.github
 
 As it stands this is also not a self-contained DID method because the DID document is immutable. Modifying the DID document would modify its hash, thus creating a new DID. We can however create a new DID document and link it back to the initial DID document, thus creating a cryptographic link back to the original DID. 
 
-![](ipld_did_documents/did_docs.png)
-
 The initial DID document needs to contain information about where to discover the latest version of the DID document (which is a requirement of DID resolution), but method specs can implement this in their own ways. 
 
 For instance, in the [muPort](https://github.com/uport-project/muport-core-js) DID method an Ethereum smart contract is used to point to the hash of the latest version of the DID document, and the document can be retrieved using the content-addressed IPFS system. In the [IPID](https://github.com/jonnycrunch/ipid) DID method the IPNS system can used to point to the latest version of the DID document, by means of a published signed statement. The [Sidetree](https://github.com/decentralized-identity/did-methods/blob/master/sidetrees/explainer.md) DID method uses a scalable Merkle data structure that aggregates multiple DID document updates in a Merkle Tree and publishes the root hash in a blockchain such as Bitcoin or Ethereum. A sidetree node can use these data structures to aggregate the updates into a complete DID document.
 
+While the exact update details are up to the method spec, example 1 shows how the resulting structure might appear.
+
+**Example 1: Demonstration of updates**
+
+![](ipld_did_documents/did_docs.png)
+
 One large advantage of the IPLD approach described here is that the identity owner does not need to use a blockchain when initially creating an identity, thus making creation of identities fast and low cost (if not free). The DID and DID document will be cryptographically coupled by hashing. Only when the identity owner needs to update their DID document will they need a more costly tool such as a blockchain.
-
-### Updates
-
-> TODO: merge some of the above into here
-
-TODO: must be signed by previous key (see diagram above).
 
 
 ## Examples
 
-Example 1 shows the DID document before resolution. Note that `id` fields are omitted.
+Example 2 shows the DID document before resolution. Note that `id` fields are omitted.
 
-**Example 1: IPLD DID document stored in IPFS**
+**Example 2: IPLD DID document stored in IPFS**
 
 ```
 {
@@ -82,7 +80,7 @@ Example 1 shows the DID document before resolution. Note that `id` fields are om
  
 ```
   
-**Example 2: final (after resolution) DID document**
+**Example 3: final (after resolution) DID document**
 ```
 {
   "@context": {
