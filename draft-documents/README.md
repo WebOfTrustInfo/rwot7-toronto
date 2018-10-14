@@ -72,7 +72,7 @@ In this paper we propose a framework for reasoning about reputation using a web 
 
 *Abstract:* Use of applicable standards is critical to the interoperability of decentralized identity systems.  This paper provides high-level guidance for architects and builders of interoperable decentralized identity systems (including data models, cryptographic requirements, and data representations).  It inventories existing and emerging standards appropriate for building these systems, identifies gaps in the standards, and proposes means to fill them.  These include standards for representation of cryptographic inputs and outputs.  The final section focuses on issues specific to systems using DIDs and the DID specification itself.
 
-   * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource_integrity_proofs.md)
+   * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource-integrity-proofs.md)
 
 *Abstract:* Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via links. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. Would it be possible to create an extensible and multipurpose cryptographic link that provides discoverability, integrity, and scheme agility?
 
