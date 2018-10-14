@@ -1,18 +1,17 @@
 # BTCR v0.1 Decisions
 
-Authors: Dan Pape, Ryan Grant, Christopher Allen, Kim Duffy, Anthony Ronning, Ganesh Annan, Wolf McNally
+Authors: Kim Hamilton Duffy, Dan Pape, Ryan Grant, Christopher Allen, Anthony Ronning, Ganesh Annan, Wolf McNally
 
 ## Abstract
-
-This paper describes the authors' design decisions that will enable us to lock down BTCR v0.1. These decisions will apply to the upcoming v0.1 BTCR method specification and the v0.1 BTCR reference implemmentation.
-
-These decisions are largely scope-cutting in nature, but also are conventions/design decisions to simplify open questions of past papers, described TODO: link.
+The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design decisions, which are largely scope-cutting in nature, in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
 
 The designs include:
 - What's out of scope
 - Credential schema and content
 - Wallet functionality
 - BTCR semantics
+
+## Background
 
 ## Out of scope
 
