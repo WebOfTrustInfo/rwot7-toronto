@@ -1,15 +1,18 @@
 # Resource Integrity Proofs
-> Cryptographic hyperlinking provides discoverability, integrity, and scheme agility
+> Cryptographic linking provides discoverability, integrity, and scheme agility
 
 Authors: Ganesh Annan and Kim Hamilton Duffy
 
 Contributors: Manu Sporny, Dave Longley, and David Lehn
 
 
-## Introduction
-Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via hyperlinks. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. The [Subresource Integrity](https://www.w3.org/TR/SRI/) standard limits this guarantee to script and link resources loaded on Web pages via the use of HTML attributes. [IPFS](https://ipfs.io/) provides a verification mechanism that is constrained to hash-based, content-addressable links with no ability to complete content negotiation. Another mechanism that cannot be applied to existing links is proposed by [RFC6920](https://tools.ietf.org/html/rfc6920); it recommends the use of named information hashes and a resolution method that creates a content addressable URL [[1](#1-example-from-naming-things-with-hashes-rfc6920)].
+## Abstract
+Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via links. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. Would it be possible to create an extensible and multipurpose cryptographic link that provides discoverability, integrity, and scheme agility? 
 
-This paper proposes a hyperlinking solution that decouples integrity information from link and resource syntaxes, enabling verification of any representation of a resource from any type of link. We call this approach Resource Integrity Proofs (RIPs). RIPs provide a succinct way to link to resources with cryptographically verifiable content integrity. RIPs can be combined with blockchain technology to create discoverable proofs of existence to off-chain resources.
+This paper proposes a linking solution that decouples integrity information from link and resource syntaxes, enabling verification of any representation of a resource from any type of link. We call this approach Resource Integrity Proofs (RIPs). RIPs provide a succinct way to link to resources with cryptographically verifiable content integrity. RIPs can be combined with blockchain technology to create discoverable proofs of existence to off-chain resources.
+
+## Introduction
+Cryptographic linking solutions today have yet to provide a generalized mechanism for creating tamper-evident links. The [Subresource Integrity](https://www.w3.org/TR/SRI/) standard limits this guarantee to script and link resources loaded on Web pages via the use of HTML attributes. [IPFS](https://ipfs.io/) provides a verification mechanism that is constrained to hash-based, content-addressable links with no ability to complete content negotiation. Another mechanism that cannot be applied to existing links is proposed by [RFC6920](https://tools.ietf.org/html/rfc6920); it recommends the use of named information hashes and a resolution method that creates a content addressable URL [[1](#1-example-from-naming-things-with-hashes-rfc6920)]. Resource Integrity Proofs incorporates ideas from these standards and solutions to provide a new data format for cryptographic links that is fit for the open world. 
 
 This paper describes use cases benefitting from RIPs, such as enabling [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) and meeting regulatory compliance.
 
