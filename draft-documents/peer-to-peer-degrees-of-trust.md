@@ -1,3 +1,5 @@
+# Peer to Peer Degrees of Trust
+
 Harrison Stahl, Titus Capilnean, Peter Snyder, Tyler Yasaka
 
 Rebooting the Web of Trust, Fall 2018
@@ -20,11 +22,11 @@ are available?
 In this paper, we explore the idea of using a *web of trust* as a tool
 to add authenticity to decentralized identifiers (DIDs). We define a
 framework for deriving relative *trust degrees* using a *given trust
-metric* - a "trustworthiness" score for an identity from the perspective
-of another identity. It is our intent that this framework may be used as
-a starting point for an ongoing exploration of graph-based,
-decentralized trust. We believe this approach may ultimately be used as
-a foundation for decentralized reputation.
+metric* - a "trustworthiness" score for a given identity from the
+perspective of another identity. It is our intent that this framework
+may be used as a starting point for an ongoing exploration of
+graph-based, decentralized trust. We believe this approach may
+ultimately be used as a foundation for decentralized reputation.
 
 Related Work on Graph-Based Reputation Systems
 ==============================================
@@ -33,7 +35,7 @@ PGP
 ---
 
 PGP (Pretty Good Privacy) is a system for asymmetric encryption. It was
-originally designed as a system for encrypting email contents. but is
+originally designed as a system for encrypting email contents, but it is
 also used for a variety of other file encryption purposes.
 
 In addition to defining a system for asymmetric message encryption, PGP
@@ -143,8 +145,8 @@ directed graph. Each edge in the graph represents a *trust link* - a
 statement that one node trusts another. These links may be weighted or
 unweighted, depending on the implementation. This web of trust may be
 created explicitly (e.g. by explicit statements among users) or it may
-be derived from some other data (e.g. transaction history on a
-marketplace).
+be derived from some other data (e.g. "follows" on a social media
+platform).
 
 We do not make any assumptions as to what is represented by a node and
 what is represented by an edge. The most intuitive interpretation is
@@ -252,18 +254,18 @@ whether or not the target identity is included in the source's trusted
 network.
 
 We of course have not yet defined identity cost. We will define an
-identity cost to be some cost required for an identity to be considered
-valid. In the physical world this might be something such as an IP
-address, but this could also be a monetary deposit (e.g. burning a token
-of a cryptocurrency) or a proof-of-work based deposit (where proof of
-some computational work must be provided for validation). This measure
-is tied to that identity for its lifetime. The identity cost is assumed
-to be an objective measure that is not disputable. The intent behind the
-identity cost is to mitigate abuse through Sybil attacks. It can act in
-a similar matter to rate limiting, significantly reducing the damage
-that might be done by creating fake identities to manipulate or simply
-overwhelm the system. By attaching a cost to identities, sybil attacks
-become less economically viable.
+*identity cost* to be some cost required for an identity to be
+considered valid. In the physical world this might be something such as
+an IP address, but this could also be a monetary deposit (e.g. burning a
+token of a cryptocurrency) or a proof-of-work based deposit (where proof
+of some computational work must be provided for validation). This
+measure is tied to that identity for its lifetime. The identity cost is
+assumed to be an objective measure that is not disputable. The intent
+behind the identity cost is to mitigate abuse through Sybil attacks. It
+can act in a similar matter to rate limiting, significantly reducing the
+damage that might be done by creating fake identities to manipulate or
+simply overwhelm the system. By attaching a cost to identities, sybil
+attacks become less economically viable.
 
 Discussion
 ==========
@@ -298,25 +300,12 @@ separate and draw groups apart. The result is a feedback loop that
 creates factions which are highly *intra-*connected but not well
 *inter*-connected.
 
-If we step back and consider this at a more human, societal level, we
-can draw parallels with current political tensions in America. Isolated
-clusters of belief have formed "ideological silos" on the left and right
-sides of the American political spectrum \[5\]. These silos have become
-internally more consistent but externally more distant from one another,
-to the point that when contact occurs between the two groups, violent
-conflict is sometimes the result. A recent example in America occurred
-during protests in Charlottesville, Virginia, where tensions escalated
-to the point that a car was driven into a crowd of protestors, killing
-one person and injuring several others \[6\].
-
 We can describe this principal more generally: clusters of nodes in a
 system are bound to make contact, either continuously or intermittently.
 If they are continuously integrated, this process will be smooth and
 manageable. If they are allowed to drift apart for too long, they will
 eventually collide, and the collision may be explosive and
-unpredictable. We are experiencing first hand what this effect looks
-like in the social world, and we want to mitigate this risk as we
-construct webs of trust to potentially be used by humans.
+unpredictable.
 
 The challenge we face is thus: how can we keep clusters continuously
 integrated? Interestingly, the *confused nodes* that we described in the
@@ -336,12 +325,12 @@ Here we have attempted to introduce and define a framework for measuring
 degrees of trust. There is much follow-up work to be done. First, we
 welcome criticisms, extensions, and modifications of the framework.
 Second, we are interested in seeing various trust metrics proposed, in
-addition to a careful analysis of the strengths and weaknesses of each
-metric. Game-theoretic analyses, models, and simulations are welcomed.
-We are interested in how this framework might be combined with other
-techniques to create real-world reputation systems. And finally, we are
-interested in further consideration of the human, social implications of
-the ideas presented.
+addition to analyses of the strengths and weaknesses of each metric.
+Game-theoretic analyses, models, and simulations are welcomed. We are
+interested in how this framework might be combined with other techniques
+to create real-world reputation systems. Finally, we are interested in
+further consideration of the human, social implications of the ideas
+presented.
 
 References
 ==========
@@ -357,9 +346,3 @@ References
 
 \[4\]
 [[http://users.utu.fi/freder/gillespie.pdf]{.underline}](http://users.utu.fi/freder/gillespie.pdf)
-
-\[5\]
-[[http://www.people-press.org/2014/06/12/political-polarization-in-the-american-public/]{.underline}](http://www.people-press.org/2014/06/12/political-polarization-in-the-american-public/)
-
-\[6\]
-[[https://www.washingtonpost.com/graphics/2017/local/charlottesville-timeline/?utm\_term=.07bec9e98c8d]{.underline}](https://www.washingtonpost.com/graphics/2017/local/charlottesville-timeline/?utm_term=.07bec9e98c8d)
