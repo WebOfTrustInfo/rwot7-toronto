@@ -3,17 +3,18 @@
 Authors: Kim Hamilton Duffy, Dan Pape, Ryan Grant, Christopher Allen, Anthony Ronning, Ganesh Annan, Wolf McNally
 
 ## Abstract
-The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design decisions, which are largely scope-cutting in nature, in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
+The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design decisions -- largely scope-cutting in nature -- in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
 
-## Background
+## Overview
 
-The designs include:
-- What's out of scope
-- Credential schema and content
-- Wallet functionality
+The design decisions include:
+- What's in and out of scope
 - BTCR semantics
+- Wallet functionality
+- Credential schema and content
 
-## Out of scope
+## Scope clarifications
+
 The most critical aspects to locking down a v0.1 of the BTCR method is defining what's out of scope. These are aspects where that either introduced a large amount of complexity or presented implementation difficulties given currently available libraries. These will assuredly be addressed in later versions of the BTCR method. 
 
 ### 1. Assume P2PKH scripts
@@ -44,22 +45,57 @@ Extending on the previous decision, we've decided that our reference extended DI
 
 Most importantly, we've decided to only support testnet (not mainnet) as we work through the initial reference implementations and obtain feedback from test usage.
 
-## Credential schema and content
+## Semantics
 
-### 1. Use JSON-LD 1.1 javascript lib, because 0.1 doesn't need hardcore verifiers
-### 2. Restrict to schema.org schemas. Can use Christopher's test cases
-### 3. Privacy: stick to pseudoanonymous claim content
-### 4. Restrict to VCs I wish to share
+A BTCR DID document relies partially on transaction structure, partially on the continuation DID document. We clarified the semantics of scenarios that were previously undefined. 
+
+### 1. Transaction keys
+
+#### a. TXIn key
+
+>  Question: I had TXIn key only verifies DDOs, which is ambiguous. Given that we still seem to give it default auth capabilities, I'm assuming we mean the following
+
+The transaction input (signing) key is the only key that can be used to verify continuation DID documents. 
+
+It also is given a default auth capability by the resolver. 
+
+> But question: given that we're focusing only on mutable storage, perhaps we're not giving any default auth capability? I.e. we just write this explicity in the DID doc, and merge in the DID (identifier) after the tx is confirmed?
+
+
+#### b. TXOut key
+
+If the OP_RETURN exists and points to a continuation DDO, the TXOut key has no implication. In other words, it is not given any default capabilities; we just accept the continuation DID document.
+
+If the OP_RETURN doesn't exist, we give the TXOut key the ability to verify verifiable credentials.
+
+> TODO: example?
+
+### 2. No OP_RETURN after a TX means revoked
+
+A BTCR DID is considered revoked if:
+- There is more than 1 transaction in the BTCR DID "chain"
+- The latest transaction has no OP_RETURN
+
+The first factor is important because a missing OP_RETURN is considered valid in the very first tx in the chain. However, all subsequent txs in the chain must have OP_RETURNs or else it is considered revoked.
+
+This behavior is enforced by BTCR resolvers.
+
 
 ## Wallet functionality
 
 ### 1. ID Keys distinct from DIDs in wallet
 
+> I forgot why we called this out...
+
 ### 2. Transactions
+
+> I forgot what we are getting at here
 
 Base tx doesn't need to broadcast/fund TX to set initial funds (tx_0). Only needs to create TXs for tx_n (n>0) 
 
 ### 3. Tip following
+
+> TODO: this section needs work
 
 - Ideally follow best practice BIP 157/158. Problem is that libraries not necessarily available. 
 - Fallback is Kulpreet's REST service.
@@ -69,16 +105,12 @@ About BIP 157/158
 - Lightning branch of Go code
 - Not as efficient as SPV: SPV requests lists of addresses it cares about. Neutro slower because it attempts to hide addresses it cares about.
 
-## BTCR semantics
 
-### 1. Verification keys
+## Credential schema and content
 
-- TXIn key only verifies DDOs
-- TXOut key: 
-	- if OP_RETURN exists and points to continuation DDO
-		- TXOut key has no implication
-		- Just accept continuation DDO
-	- if dn exist
-		- TXOut key can be used to verify verifiable credentials
+> TODO: this section needs work
 
-### 2. No OP_RETURN after a TX means revoked
+### 1. Use JSON-LD 1.1 javascript lib, because 0.1 doesn't need hardcore verifiers
+### 2. Restrict to schema.org schemas. Can use Christopher's test cases
+### 3. Privacy: stick to pseudoanonymous claim content
+### 4. Restrict to VCs one wishes to share
