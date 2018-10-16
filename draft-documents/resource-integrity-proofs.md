@@ -149,25 +149,22 @@ This example shows how we might use a RIP to address the problem of proving that
   "issuanceDate": "2014-01-02",
   "expirationDate": "2014-02-02",
   "claim": {
+    "id": "did:example:10011872",
+    "accomplishment": "Employee of the Month Demonstrating Excellent Leadership Skills"
+  },
+  "verifiableDisplay": {
     "id": "https://raw.githubusercontent.com/WebOfTrustInfo/rwot7/master/draft-documents/images/exampleVerifiableDisplay.png",
-    "accomplishment": "Employee of the Month Demonstrating Excellent Leadership Skills",
-    "verifiableDisplay": {
-      "type": "ResourceIntegrityProof",
-      "id": "https://raw.githubusercontent.com/WebOfTrustInfo/rwot7/master/draft-documents/images/exampleVerifiableDisplay.png",
-      "proof": {
-        "type": "Multihash2018",
-        "contentType: "image/png",
-        "multiDigest": "zQmUvZSaVzgjVHCDDDAoNNBgpiAkN6wKmCcD37vvnmoKq6e"
-      }
+    "proof": {
+      "type": ["ResourceIntegrityProof", "Multihash2018"],
+      "contentType: "image/png",
+      "multiDigest": "zQmUvZSaVzgjVHCDDDAoNNBgpiAkN6wKmCcD37vvnmoKq6e"
     }
   },
   "proof": { ... }
 }
 ```
 
-In this example, we leverage the `ResourceIntegrityProof` type to say that the image identified by `id` is expected to have a Base64 encoded multihash that matches the value in `multiDigest`. While the above example uses `ResourceIntegrityProof` type as is, implementors could subclass this type with context-relevant metadata.
-
-In a credentialing ecosystem aware of this convention, one can envision tooling enabling an icon (e.g. a green checkmark) signifying the targeted image has not been tampered with.
+In this example, we leverage the `ResourceIntegrityProof` and `Multihash2018` type to say that the image identified by `id` is expected to have a multibase encoded multihash that matches the value in `multiDigest`.
 
 ### Extensions to General Linked Data
 
