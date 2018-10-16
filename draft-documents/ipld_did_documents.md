@@ -4,6 +4,8 @@
 
 ## Abstract
 
+Numerous Decentralized Identifiers (DID)
+
 ## Background
 
 [IPLD](https://ipld.io) is a way of representing hash-linked data to be used in content-addressed data retrieval systems like [IPFS](https://ipfs.io). We investigate using IPLD as a general pattern in creating DID methods. The main idea is to represent an initial DID document as IPLD data, and then define the DID itself as the hash of this data. This way resolving the initial DID document from the DID is tautological - the DID is merely a representation of the data in the DID document.
