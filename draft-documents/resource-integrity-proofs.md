@@ -3,7 +3,7 @@
 
 Authors: Ganesh Annan and Kim Hamilton Duffy
 
-Contributors: Manu Sporny, Dave Longley, and David Lehn
+Contributors: Manu Sporny, Dave Longley, David Lehn, and Bohdan Andriyiv
 
 
 ## Abstract
