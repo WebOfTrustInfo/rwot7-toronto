@@ -1,4 +1,4 @@
-# IPLD as a general pattern for DID documents
+# IPLD as a general pattern for DID documents and Verifiable Claims
 
 *By [jonnycrunch](https://github.com/jonnycrunch), [Anthony Ronning](https://github.com/AnthonyRonning), [Kim Duffy](https://github.com/kimdhamilton), [Christian Lundkvist](https://github.com/christianlundkvist)*
 
