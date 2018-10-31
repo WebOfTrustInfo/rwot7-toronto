@@ -33,6 +33,8 @@ This syntax for repsenting linked data can be expanded and used for other JSON s
 
 JSON-LD is a syntax to serialize Linked Data in JSON and provide semantics without the overhead of a large rdf model [[2]](https://www.w3.org/TR/json-ld/).  Since both IPLD and JSON-LD are 100% compatible with JSON, the large number of JSON parsers and libraries are already available. 
 
+> When using JSON-LD in a browser it is impossible to discover the Base IRI after a redirect #316
+
 However, one issue that has become apparent with the typical URI based JSON-LD syntax is that the content of the `@context` can potentially change over time [[3]](https://github.com/json-ld/json-ld.org/issues/547). Moreover, since a URI depends upon the security of DNS, a simple attack vector could be [DNS spoofing/DNS poisoning](https://en.wikipedia.org/wiki/DNS_spoofing).  Essentially, without much effort, an attacker can adjust the cache of a DNS server, and begin pointing traffic from 'schema.org' (or any other desired host) to anywhere else on the internet or local LAN. Given the critical nature that the JSON-LD `@context` resource provides the attacker can make a fraudulent signature pass as being valid. 
 
 Using IPLD we can use the entire JSON data model and we can layer any JSON-LD on top of IPLD [[4]](https://github.com/ipfs/ipfs/issues/36). This will enable cryptographic guantees to the authenticity of the JSON-LD schema and mitigate such an attack. 
@@ -188,7 +190,7 @@ Example 2 shows the DID document after it is associated with the DID method spec
 output: 
 ```
 {"curve":"ed25519","expires":"2019-07-08T16:02:20Z","publicKeyBase64":"lji9qTtkCydxtez/bt1zdLxVMMbz4SzWvlqgOBmURoM=","type":"EdDsaPublicKey"}
-``` 
+```
 
 **Example 3: IPLD DID document updated after key rotation**
 
@@ -247,7 +249,7 @@ Example 3 shows an updated DID document that has revoked key/0 and created a new
 The IPLD pattern may also be a good fit to use for pairwise identifiers. A pairwise identifier is a DID that is meant to be used only with one other entity. The idea is that when setting up a pairwise DID you can do it by generating the DID document, and send the DID as well as the DID document to the counterparty. The counterparty can verify that the DID document hash is the DID. Then if the user decides to update the DID document (normally through the use of a digital signature from a "management key" specified in the DID document) they can just present the updated version of the DID document to the counterparty who can then verify the signatures and store the updated document in a local database and not necessarily publish it publically.
 
 Even though IPFS could be used for content addressing there would not be a need to connect to a wider IPFS network. The "ledger" in this case could just be a simple database hosted by each of the counterparties or a private `ledger` shared between them. 
-  
+
 
 ## Benefits
 
