@@ -3,7 +3,7 @@
 
 Authors: Ganesh Annan and Kim Hamilton Duffy
 
-Contributors: Manu Sporny, Dave Longley, and David Lehn
+Contributors: Manu Sporny, Dave Longley, David Lehn, and Bohdan Andriyiv
 
 
 ## Abstract
@@ -12,14 +12,14 @@ Currently, the Web provides a simple yet powerful mechanism for the disseminatio
 This paper proposes a linking solution that decouples integrity information from link and resource syntaxes, enabling verification of any representation of a resource from any type of link. We call this approach Resource Integrity Proofs (RIPs). RIPs provide a succinct way to link to resources with cryptographically verifiable content integrity. RIPs can be combined with blockchain technology to create discoverable proofs of existence to off-chain resources.
 
 ## Introduction
-Cryptographic linking solutions today have yet to provide a generalized mechanism for creating tamper-evident links. The [Subresource Integrity](https://www.w3.org/TR/SRI/) standard limits this guarantee to script and link resources loaded on Web pages via the use of HTML attributes. [IPFS](https://ipfs.io/) provides a verification mechanism that is constrained to hash-based, content-addressable links with no ability to complete content negotiation. Another mechanism that cannot be applied to existing links is proposed by [RFC6920](https://tools.ietf.org/html/rfc6920); it recommends the use of named information hashes and a resolution method that creates a content addressable URL [[1](#1-example-from-naming-things-with-hashes-rfc6920)]. Resource Integrity Proofs incorporates ideas from these standards and solutions to provide a new data format for cryptographic links that is fit for the open world. 
+Cryptographic linking solutions today have yet to provide a generalized mechanism for creating tamper-evident links. The [Subresource Integrity](https://www.w3.org/TR/SRI/) standard limits this guarantee to script and link resources loaded on Web pages via the use of HTML attributes. [IPFS](https://ipfs.io/) provides a verification mechanism that is constrained to hash-based, content-addressable links, with no ability to complete content negotiation. [RFC6920](https://tools.ietf.org/html/rfc6920) proposes another mechanism that cannot be applied to existing links: it recommends the use of named information hashes and a resolution method that creates a content addressable URL [[1](#1-example-from-naming-things-with-hashes-rfc6920)]. Resource Integrity Proofs incorporates ideas from these standards and solutions to provide a new data format for cryptographic links that is fit for the open world. 
 
 This paper describes use cases benefitting from RIPs, such as enabling [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md) and meeting regulatory compliance.
 
 ## Features
 
 ### Integrity
-Resource Integrity Proofs use the representation of a resource as the input to a cryptographic hash function to generate a digest value. We can reproduce the digest value because the RIP data model requires one to record the content type and digest algorithm. Third parties can easily verify data received by 1) dereferencing the URL of the desired resource and 2) using the digest algorithm on the data to generate a matching digest value to ensure that the data was not unexpectedly manipulated. The content received is now tamper-evident. RIPs may be placed on blockchains to simultaneously enable discoverability of off-chain resources and establish a proof of existence.
+Resource Integrity Proofs use the representation of a resource as the input to a cryptographic hash function to generate a digest value. We can reproduce the digest value because the RIP data model requires recording of the content type and digest algorithm. Third parties can easily verify data received by 1) dereferencing the URL of the desired resource and 2) using the digest algorithm on the data to generate a matching digest value, ensuring that the data was not unexpectedly manipulated. The content received is now tamper-evident. RIPs may be placed on blockchains to simultaneously enable discoverability of off-chain resources and establish a proof of existence.
 
 ### Discoverability
 Resource Integrity Proofs allow any party to find a given resource. This is achieved simply by including the URL of the resource in the data model. RIPs may be placed on blockchains to enable discovery of data whilst keeping sensitive data off-chain (i.e., private and secure).
@@ -132,13 +132,13 @@ _:b0 <https://w3id.org/security#multiDigest> "zQmUvZSaVzgjVHCDDDAoNNBgpiAkN6wKmC
 
 ## Use Cases
 
-There are many compelling applications of RIPs in a decentralized ecosystem. We will first dive into the problem of [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), which seeks to ensure the rendering of the Verifiable Credential content matches what the issuer intended. Next, we will envision a new age regulatory compliance system built on top of [Decentralized Identifiers (DID)](https://w3c-ccg.github.io/did-spec/), [Verifiable Credentials (VC)](https://w3c.github.io/vc-data-model/), and [Object Capabilities (OCAP)](https://w3c-ccg.github.io/ocap-ld/).
+There are many compelling applications of RIPs in a decentralized ecosystem. We will first dive into the problem of [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), which seeks to ensure that the rendering of the Verifiable Credential content matches what the issuer intended. Next, we will envision a new age regulatory compliance system built on top of [Decentralized Identifiers (DID)](https://w3c-ccg.github.io/did-spec/), [Verifiable Credentials (VC)](https://w3c.github.io/vc-data-model/), and [Object Capabilities (OCAP)](https://w3c-ccg.github.io/ocap-ld/).
 
 ### Verifiable Displays
 
-In the Educational/Occupational Credentials space, RIPs allow issuers to specify a set of approved visual renderings associated with a signed claim. This enables any viewer of the claim to determine if the visual rendering differs from what was intended by the issuer -- an ability that's critical for detecting social engineering attacks introduced by tampering with the rendered image.The "verifiability" of a Verifiable Credential applies to the content of the claim -- not necessarily the human-readable display. As described in [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), this risk has been generally been addressed in an ad-hoc, use case dependent way. But there is no clear standard or convention for tamper detection across different credential schemas and use cases. 
+In the Educational/Occupational Credentials space, RIPs allow issuers to specify a set of approved visual renderings associated with a signed claim. This enables any viewer of the claim to determine if the visual rendering differs from what was intended by the issuer -- an ability that's critical for detecting social engineering attacks introduced by tampering with the rendered image. The "verifiability" of a Verifiable Credential applies to the content of the claim, not necessarily the human-readable display. As described in [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md), this risk has been generally been addressed in an ad-hoc, use-case-dependent way. But there is no clear standard or convention for tamper detection across different credential schemas and use cases. 
 
-This example shows how we might use a RIP to address the problem of proving that a png file hashes to the value expected by a referencing Verifiable Credential:
+This example shows how we might use a RIP to address the problem of proving that a PNG file hashes to the value expected by a referencing Verifiable Credential:
 
 ```
 {
@@ -168,7 +168,7 @@ In this example, we leverage the `ResourceIntegrityProof` and `Multihash2018` ty
 
 ### Extensions to General Linked Data
 
-Expanding on linked visual data examples, this method enables a pharmacist to ensure the prescription they are viewing matches the associated machine-readable content. If the credential contained sensitive data, we wouldn't want the image to be publicly-hosted. But this is also supported: `id` can be any URI, so the referenced visual rendering could be stored offline.
+Expanding on linked visual data examples, this method could enable a pharmacist to ensure the prescription they are viewing matches the associated machine-readable content. If the credential contained sensitive data, we wouldn't want the image to be publicly-hosted. But this is also supported: `id` can be any URI, so the referenced visual rendering could be stored offline.
 
 RIPs enable snapshot integrity proofs for general linked data; this can be used for credentials bridging legacy systems where data is stored in a mutable store.
 
@@ -184,11 +184,11 @@ When an organization is preparing supporting documentation to meet compliance, t
 
 #### [1] Example from Naming Things with Hashes ([RFC6920](https://tools.ietf.org/html/rfc6920))
 
-Using an **Authority** of `example.com` and the **sha-256 hash** of the text `"Hello World!"` we can generate the following ni URI:
+Using an **Authority** of `example.com` and the **sha-256 hash** of the text `"Hello World!"` we can generate the following `ni` URI:
 
 `ni://example.com/sha-256;f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk`
 
-The generated ni URI takes advantage of the .well-known URI ([RFC5785](https://tools.ietf.org/html/rfc5785)) format so that we can dereference the information using HTTP(S):
+The generated `ni` URI takes advantage of the `.well-known` URI ([RFC5785](https://tools.ietf.org/html/rfc5785)) format so that we can dereference the information using HTTP(S):
 
 `http://example.com/.well-known/ni/sha-256/f4OxZX_x_FO5LcGBSKHWXfwtSx-j1ncoSt3SABJtkGk`
 
