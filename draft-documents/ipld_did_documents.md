@@ -135,8 +135,6 @@ This smart contract has the added benefit of listening to updates to the IPLD di
 
 Example 1 shows the DID document before publication, and before a cryptographic signature has been added. Note that the `id` and `signature` fields are omitted as it is not associated yet with the DID method specific identifier.  Unlike other DID methods, with the DID document being represented as IPLD, we can directly link the `@context` which is also represented on IPLD as a resolvable CID cryptographic link.  Noteably absent is the `previous` field, as this is the genesis of the chain of objects that subsequent updates will reference (see below). This entire DID document when added to IPFS as IPLD has a CID of `zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi` and will be used as the `previous` field in the subsequent updated DID document (below).  
 
-> Issue: previous field in example 2 doesn't match CID above. Which is correct?
-
 **Example 2: IPLD DID document updated with the addition of the `id` and `signature` fields associating this DID document with a DID method specific identifier for future resolution**
 
 ``` javascript
@@ -153,10 +151,7 @@ Example 1 shows the DID document before publication, and before a cryptographic 
   "created": "2018-10-09T17:00:00Z",
   "id": "did:ipid:QmcEF77C6QKj6Rzru7MR2N5tSM33PHQYEqXYzQuVHHAvvv",
   "previous": {
-    "/" : "zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B"
-  },
-  "proof" : {
-    "/" : "z43AaGF42R2DXsU65bNnHRCypLPr9sg6D7CUws5raiqATVaB1jj"
+    "/" : "zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi"
   },
   "publicKey": [
      {
@@ -166,20 +161,15 @@ Example 1 shows the DID document before publication, and before a cryptographic 
       "type": "EdDsaPublicKey"
     }
   ],
-  "signature": {
+  "proof": {
     "created": "2018-10-09T17:00:00Z",
-    "creator": "zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B/publicKey/0",  
-    "message" : {
-        "/" : "zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B"
-    },
-    "signatureValue": "IOmA4R7TfhkYTYW87z640O3GYFldw0yqie9Wl1kZ5OBYNAKOwG5uOsPRK8/2C4STOWF+83cMcbZ3CBMq2/gi25s=",
+    "creator": "did:ipid:zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B/publicKey/0",  
+    "proofValue": "IOmA4R7TfhkYTYW87z640O3GYFldw0yqie9Wl1kZ5OBYNAKOwG5uOsPRK8/2C4STOWF+83cMcbZ3CBMq2/gi25s=",
     "type": "ed25519Signature2018"
   },
   "updated": "2018-10-09T17:00:00Z"
 }
 ```
-
-> Issue: I think creator has to be scoped by a DID identifier, but not sure...
 
 Example 2 shows the DID document after it is associated with the DID method specific identifier. In this case, it is published to IPNS using the IPID method spec.  Note that `id` fields are now populated, the entire document has been signed and the `message` payload of the signature is itself a link to the previous document that was signed. the `signature` field links to the publicKey of the CID natively without the need of a referenced `fragment`.  Additionally, a `proof` has been added -- again a CID link that resolves to a `proof of existence` smart contract on the Ethereum blockchain. Finally, note the addition of a `previous` field that cryptographically references the above DID document.  The CID of this DID doucment is `zdpuAwBVitwZV3Z6MvcVXLuwduyKppDdJjiP2uZFSRL7witXj` and will be used for the subsequent update below.       
 
@@ -213,9 +203,6 @@ output:
   "previous": {
     "/": "zdpuAwBVitwZV3Z6MvcVXLuwduyKppDdJjiP2uZFSRL7witXj"
   },
-  "proof": {
-    "/": "z43AaGF42R2DXsU65bNnHRCypLPr9sg6D7CUws5raiqATVaB1jj"
-  },
   "publicKey": [
     {
       "curve": "ed25519",
@@ -230,13 +217,10 @@ output:
       "type": "EdDsaPublicKey"
     }
   ],
-  "signature": {
+  "proof": {
     "created": "2018-10-14T17:00:00Z",
-    "creator": "zdpuAvXDHaUYouVseVoevTReN6tD28UvNPin8CAUgJq5txG6W/publicKey/1",
-    "message": {
-      "/": "zdpuAvXDHaUYouVseVoevTReN6tD28UvNPin8CAUgJq5txG6W"
-    },
-    "signatureValue": "",
+    "creator": "did:ipid:zdpuAvXDHaUYouVseVoevTReN6tD28UvNPin8CAUgJq5txG6W/publicKey/1",
+    "proofValue": "",
     "type": "ed25519Signature2018"
   },
   "updated": "2018-10-09T17:00:00Z"
