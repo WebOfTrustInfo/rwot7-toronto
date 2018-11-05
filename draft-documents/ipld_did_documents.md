@@ -33,9 +33,7 @@ This syntax for repsenting linked data can be expanded and used for other JSON s
 
 JSON-LD is a syntax to serialize Linked Data in JSON and provide semantics without the overhead of a large rdf model [[2]](https://www.w3.org/TR/json-ld/).  Since both IPLD and JSON-LD are 100% compatible with JSON, the large number of JSON parsers and libraries are already available. 
 
-> When using JSON-LD in a browser it is impossible to discover the Base IRI after a redirect #316
-
-However, one issue that has become apparent with the typical URI based JSON-LD syntax is that the content of the `@context` can potentially change over time [[3]](https://github.com/json-ld/json-ld.org/issues/547). Moreover, since a URI depends upon the security of DNS, a simple attack vector could be [DNS spoofing/DNS poisoning](https://en.wikipedia.org/wiki/DNS_spoofing).  Essentially, without much effort, an attacker can adjust the cache of a DNS server, and begin pointing traffic from 'schema.org' (or any other desired host) to anywhere else on the internet or local LAN. Given the critical nature that the JSON-LD `@context` resource provides the attacker can make a fraudulent signature pass as being valid. 
+However, when using JSON-LD in a browser it is impossible to discover the Base IRI after an http redirect ([see #316](https://github.com/json-ld/json-ld.org/issues/316)) and the content of the `@context` can potentially change over time [[3]](https://github.com/json-ld/json-ld.org/issues/547). Finally, since a URI depends upon the security of DNS, a simple attack vector could be [DNS spoofing/DNS poisoning](https://en.wikipedia.org/wiki/DNS_spoofing).  Essentially, without much effort, an attacker can adjust the cache of a DNS server, and begin pointing traffic from 'schema.org' (or any other desired host) to anywhere else on the internet or local LAN. Given the critical nature that the JSON-LD `@context` resource provides the attacker can make a fraudulent signature pass as being valid. 
 
 Using IPLD we can use the entire JSON data model and we can layer any JSON-LD on top of IPLD [[4]](https://github.com/ipfs/ipfs/issues/36). This will enable cryptographic guarantees to the authenticity of the JSON-LD schema and mitigate such an attack. 
 
@@ -137,7 +135,6 @@ This smart contract has the added benefit of listening to updates to the IPLD di
 
 Example 1 shows the DID document before publication, and before a cryptographic signature has been added. Note that the `id` and `signature` fields are omitted as it is not associated yet with the DID method specific identifier.  Unlike other DID methods, with the DID document being represented as IPLD, we can directly link the `@context` which is also represented on IPLD as a resolvable CID cryptographic link.  Noteably absent is the `previous` field, as this is the genesis of the chain of objects that subsequent updates will reference (see below). This entire DID document when added to IPFS as IPLD has a CID of `zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi` and will be used as the `previous` field in the subsequent updated DID document (below).  
 
-> Issue: previous field in example 2 doesn't match CID above. Which is correct?
 
 **Example 2: IPLD DID document updated with the addition of the `id` and `signature` fields associating this DID document with a DID method specific identifier for future resolution**
 
@@ -170,7 +167,7 @@ Example 1 shows the DID document before publication, and before a cryptographic 
   ],
   "signature": {
     "created": "2018-10-09T17:00:00Z",
-    "creator": "zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B/publicKey/0",  
+    "creator": "did:ipid:zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B/publicKey/0",  
     "message" : {
         "/" : "zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B"
     },
@@ -181,9 +178,7 @@ Example 1 shows the DID document before publication, and before a cryptographic 
 }
 ```
 
-> Issue: I think creator has to be scoped by a DID identifier, but not sure...
-
-Example 2 shows the DID document after it is associated with the DID method specific identifier. In this case, it is published to IPNS using the IPID method spec.  Note that `id` fields are now populated, the entire document has been signed and the `message` payload of the signature is itself a link to the previous document that was signed. the `signature` field links to the publicKey of the CID natively without the need of a referenced `fragment`.  Additionally, a `proof` has been added -- again a CID link that resolves to a `proof of existence` smart contract on the Ethereum blockchain. Finally, note the addition of a `previous` field that cryptographically references the above DID document.  The CID of this DID doucment is `zdpuAwBVitwZV3Z6MvcVXLuwduyKppDdJjiP2uZFSRL7witXj` and will be used for the subsequent update below.       
+Example 2 shows the DID document after it is associated with the DID method specific identifier. In this case, it was published to IPNS using the [IPID](https://www.github.com/jonnycrunch/ipid) method spec.  Note that `id` field is now populated and the updated document was pushed to IPLD, resulting in a CID for the document of `zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B` ([intermediate document](http://ipfs.io/api/v0/dag/get?arg=zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B) not shown). This is followed by signing of this entire document as the  `message` payload of the signature in Example 2.  This link follows the previous document that was signed. The `signature` field links to the publicKey of the CID natively without the need of a referenced `fragment`. If an user or agent wishes to follow the complete path to the genesis node simply resolve the link followed by previous/previous. Additionally, a `proof` has been added -- again a CID link that resolves to a `proof of existence` smart contract on the Ethereum blockchain. The CID of the DID document in Example 2 is `zdpuAwBVitwZV3Z6MvcVXLuwduyKppDdJjiP2uZFSRL7witXj` and will be used for the subsequent update below.       
 
 
 **Retrieval of `creator` of the signature can be performed via any ipfs gateway** 
