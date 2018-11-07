@@ -1,4 +1,5 @@
-# Peer to Peer Degrees of Trust
+Peer to Peer Degrees of Trust
+=============================
 
 Harrison Stahl, Titus Capilnean, Peter Snyder, Tyler Yasaka
 
@@ -125,7 +126,7 @@ Indeed, the defunct website Advogato used a web of trust with designated
 "seed nodes" in order to generate trust scores for members of the site
 \[3\]. Advogato's solution was Sybil resistant thanks to the seed nodes,
 and Google's updated ranking algorithm may very well use a similar
-concept of "seed" websites to strengthen to protect against link farms.
+concept of "seed" websites to protect against link farms.
 
 There is a problem with seed nodes, however. Seed nodes are inherently
 more powerful than other nodes - an inequality of power that we do not
