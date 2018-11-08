@@ -2,19 +2,19 @@
 
 Name | Lead | Link | Status
 ---|---|---|---
-Agent Communication Protocols | Adrian | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md) | Oct 22
+Agent Communication Protocols | Adrian | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md) | Dec 15
 BTCR | Ryan | | 
-Concept Map | Andrew, Ouri | [Map](https://kumu.io/andrewhughes3000/rwot#credentials-concepts) | In Process 
-A DID for Everything | Sam | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md) | Oct. 22
+Concept Map | Andrew, Ouri | [Map](https://kumu.io/andrewhughes3000/rwot#credentials-concepts) | Dec 1 
+A DID for Everything | Sam | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md) | Dec 1
 Digital Credential Wallet | Mikerah | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet.md) | Feb 1
 Digital Identity for the Homeless | Matt | [Topic](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) | Dec 5
-Guidance and Standards for Interoperability of Decentralized Identity Systems | Manu, Mike J. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md) | Nov 1
+Guidance and Standards for Interoperability of Decentralized Identity Systems | Manu, Mike J. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md) | Dec 1
 How to Convince Dad* | Lucas | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/convincing-dad.md) | Nov 9
 IPLD as a General Pattern | Jonny | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/ipld_did_documents.md) | Oct 22
 Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | Jan 4
 Peer to Peer Degrees of Trust | Tyler | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/peer-to-peer-degrees-of-trust.md) | In Edit
 Resource Integrity Proofs | Ganesh | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource-integrity-proofs.md) | In Layout
-Use Cases and Proposed Solutions for Verifiable Offline Credentials | Mike L. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Use%20Cases%20and%20Proposed%20Solutions%20for%20Verifiable%20Offline%20Credentials.md)| Nov 1
+Use Cases and Proposed Solutions for Verifiable Offline Credentials | Mike L. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Use%20Cases%20and%20Proposed%20Solutions%20for%20Verifiable%20Offline%20Credentials.md)| Dec 15
 
 # Draft Abstracts
 
