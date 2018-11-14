@@ -8,14 +8,14 @@ Rebooting the Web of Trust, Fall 2018
 Abstract
 ========
 
-A challenge of any identity solution is authenticity. In the physical
+Aunthenticity is a challenge for any identity solution. In the physical
 world, at least in America, it is not difficult to change one's identity
 \[1\]. In the digital world, there is the problem of bots. The botnet
 detection market is expected to be worth over one billion USD by 2023
 \[2\], in a landscape where most digital activity is still heavily
-centralized. Centralized digital solutions have the advantage of being
+centralized. These centralized digital solutions have the advantage of being
 able to track IP addresses, request phone verification, and present
-captchas to users in order to authenticate them. If this problem is so
+CAPTCHAs to users in order to authenticate them. If this problem is so
 difficult to solve in the centralized world, how much more challenging
 will it be in the decentralized world, where none of these techniques
 are available?
@@ -23,7 +23,7 @@ are available?
 In this paper, we explore the idea of using a *web of trust* as a tool
 to add authenticity to decentralized identifiers (DIDs). We define a
 framework for deriving relative *trust degrees* using a *given trust
-metric* - a "trustworthiness" score for a given identity from the
+metric*: a "trustworthiness" score for a given identity from the
 perspective of another identity. It is our intent that this framework
 may be used as a starting point for an ongoing exploration of
 graph-based, decentralized trust. We believe this approach may
@@ -37,12 +37,11 @@ PGP
 
 PGP (Pretty Good Privacy) is a system for asymmetric encryption. It was
 originally designed as a system for encrypting email contents, but it is
-also used for a variety of other file encryption purposes.
+also used for a variety of other file-encryption purposes.
 
 In addition to defining a system for asymmetric message encryption, PGP
 also defines a system for key discovery, based off of key servers (which
-are conceptually distributed, but in practice use a small number of well
-known and trusted servers), a method for assigning trust to keys that
+are conceptually distributed, but in practice use a small number of well-known and trusted servers), a method for assigning trust to keys that
 have been uploaded to these servers, and an algorithm for determining
 how much trust to assign to a key that was uploaded by a given email
 address, but which belongs to an account unfamiliar to the email sender.
@@ -68,26 +67,26 @@ such statements.
 Social Networks
 ---------------
 
-Online social networks, such as Facebook, Twitter and Instagram,
+Online social networks such as Facebook, Twitter and Instagram
 conceptually model their systems as graphs, with participants as nodes,
 and connections between the participants as edges with labels like
 \"friend\", \"follower\" or \"boyfriend\". These edges can be directed
 or bi-directional, depending on the relationship being represented.
 
 The maintainers of these systems use the graph representation to make
-decisions about relationship, event or interest recommendations. A
-friend of your friend is more likely to also be your friend, than a
+decisions about relationship, event or interest recommendations: a
+friend of your friend is more likely to also be your friend than a
 randomly selected person in the graph. While these systems are not
-primarily intended to be reputation or trust management systems, the
+primarily intended to be reputation or trust-management systems, the
 same algorithms and representations used in online social networks could
 guide the development of decentralized trust systems.
 
 Recommendation Systems
 ----------------------
 
-Graph based recommendation systems have been deployed for many
+Graph-based recommendation systems have been deployed for many
 commercial purposes. Examples include the video recommendation systems
-used in YouTube and Netflix, and the product recommendation systems used
+used in YouTube and Netflix and the product-recommendation systems used
 in sites like Amazon and eBay. In such systems, videos and products can
 be modeled as nodes. The users and customers of such sites are also
 represented as nodes. Recommendations are represented as edges from the
@@ -109,7 +108,7 @@ Google's PageRank algorithm is famously able to assign ranking scores to
 web pages from a directed graph, where edges represent links from one
 website to another. One major problem with PageRank, however, is that it
 is vulnerable to Sybil attacks. Indeed, after Google implemented
-PageRank we witnessed the phenomenon of link farms - a form of Sybil
+PageRank we witnessed the phenomenon of link farms: a form of Sybil
 attack that takes advantage of the fact that (in the pure form of
 PageRank) all pages are first-class citizens with equal ability to cast
 "votes" in the algorithm, in the form of web links. Dummy web pages
@@ -118,8 +117,8 @@ widely known that Google uses a much more sophisticated version of
 PageRank that is less susceptible to link farms (though the algorithm
 itself is kept secret).
 
-Deriving trust scores in an open web of trust is similar to the problem
-of deriving web page rankings in an open internet, in many respects.
+In many respects, deriving trust scores in an open web of trust is similar to the problem
+of deriving web page rankings in an open internet.
 Both the web of trust and the internet can be represented as a directed
 graph, where edges represent votes from one node in favor of another.
 Indeed, the defunct website Advogato used a web of trust with designated
@@ -129,7 +128,7 @@ and Google's updated ranking algorithm may very well use a similar
 concept of "seed" websites to protect against link farms.
 
 There is a problem with seed nodes, however. Seed nodes are inherently
-more powerful than other nodes - an inequality of power that we do not
+more powerful than other nodes -- an inequality of power that we do not
 want in a decentralized system. Seed nodes seem to be necessary when
 these two requirements exist for a graph-based system: (1) that it must
 produce absolute scores for each node, and (2) that it must be Sybil
@@ -141,8 +140,8 @@ varies based on the observer.
 Assumptions
 -----------
 
-In this framework, we assume an underlying web of trust represented as a
-directed graph. Each edge in the graph represents a *trust link* - a
+In this framework, we assume an underlying web of trust that is represented as a
+directed graph. Each edge in the graph represents a *trust link*: a
 statement that one node trusts another. These links may be weighted or
 unweighted, depending on the implementation. This web of trust may be
 created explicitly (e.g. by explicit statements among users) or it may
@@ -231,23 +230,23 @@ that a metric has. We will define the degree of Sybil resistance as the
 maximum trust that an attacker can have with a single bad node, divided
 by the maximum combined trust that can be accumulated by an attacker
 with an unlimited number of puppet nodes. A metric where puppet nodes
-have no effect has a Sybil resistance degree of one. A metric where
+have no effect has a Sybil-resistance degree of one; a metric where
 puppet nodes can increase the combined trust score of an attacker has a
-Sybil resistance degree less than one. And a metric where puppet nodes
+Sybil-resistance degree less than one; and a metric where puppet nodes
 can increase the combined trust score of an attacker without bound has a
-Sybil resistance degree of zero (i.e. is not Sybil resistant).
+Sybil-resistance degree of zero (i.e. is not Sybil resistant).
 
 Inclusion Status
 ----------------
 
 Here we want to introduce the concept of *inclusion status*. We envision
-that in many applications that use webs of trust, there will be a need
+that many applications that use webs of trust will need
 to determine whether some identity is *included* in a set of valid
 identities. This inclusion status is subjective, just like the trust
 degree; the set of included identities will vary based on the source
 identity.
 
-We define an *inclusion function* to be a function which takes as input
+We define an *inclusion function* to be a function that takes as input
 a *trust degree* and an *identity cost* and returns a boolean (true or
 false). This trust degree and identity cost should pertain to a target
 identity in a web of trust, and the returned value should indicate
@@ -301,7 +300,7 @@ separate and draw groups apart. The result is a feedback loop that
 creates factions which are highly *intra-*connected but not well
 *inter*-connected.
 
-We can describe this principal more generally: clusters of nodes in a
+We can describe this principle more generally: clusters of nodes in a
 system are bound to make contact, either continuously or intermittently.
 If they are continuously integrated, this process will be smooth and
 manageable. If they are allowed to drift apart for too long, they will
