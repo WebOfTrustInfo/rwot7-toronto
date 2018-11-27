@@ -488,4 +488,4 @@ of 143 Million Customers." *Reuters*. September 08, 2017.
 
 Wolff, Josephine. "How a 2011 Hack You've Never Heard of Changed the
 Internet's Infrastructure." *Slate Magazine.* December 21, 2016.
-http://www.slate.com/articles/technology/future\_tense/2016/12/how\_the\_2011\_hack\_of\_diginotar\_changed\_the\_internet\_s\_infrastructure.html.
+https://slate.com/technology/2016/12/how-the-2011-hack-of-diginotar-changed-the-internets-infrastructure.html
