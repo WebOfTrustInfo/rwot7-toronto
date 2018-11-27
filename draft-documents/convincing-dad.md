@@ -420,44 +420,13 @@ real problems they currently experience, and suggests how self-sovereign
 identity could offer solutions. The following table summarizes many of
 these possibilities:
 
-  ------------------------------------------------------------------
-  **Actor**     **Category**   **Needs**
-  ------------- -------------- -------------------------------------
-  Dad           Finance        1.  Self-sovereign federated logins
-                               
-                               2.  Biometric logins
-                               
-                               3.  Validated identity
-                               
-
-  Sister        Government     1.  Digital passport
-                               
-                               2.  Selective identity disclosure
-                               
-                               3.  Digital health records
-                               
-
-  Daughter      Privacy        1.  Selective data disclosure
-                               
-                               2.  Data revocation
-                               
-                               3.  Automated identity disclosure
-                               
-
-  Best Friend   Content        1.  Self-sovereign content
-                               
-                               2.  Self-sovereign relationships
-                               
-                               3.  Validated content
-                               
-
-  Nephew        Business       1.  Verifiable credentials
-                               
-                               2.  Validated finances
-                               
-                               3.  Delegated identity
-                               
-  ------------------------------------------------------------------
+  **Actor**   |  **Category**  | **Needs**
+  -------------|--------------|-------------------------------------
+  Dad       |    Finance   |     1.  Self-sovereign federated logins<br>2.  Biometric logins<br>3.  Validated identity                          
+  Sister   |     Government   |  1.  Digital passport<br>2.  Selective identity disclosure<br>3.  Digital health records
+  Daughter   |   Privacy    |    1.  Selective data disclosure<br>2.  Data revocation<br>3.  Automated identity disclosure                             
+  Best Friend |  Content     |   1.  Self-sovereign content<br> 2.  Self-sovereign relationships<br>3.  Validated content                 
+Nephew     |   Business   |    1.  Verifiable credentials<br>2.  Validated finances<br>3.  Delegated identity
 
 Offering concrete solutions for these use cases could drive adoption of
 self-sovereign identity. We thus encourage software developers to
