@@ -25,22 +25,20 @@ making self-sovereign identity a reality.
 Introduction
 ------------
 
-Cogito ergo sum — I think, therefore I am.
-
+"Cogito ergo sum — I think, therefore I am."
 \~René Descartes
 
-Identity is a uniquely human concept; however modern society view this
+"Identity is a uniquely human concept; however modern society view this
 concept of identity as state-issued credentials such as driver’s license
 and social security cards, which suggests a person can lose his very
 identity if a state revokes his credentials or even if he just crosses
-state borders. **I think, but I am not**.
-
+state borders. **I think, but I am not**."
 \~ Christopher Allen
 
 The possibility of losing your identity is a serious problem in the
 digital world. Vloggers could lose their identities if YouTube closes
 their accounts, while common internet citizens like you and me could
-loss a big part of our life if Facebook revokes our credentials. As
+lose a big part of our life if Facebook revokes our credentials. As
 digital accounts become a major part of our identities, we need a
 paradigm that allows us to bring identity back under our control.
 
@@ -54,15 +52,15 @@ daily basis.
 
 This runs counter to the traditional model for online identity, designed
 from the perspective of the corporation and government, with the needs
-of the individual being secondary. In the age of ‘Surveillance
-Capitalism’, personal data is typically abused by large corporations in
+of the individual being secondary. In the age of "Surveillance
+Capitalism", personal data is typically abused by large corporations in
 the never-ending quest for profit, disregarding user privacy and
 inadequately safeguarding user data. The Equifax hack in late 2017 and
 the Cambridge Analytica scandal highlight the risks of large,
 centralized databases of personal information (i.e. honeypots of data),
 which present high-value targets for hackers.
 
-But how to we convince the average person to move from the old,
+But how do we convince the average person to move from the old,
 centralized model to the new, self-sovereign model? We think that this
 requires proactively fulfilling their needs. To highlight these needs,
 we’ve created case studies for five people who could be served by
@@ -93,12 +91,12 @@ Your Dad is Preparing for Retirement
 Dad is getting ready to retire, which has him thinking more about his
 financial security. So much is online now! He has to use his laptop
 computer to pay some of his bills from his bank account, and he looks at
-his retirement accounts through his browser too! He has a few different
+his retirement accounts through his browser too. He has a few different
 logins and passwords, because the different institutions have different
 requirements. He keeps them written down on a yellow post-it that he
 hides in his desk drawer.
 
-Recently, Dad’s become paranoid about having his money stolen because
+Recently, Dad has become paranoid about having his money stolen because
 his best friend got phished by someone claiming that their Microsoft
 Windows installation needed updating, which let the hackers install a
 keylogger on their computer and steal some money.
@@ -128,7 +126,7 @@ login.”*
 
 *The Problem.* Dad is especially vulnerable to phishing attacks, in
 which someone obtains access to his financial account by pretending to
-represent the financial institution. He lives in constant fear about
+represent the financial institution. He lives in constant fear of
 losing his nest egg: he is concerned that it is impossible to tell the
 difference between a legitimate representative and a scammer.
 
@@ -142,7 +140,7 @@ portal. The application will take him to the correct site.
 attackers stole names, phone numbers, and addresses from Home Depot and
 stole reams of identity information from Equifax. Dad is afraid that the
 thieves could use this information to steal his money at his financial
-institutions or to take or credit or loans in his name.
+institutions or to take out credit or loans in his name.
 
 *The Solution.* This sort of breach would be less likely in a world of
 self-sovereign identity because users can safeguard their information
@@ -168,7 +166,7 @@ causes for her diabetes.
 *“I’m afraid of losing my passport.”*
 
 *The Problem.* Sis was once forced to leave her passport behind when she
-had to flee a city; she was afraid to return to her lodgings due to the
+had to flee a city: she was afraid to return to her lodgings due to the
 local authority’s disagreement with *MSF*. This terrified her, because a
 passport is expected to be in a traveler’s possession when they are
 traveling in a foreign country. This left her unable to easily leave the
@@ -186,8 +184,8 @@ her government’s online platform.
 
 *“I don’t want the police looking at my passport if they stop me.”*
 
-*The Problem.* Sis experienced harassment from the police when they were
-reviewing her passport due to her country of origin. She also endured
+*The Problem.* Due to her country of origin, Sis experienced harassment from the police when they were
+reviewing her passport. She also endured
 extensive interviews because of the countries she has visited.
 
 *The Solution.* When Sis enters a country, the border agents issue
@@ -221,8 +219,8 @@ Your Daughter is a Reckless Social Media User
 
 Daughter has spent her life publishing pictures, tweeting, and posting
 on social media services such as Facebook and Snapchat. Now that she is
-going for job interviews, she realizes all of her photos of holidays and
-parties, and all of her tweets, are a bit more public than she would
+going for job interviews, she realizes that all of her photos of holidays and
+parties and all of her tweets are a bit more public than she would
 like.
 
 *“I don’t want to show my employer everything.”*
@@ -256,8 +254,8 @@ ownership of the photo.
 
 *“I’m afraid of being doxxed.”*
 
-*The Problem.* Daughter has been vocal on the issue of presentation of
-female characters in video games in recent years, and she just heard
+*The Problem.* In recent years, Daughter has been vocal on the issue of presentation of
+female characters in video games. She just heard
 about a few friends getting doxxed because of similar comments online.
 She is afraid that she might be a target of harassment.
 
@@ -291,7 +289,7 @@ his work, but not be able to access the original posts.
 all of his videos. They’re posted to his data store, a decentralized
 file storage and delivery system that is accessible through his
 self-sovereign identity and provably attributable to him. Hyperlinked
-citations and references connect to this original data source.Even if
+citations and references connect to this original data source. Even if
 the content on the local social network is removed, anyone looking at a
 citation or reference can still find the original content and know that
 he wrote it — even though it’s no longer connected to his social media
@@ -365,7 +363,7 @@ to show its profitability and lay out its money flow to potential
 purchasers. But this information isn’t verifiable!
 
 *The Solution.* Nephew, with the aid of self-sovereign identity, can
-prove a full-spectrum, well-defined, verifiable suite of business
+provide a full-spectrum, well-defined, verifiable suite of business
 analytics. Every purchase order, credit card sale, inventory item, and
 bill payment is signed with the business’ decentralized identifier
 (DID), a component of his self-sovereign identity. This provability
@@ -399,7 +397,7 @@ And, these possibilities are just the tip of the iceberg. Because the
 adoption of self-sovereign identity is likely to begin in the developed
 world, the use cases in this paper focused on our own privileged family
 members. However, self-sovereign identity might be even more useful for
-marginalized people who could gain protections that the developed world
+marginalized people, who could gain protections that the developed world
 takes for granted. Refugees could be guaranteed identity when they flee
 their home state; peoples living in autocratic societies could enjoy new
 protections; and disadvantaged people could see their playing fields
