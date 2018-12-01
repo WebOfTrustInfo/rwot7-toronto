@@ -120,23 +120,56 @@ This smart contract has the added benefit of listening to updates to the IPLD DI
   "@context": {
     "/": "zdpuAmoZixxJjvosviGeYcqduzDhSwGV2bL6ZTTXo1hbEJHfq"
   },
-  "created": "2018-10-09T17:00:00Z",
+  "created": "2018-12-01T03:00:00Z",
   "publicKey": [
     {
       "curve": "ed25519",
-      "expires": "2019-07-08T16:02:20Z",
-      "publicKeyBase64": "lji9qTtkCydxtez/bt1zdLxVMMbz4SzWvlqgOBmURoM=",
+      "expires": "2019-12-01T03:00:00Z",
+      "publicKeyBase64": "qmz7tpLNKKKdl7cD7PbejDiBVp7ONpmZbfmc7cEK9mg=",
       "type": "EdDsaPublicKey"
     }
   ],
-  "updated": "2018-10-0917:00:01Z"
+  "updated": "2018-12-01T03:00:01Z"
 }
 ```
 
-Example 1 shows the DID document before publication and before a cryptographic signature has been added. Note that the `id` and `signature` fields are omitted as it is not associated yet with the DID method specific identifier.  Unlike other DID methods, with the DID document being represented as IPLD, we can directly link the `@context`, which is also represented on IPLD as a resolvable CID cryptographic link.  Notably absent is the `previous` field, as this is the genesis of the chain of objects that subsequent updates will reference (see below). This entire DID document when added to IPFS as IPLD has a CID of `zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi` and will be used as the `previous` field in the subsequent updated DID document (below).  
+Example 1 shows the DID document before publication and before a cryptographic signature has been added. Note that the `id` and `signature` fields are omitted as it is not associated yet with the DID method specific identifier.  Unlike other DID methods, with the DID document being represented as IPLD, we can directly link the `@context`, which is also represented on IPLD as a resolvable CID cryptographic link.  Notably absent is the `previous` field, as this is the genesis of the chain of objects that subsequent updates will reference (see below). This entire DID document when added to IPFS as IPLD has a CID of `zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi` and will be used as the `previous` field in the subsequent updated DID document (Example 2).  
 
 
-**Example 2: IPLD DID document updated with the addition of the `id` and `signature` fields associating this DID document with a DID method specific identifier for future resolution**
+**Example 2: Intermediate DID document updated with `id` field associating this DID document with a DID method specific identifier for future resolution**
+```javascript
+{
+  "@context": {
+    "/": "zdpuAmoZixxJjvosviGeYcqduzDhSwGV2bL6ZTTXo1hbEJHfq"
+  },
+  "authentication": {
+    "publicKey": [
+      "did:ipid:12D3KooWMHdrzcwpjbdrZs5GGqERAvcgqX3b5dpuPtPa9ot69yew"
+    ],
+    "type": "EdDsaSASignatureAuthentication2018"
+  },
+  "created": "2018-12-01T03:00:00Z",
+  "id": "did:ipid:12D3KooWMHdrzcwpjbdrZs5GGqERAvcgqX3b5dpuPtPa9ot69yew",
+  "previous": {
+    "/": "zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi"
+  },
+  "proof": {
+    "/": "z43AaGF42R2DXsU65bNnHRCypLPr9sg6D7CUws5raiqATVaB1jj"
+  },
+  "publicKey": [
+    {
+      "curve": "ed25519",
+      "expires": "2019-12-01T03:00:00Z",
+      "publicKeyBase64": "qmz7tpLNKKKdl7cD7PbejDiBVp7ONpmZbfmc7cEK9mg=",
+      "type": "EdDsaPublicKey"
+    }
+  ],
+  "updated": "2018-12-01T03:00:02Z"
+}
+```
+Example 2 shows the addition of the `id` field with the `previous` field linking to the hash of Example 1
+
+**Example 3: IPLD DID document updated with the addition of the `signature` field**
 
 ``` javascript
 {
@@ -146,13 +179,13 @@ Example 1 shows the DID document before publication and before a cryptographic s
   "authentication": {
       "type": "EdDsaSASignatureAuthentication2018", 
       "publicKey": [
-          "did:ipid:QmcEF77C6QKj6Rzru7MR2N5tSM33PHQYEqXYzQuVHHAvvv"
+          "did:ipid:12D3KooWMHdrzcwpjbdrZs5GGqERAvcgqX3b5dpuPtPa9ot69yew"
       ]
   },
-  "created": "2018-10-09T17:00:00Z",
-  "id": "did:ipid:QmcEF77C6QKj6Rzru7MR2N5tSM33PHQYEqXYzQuVHHAvvv",
+  "created": "2018-12-01T03:00:00Z" ,
+  "id": "did:ipid:12D3KooWMHdrzcwpjbdrZs5GGqERAvcgqX3b5dpuPtPa9ot69yew",
   "previous": {
-    "/" : "zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B" [[SHOULDN'T THIS BE zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi ?]]
+    "/" : "zdpuAosm9NYNW5kG2h3SBoCZz5DYqyTgf6qopkxpih5cFhqmU" 
   },
   "proof" : {
     "/" : "z43AaGF42R2DXsU65bNnHRCypLPr9sg6D7CUws5raiqATVaB1jj"
@@ -160,38 +193,51 @@ Example 1 shows the DID document before publication and before a cryptographic s
   "publicKey": [
      {
       "curve": "ed25519",
-      "expires": "2019-07-08T16:02:20Z",
-      "publicKeyBase64": "lji9qTtkCydxtez/bt1zdLxVMMbz4SzWvlqgOBmURoM=",
+      "expires": "2019-12-01T03:00:00Z",
+      "publicKeyBase64": "qmz7tpLNKKKdl7cD7PbejDiBVp7ONpmZbfmc7cEK9mg=",
       "type": "EdDsaPublicKey"
     }
   ],
   "signature": {
-    "created": "2018-10-09T17:00:00Z",
-    "creator": "did:ipid:zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B/publicKey/0",  
+    "created": "2018-12-01T03:00:02Z",
+    "creator": "zdpuAohuM1RWMpzwQgWz5jXFCdPtz1rhD82fuZBauUDuRzknt/publicKey/0",  
     "message" : {
-        "/" : "zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B"
+        "/" : "zdpuAohuM1RWMpzwQgWz5jXFCdPtz1rhD82fuZBauUDuRzknt"
     },
-    "signatureValue": "IOmA4R7TfhkYTYW87z640O3GYFldw0yqie9Wl1kZ5OBYNAKOwG5uOsPRK8/2C4STOWF+83cMcbZ3CBMq2/gi25s=",
+    "signatureValue": "o9r6LxgoGN8FoaeeUA6EdDcv12GvDzFEmCgjWzvpur2YSQyA8W2r0SSWUK+nH5tMqzaFLun6wwZ1Eot37amGDg==",
     "type": "ed25519Signature2018"
   },
-  "updated": "2018-10-09T17:00:00Z"
+  "updated": "2018-12-01T03:00:00Z"
 }
 ```
 
-Example 2 shows the DID document after it is associated with the DID method specific identifier. In this case, it was published to IPNS using the [IPID](https://www.github.com/jonnycrunch/ipid) method spec.  Note that `id` field is now populated and the updated document was pushed to IPLD, resulting in a CID for the document of `zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B` ([intermediate document](http://ipfs.io/api/v0/dag/get?arg=zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B) not shown). This is followed by signing of this entire document as the  `message` payload of the `signature` field in Example 2.  This link follows the previous document that was signed. The `signature` field links to the publicKey of the CID natively without the need of a referenced `fragment`. If a user or agent wishes to follow the complete path to the genesis node, they simply resolve the `previous` links. Additionally, a `proof` has been added -- again a CID link that resolves to a `proof of existence` smart contract on the Ethereum blockchain. The CID of the DID document in Example 2 is `zdpuAwBVitwZV3Z6MvcVXLuwduyKppDdJjiP2uZFSRL7witXj` and will be used for the subsequent update below.       
+Example 3 shows the final DID document after it is associated with the DID method specific identifier and signature. In this case, it was published to IPNS using the [IPID](https://www.github.com/jonnycrunch/ipid) method spec.  Note that `id` field is now populated and the updated document was pushed to IPLD, resulting in a CID for the final document of `zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP`[(link)](https://ipfs.io/api/v0/dag/get?arg=zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP). The chain of trust of the history of all edits can be done my simply following the `previous` link with the syntax [`zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP/previous`](https://ipfs.io/api/v0/dag/get?arg=zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP/previous) and back to the original genesis of the document with a cid of [`zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi`](https://ipfs.io/api/v0/dag/get?arg=zdpuAqiExr6k4AbWF6BuGkgUbVMZ7jbJyNvRz9z9yyRBxosPi) with the syntax of [`zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP/previous/previous`](https://ipfs.io/api/v0/dag/get?arg=zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP).   
+
+Similarly, with this syntax the `signature` field links to the publicKey of the CID natively without the need of a referenced `fragment` and the `message` (payload) that was signed.  Additionally, a `proof` field has been added which is itself CID link that resolves to a `proof of existence` smart contract on the Ethereum blockchain that resolves natively or can be externally validated. 
 
 
 **Retrieval of `creator` of the signature can be performed via any ipfs gateway** 
 ```
-> curl -s https://ipfs.io/api/v0/dag/get?arg=zdpuAvqt1YTeAdcyyncBDdJLVgKyZNbHm17rBEJNqFzVbg24B/publicKey/0
+> curl -s https://ipfs.io/api/v0/dag/get?arg=zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP/publicKey/0
 ```
 
 output: 
 ```
-{"curve":"ed25519","expires":"2019-07-08T16:02:20Z","publicKeyBase64":"lji9qTtkCydxtez/bt1zdLxVMMbz4SzWvlqgOBmURoM=","type":"EdDsaPublicKey"}
+"curve":"ed25519","expires":"2019-12-01T03:00:00Z","publicKeyBase64":"qmz7tpLNKKKdl7cD7PbejDiBVp7ONpmZbfmc7cEK9mg=","type":"EdDsaPublicKey"}
 ```
 
-**Example 3: IPLD DID document updated after key rotation**
+
+**Retrieval of the `id` of the  `creator` can be performed via any ipfs gateway** 
+```
+> curl -s https://ipfs.io/api/v0/dag/get?arg=zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP/id
+```
+output: 
+```
+"did:ipid:12D3KooWMHdrzcwpjbdrZs5GGqERAvcgqX3b5dpuPtPa9ot69yew"
+```
+
+
+**Example 4: IPLD DID document updated after key rotation**
 
 
 ``` javascript
@@ -202,13 +248,13 @@ output:
   "authentication": {
     "type": "EdDsaSASignatureAuthentication2018",
     "publicKey": [
-      "did:ipid:QmcEF77C6QKj6Rzru7MR2N5tSM33PHQYEqXYzQuVHHAvvv"
+      "did:ipid:12D3KooWMHdrzcwpjbdrZs5GGqERAvcgqX3b5dpuPtPa9ot69yew"
     ]
   },
-  "created": "2018-10-09T17:00:00Z",
-  "id": "did:ipid:QmcEF77C6QKj6Rzru7MR2N5tSM33PHQYEqXYzQuVHHAvvv",
+  "created": "2018-12-01T03:00:00Z" ,
+  "id": "did:ipid:12D3KooWMHdrzcwpjbdrZs5GGqERAvcgqX3b5dpuPtPa9ot69yew",
   "previous": {
-    "/": "zdpuAwBVitwZV3Z6MvcVXLuwduyKppDdJjiP2uZFSRL7witXj"
+    "/": "zdpuB1oR3vjYmkDc9ALfY7o6hSt1Hrg2ApXaYAFyiAW5E4NJP"
   },
   "proof": {
     "/": "z43AaGF42R2DXsU65bNnHRCypLPr9sg6D7CUws5raiqATVaB1jj"
@@ -216,31 +262,31 @@ output:
   "publicKey": [
     {
       "curve": "ed25519",
-      "publicKeyBase64": "lji9qTtkCydxtez/bt1zdLxVMMbz4SzWvlqgOBmURoM=",
+      "publicKeyBase64": "qmz7tpLNKKKdl7cD7PbejDiBVp7ONpmZbfmc7cEK9mg=",
       "type": "EdDsaPublicKey",
       "status": "revoked"
     },
     {
       "curve": "ed25519",
       "expires": "2021-07-08T16:02:20Z",
-      "publicKeyBase58": "H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV",
+      "publicKeyBase64": "jGp4OT1GktrZMdrkOM+zj8iE1IqCiqg2iH+rUZ93jhE=",
       "type": "EdDsaPublicKey"
     }
   ],
   "signature": {
-    "created": "2018-10-14T17:00:00Z",
-    "creator": "zdpuAvXDHaUYouVseVoevTReN6tD28UvNPin8CAUgJq5txG6W/publicKey/1",
+    "created": "2018-12-01T03:00:04Z" ,
+    "creator": "zdpuAt99xoa8i2BrcjwpY2H6ksXeaE28upionw2VuxRamBs6H/publicKey/1",
     "message": {
-      "/": "zdpuAvXDHaUYouVseVoevTReN6tD28UvNPin8CAUgJq5txG6W"
+      "/": "zdpuAyvreXzQHqwv3rL8MaVPjNJjpLLa5Du3HcbpQL41XS35G"
     },
-    "signatureValue": "",
+    "signatureValue": "WDA3Dx7c+UWR37oglhkLNwxAbxXM4YbT7TpgmaCQ/rSqbtXgM3EpQ4mpkPXT5OBLH6bDai12Ank8SUHW47JxCQ==",
     "type": "ed25519Signature2018"
   },
-  "updated": "2018-10-09T17:00:00Z"
+  "updated": "2018-12-01T03:00:04Z" 
 }
 ```
 
-Example 3 shows an updated DID document that has revoked key/0 and created a new key/1, which is used for signing the new DID document.  The `cid` for this new document is `zdpuAtwype2DbCYyc4vprT31smhtZ3uKvBJd3Hf58sbstq9po` and is used to publish and associate it with the DID.    
+Example 4 shows an updated DID document that has revoked key/0 and created a new key/1, which is used for signing the new DID document.  The `cid` for this final document is `zdpuAtrP6ZSDZj6izYQEbuUjuDRGHSa5L59BZDa1deRwAAZRQ` and is used to publish and associate it with the DID.    
 
 
 ## Use with Pairwise Identifiers
@@ -313,40 +359,36 @@ A better approach may be to name the key by name within the object of `publicKey
 ```
 {
   ...
-  "publicKey": {
-    "keys-1": {
-      "type": "RsaVerificationKey2018",
-      "owner": "did:example:123456789abcdefghi",
-      "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n", 
-      "status" : "revoked"
-  }, 
-    "keys-2" : { 
-      "type": "Ed25519VerificationKey2018",
-      "owner": "did:example:pqrstuvwxyz0987654321",
-      "publicKeyBase58": "H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV"
-    }, 
-  }, {
-    "keys-3" : { 
-      "type": "Secp256k1VerificationKey2018",
-      "owner": "did:example:123456789abcdefghi",
-      "publicKeyHex": "02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71"
+"publicKey": {
+    "key-1" : {
+      "curve": "ed25519",
+      "publicKeyBase64": "qmz7tpLNKKKdl7cD7PbejDiBVp7ONpmZbfmc7cEK9mg=",
+      "type": "EdDsaPublicKey"
+    },
+    "key-2" : {
+      "curve": "ed25519",
+      "expires": "2021-07-08T16:02:20Z",
+      "publicKeyBase64": "jGp4OT1GktrZMdrkOM+zj8iE1IqCiqg2iH+rUZ93jhE=",
+      "type": "EdDsaPublicKey"
     }
-  },
-  ...
+  },  ...
 }
 ```
 
 In IPLD, this will allow for a more straightforward reference without a convoluted algorithm to accomplish this. 
 
 ```
-> curl -s https://ipfs.io/api/v0/dag/get?arg=zdpuAmGmtj94t6dTG8E8GSBfzyfEM4BD889kM2r1jYab2ehdK/publicKey/keys-3
+> curl -s https://ipfs.io/api/v0/dag/get?arg=zdpuAu918t7r8bv2wvuJiasiq78oDCbZ62ecZCj43oBWvspzr/publicKey/key-1
 ```
 with output:
 ```
-{"owner":"did:example:123456789abcdefghi","publicKeyHex":"02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71","type":"Secp256k1VerificationKey2018"}
+{"curve":"ed25519","publicKeyBase64":"qmz7tpLNKKKdl7cD7PbejDiBVp7ONpmZbfmc7cEK9mg=","type":"EdDsaPublicKey"}
 ```
 
-
+This can be cryptographically linked back to the `id` with:
+```
+> curl -s https://ipfs.io/api/v0/dag/get?arg=zdpuAu918t7r8bv2wvuJiasiq78oDCbZ62ecZCj43oBWvspzr/id
+```
 
 
 ## Conclusion
