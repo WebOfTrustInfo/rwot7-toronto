@@ -1,8 +1,8 @@
 # BTCR v0.1 Decisions
 
-Authors: Kim Hamilton Duffy
+Authors: Kim Hamilton Duffy, Christopher Allen
 
-Contributors: Dan Pape, Ryan Grant, Christopher Allen, Anthony Ronning, Ganesh Annan, Wolf McNally
+Contributors: Dan Pape, Ryan Grant, Anthony Ronning, Ganesh Annan, Wolf McNally
 
 ## Abstract
 The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design decisions -- largely scope-cutting in nature -- in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
@@ -55,7 +55,7 @@ Extending on the previous decision, we've decided in v0.1 to store continuation 
 2. a signature on the updated DID Document from the tx signing key
 
 > TODO: add more details about github somewhere
-- advantage: can tie to pgp 
+- advantage: can tie to pgp (CA: this allows for a signed commit)
 - disadvantage: need github account (ok, dev audience)
 
 ### 4. Testnet only
@@ -116,7 +116,7 @@ We will achieve this by choosing our own convention about the derivation path.
 
 > TODO: this section needs work
 
-- Ideally follow best practice BIP 157/158. Problem is that libraries not necessarily available. 
+- Ideally follow best practice BIP 157/158 (CA: AKA Neutrino, which allows a mobile wallet to not use SPF, thus preserves privacy of which address is your DID). Problem is that libraries not necessarily available. 
 - Fallback is Kulpreet's REST service.
 
 About BIP 157/158
@@ -130,12 +130,14 @@ About BIP 157/158
 > TODO: this section needs work
 
 ### 1. Use JSON-LD 1.1 javascript lib, because 0.1 doesn't need hardcore verifiers
-### 2. Restrict to schema.org schemas. Can use Christopher's test cases
+### 2. Restrict to schema.org schemas, like person. No custom schemas. Can use Christopher's test cases
 ### 3. Privacy: stick to pseudoanonymous claim content
-### 4. Restrict to VCs one wishes to share
+### 4. Restrict to simple VCs one wishes to share
 
 
 > TODO also add somewhere: Can prerevoke in case of emergency 
+
+CA: you can pre-sign a transaction spending the tip, and store away, which you can use to revoke the DID even without the key material.
 
 
 > TODO: update this sample
