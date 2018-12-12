@@ -1,8 +1,8 @@
 # BTCR v0.1 Decisions
 
-Authors: Kim Hamilton Duffy, Christopher Allen
+Authors: Kim Hamilton Duffy, Christopher Allen, Dan Pape
 
-Contributors: Dan Pape, Ryan Grant, Anthony Ronning, Ganesh Annan, Wolf McNally
+Contributors: Ryan Grant, Anthony Ronning, Ganesh Annan, Wolf McNally
 
 ## Abstract
 The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design decisions -- largely scope-cutting in nature -- in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
@@ -144,7 +144,7 @@ In future versions, we will require library support in a different language.
 
 ### 2. Restrict to schema.org schemas, like person. 
 
-We'll restrict our prototypes to schema.org schemas as opposed to custom schemas. Can use Christopher's test cases
+We'll restrict our prototypes to schema.org schemas as opposed to custom schemas. We've developed a [suite of test cases](https://github.com/w3c-ccg/did-hackathon-2018/blob/master/BTCR-DID-Tests.md) that can be used.
 
 ### 3. Privacy: stick to pseudoanonymous claim content
 
