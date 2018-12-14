@@ -26,7 +26,11 @@ For this reason, we decided that only P2PKH scripts are supported, and other scr
 
 Because of the size and cost implications, we will revisit this decision in later versions.
 
-### 2. Only a HTTP URL in OP_RETURN (Note: no IPFS support)
+### 2. Only an HTTP URL in OP_RETURN (Note: no IPFS support)
+
+### 3. Txrefs and Txref-ext
+
+Finalizing the txref spec (BIP-0136) is currently still in progress, but we have decided that BTCR DIDs will use the extended form of the txref, which encodes the TXO index within the transaction, as well as the block height and TX index of the transaction itself. See [here](https://w3c-ccg.github.io/didm-btcr/#txref) for details. 
 
 #### Background/Context
 
@@ -44,7 +48,7 @@ However, this introduces a requirement for the resolvers to be aware of differen
 
 The BTCR team strongly prefers use of immutable storage for its simplicity; however, we considered the burden of ensuring availability of IPFS objects prohibitive for evaluting BTCR DIDs in end-to-end scenarios. This would require the user to run an IPFS node (or have their objects pinned on one) because this isn't feasible on a mobile device. For example, on an iPhone (our MVP target device) the IPFS lib on iPhone has to be running all the time, and can’t be running the in background.
 
-For these reasons, we decided to wait for greater support on phone for ipfs, or use something like filecoin. In v0.1 we will assume that, if the OP_RETURN is present, it points to a HTTP URL. We also assume that the target content could have been altered. 
+For these reasons, we decided to wait for greater support for IPFS on iPhone, or use something like filecoin. In v0.1 we will assume that, if the OP_RETURN is present, it points to an HTTP URL. We also assume that the target content could have been altered.
 
 This allows us to cut scope and address the case of mutable storage only.
 
@@ -52,7 +56,7 @@ This allows us to cut scope and address the case of mutable storage only.
 
 Extending on the previous decision, we've decided in v0.1 to store continuation DID Documents in github. The continuation DID Document must be updated after tx confirmation to explicity list fields we formerly derived as part of the implicit DID document.
 
-Specifically, after tx conformation, the user must specify:
+Specifically, after tx confirmation, the user must specify:
 1. the resulting DID in relevant fields such as `id` and `creator`. Note this must be done after confirmation because the DID will be known only after the BTCR tx is confirmed.
 2. a signature on the updated DID Document from the tx signing key
 
@@ -126,7 +130,7 @@ The problem we encountered is that library support for Neutrino not readily avai
 
 As a fallback, we will use REST services backed by a bitcoin node (initially maintained by the BTCR team).
 
-### 4. Prerevocation
+### 4. Pre-revocation
 
 The v0.1 BTCR wallet may support pre-revocation in cases of emergency. This works by pre-signing a transaction spending the tip, which can be stored away, and broadcast later to revoke the DID even without the key material.
 
@@ -154,27 +158,54 @@ Users should not include any PII in claims used for BTCR v0.1 prototypes
 
 Similar to above, only include claim content that you want others to see. This phase is not equipped to handle high-stakes scenarios.
 
-
-> TODO: update this sample
+## Example
 
 ```
 {
-  "didDocument": {
-    "@context": "https://w3id.org/did/v1",
-    "publicKey": [
-      {
-        "id": "#keys-2",
-        "type": "RsaVerificationKey2018",
-        "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
-      }
-    ],
-    "authentication": [
-      {
-        "type": "RsaSignatureAuthentication2018",
-        "publicKey": "#keys-2"
-      }
-    ]
-  },
+  "@context": "https://w3id.org/did/v1",
+  "id": "did:btcr:8kyt-fzzq-qpqq-ljsc-5l",
+  "publicKey": [
+    {
+      "id": "did:btcr:8kyt-fzzq-qpqq-ljsc-5l#keys-1",
+      "owner": "did:btcr:8kyt-fzzq-qpqq-ljsc-5l",
+      "type": "EdDsaSAPublicKeySecp256k1",
+      "publicKeyHex": "0280e0b456b9e97eecb8028215664c5b99ffa79628b60798edd9d562c6db1e4f85"
+    },
+    {
+      "id": "did:btcr:8kyt-fzzq-qpqq-ljsc-5l#keys-2",
+      "type": "RsaVerificationKey2018",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n",
+      "owner": "did:btcr:8kyt-fzzq-qpqq-ljsc-5l"
+    }
+  ],
+  "authentication": [
+    {
+      "type": "EdDsaSAPublicKeySecp256k1Authentication",
+      "publicKey": "#keys-1"
+    },
+    {
+      "type": "RsaSignatureAuthentication2018",
+      "publicKey": "#keys-2"
+    }
+  ],
+  "service": [
+    {
+      "type": "BTCREndpoint",
+      "serviceEndpoint": "https://raw.githubusercontent.com/kimdhamilton/did/master/ddo.jsonld"
+    }
+  ],
+  "SatoshiAuditTrail": [
+    {
+      "chain": "testnet",
+      "blockhash": "0000000000000722ded9d85d67e145ba41c53ef2e8680f75540a08b885febba5",
+      "blockindex": 2,
+      "outputindex": 1,
+      "blocktime": "2017-09-23T17:27:56.682Z",
+      "time": 1499501000,
+      "timereceived": "2017-09-23T17:27:56.682Z",
+      "burn-fee": -0.05
+    }
+  ],
   "claims": [
   
   ]
