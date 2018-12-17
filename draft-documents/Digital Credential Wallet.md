@@ -35,6 +35,66 @@ Differences
 Both types of wallets require at least 2 parties in order to start and complete an interaction.  Generally, with cryptocurrency wallets, they are programmed to only handle 2 party interactions and not multiple party interaction. However, multi-signature wallets are used to require multiple signatures from different parties in order to authorize a transaction.
 
 ## Use Cases of Digital Credential Wallet
+### Account Opening
+When opening an account with a new organization (e.g. telco, utility, bank) that organization requires an individual to provide certain information. This can be provided through the completion of various forms (online or paper) and then proof of some of the details (e.g. presentation of drivers license). Through the use of a digital credential wallet, it would be possible for the organization to request all of the data to that wallet, and for the wallet to then provide the details back, if they are present in the wallet. 
+
+In the scenario of opening account online the following steps could take place:
+- The consumer visits the business’ website and requests to open an account
+- The website indicates that the consumer can complete the various forms and provide proof of government ID (e.g. through selfie and photo of drivers license), or they could choose to use their digital credential wallet
+- Once selecting to use their credential wallet, the site would indicate the information that it requires (e.g. government issued ID, proof of other business (e.g. bank, utility) relationships, proof of employment
+- Through establishing a connection between the site and the digital credential wallet - often through QR code or SMS, the request for credentials would be made
+Through the digital credential wallet the consumer would confirm the information that it would like to share - which may include selecting which credentials to share (e.g. drivers license vs passport, or prior bank relationship or telco relationship)
+- The wallet would then share the verified credentials with the website
+- Depending on the protocol, the website would then verify the validity of the presented credentials
+
+### Employee Onboarding
+Not too dissimilar to the Account Opening use case, employee onboarding requires an employee to present forms of various credentials in order to begin employment. Depending on the type of job, the credentials required may include: 
+- government issued ID
+- SSN/SIN
+- Education
+- Training
+- professional designations
+- prior employment
+- direct deposit bank account 
+
+Some of the above could be provided during the applications process (e.g. prior employment, educations), while some are only relevant once the employee is being hired. 
+
+A possible scenario for this use case could be:
+- An employee accepts an offer and then receives a confirmation email which contains a link to a web page with the employment agreement and a request for credentials
+- The web page could include a QR code that contains a request for the necessary credentials from a digital credential wallet
+- Once scanned with the wallet, the wallet displays a list of what the company is requesting and the employee confirms what details, and from which sources, it will provide
+- The credentials are then shared between the wallet and the organization for their storage
+
+### NPE - Non Person Entitity
+NPE is a non-person based entity, it is a term to describe a non-human object that has an identity. It may be a smart object with specific technical functionality (like collecting or sharing data, e.g. a weather station) or it may be a dumb object that does not integrate with technology for sharing information. These objects need their own wallets to collect and share credentials. 
+
+Another use case class is the introduction of Digital Credential Wallets for objects or machines. This will enable to overcome some of the virulent issues in today’s global industry like provenance, authenticity, tracking, proof of audit trails and compliance. Set up of Digital Credential Wallets are hereby a key credential for so called digital twins of objects, machines or IOT devices. Digital twins are a digital representations of a such objects and keep lifecycle data and events spanning from assembly, across testing, transport, operations to decommission.
+
+### Motorcycle Wallet - A Complex Object
+A motorcycle has a wallet that keeps digitally native credentials. These credentials are given by various entities. The wallet needs to be accessed by the owner of the motorcycle. There may be situations where data from the wallet should be shared. This is a complex object because it is both “smart” and “dumb.”
+
+The wallet needs to hold different kinds of credentials from different entities: human entities, corporate entities, service providers, government and data from the vehicle itself. This data may need to be accessed by a variety of different entities as well, including humans identities, corporate, government and service providers. The wallet needs to address delegation and access transfer in the context of changing ownership of the object itself - a motorcycle.
+
+### Request professional service
+- Request for Graphic Design
+- - Preconditions:
+- - - Unknown Creative
+- - - Unknown Client
+- - - Creative has portfolio
+- - - Client has examples
+- - - Old versions
+- - - Likes
+- - - Dislikes
+- - - Creative has bearer references behind portfolio items
+- - Client validates Creative references
+- - References respond
+- - Scope of Work agreed by Client & Creative
+- - Creative does iteration
+- - Client provides feedback
+- - Milestones approved by client
+- - Deliverable approved
+- - Both Creative & Client issue references
+
 
 ## Wallet Key Management
 

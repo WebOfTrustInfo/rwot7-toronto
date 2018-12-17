@@ -1,4 +1,22 @@
-# RWOT7 Drafts
+# Draft Status
+
+Name | Lead | Link | Status
+---|---|---|---
+Agent Communication Protocols | Adrian | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md) | Dec 15
+BTCR | Ryan | | 
+Concept Map | Andrew, Ouri | [Map](https://kumu.io/andrewhughes3000/rwot#credentials-concepts) | Dec 1 
+A DID for Everything | Sam | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/A_DID_for_everything.md) | Dec 1
+Digital Credential Wallet | Mikerah | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet.md) | Feb 1
+Digital Identity for the Homeless | Matt | [Topic](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) | Dec 5
+Guidance and Standards for Interoperability of Decentralized Identity Systems | Manu, Mike J. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md) | Dec 1
+How to Convince Dad* | Lucas | [Final](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/convincing-dad.pdf) | DONE
+IPLD as a General Pattern | Jonny | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/ipld_did_documents.md) | Oct 22
+Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | Jan 4
+Peer to Peer Degrees of Trust | Tyler | [Final](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/peer-to-peer-degrees-of-trust.pdf) | DONE
+Resource Integrity Proofs | Ganesh | [Final](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/resource-integrity-proofs.pdf) | DONE
+Use Cases and Proposed Solutions for Verifiable Offline Credentials | Mike L. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Use%20Cases%20and%20Proposed%20Solutions%20for%20Verifiable%20Offline%20Credentials.md)| Dec 15
+
+# Draft Abstracts
 
 ## Pandoc
 
@@ -26,7 +44,7 @@ DIDs are only the base layer of decentralized identity infrastructure. The next 
 
 *Abstract:* The term agent has been used in many context within the self sovereign identity world. But what exactly we mean by an agent? This paper will try to summarize the agent concept and at the same time identify the main phases and messages they need to exchange in order to be able to connect, receive credentials and share proofs between each other. We will start by assuming the discoverability of those agents.
 
-   * [Digital Credential Wallet Design](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet%20Design.md)
+   * [Digital Credential Wallet](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet.md)
 
 *Abstract:* Digital Credential Wallet Outline What is it? (Define it) A credential issued by a peer Existing solutions to doing credential wallets Centralized (Apple wallets, AndroidPay) What does it do?/Requirements Request a credential from a peer Share a credential Revoke a credential Message Manage Keys Consumer requirements vs Enterprise requirements vs NPE wallet requirements (Digital Twins) How do I take ownership for that thing I just bought? Applications Use Cases Identify some use cases What solutions are already there // Point out ones that are already there 3Rs of key management - let’s point at DPKI, DKMS … Depth - this is about the broad picture. General guideline is to stop at pointing at current (and needed) work. Avoid useless Rabbit Holes Future work
 
@@ -50,19 +68,15 @@ This paper addresses that need by offering arguments to a variety of people who 
 
 In this paper we propose a framework for reasoning about reputation using a web of trust. We briefly summarize the history of peer-to-peer reputation, define 3 layers required for peer-to-peer reputation, and explore possible applications of this framework.
 
-   * [Requirements and Standards for Increasing Interoperability of Decentralized Identity Systems](https://github.com/burnburn/rwot7/blob/patch-3/draft-documents/Requirements_and_Standards_for_Increasing_Interoperability_of_Decentralized_Identity_Systems.md)
+   * [Guidance and Standards for Interoperability of Decentralized Identity Systems](Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md)
 
-*Abstract:*
-   1. Identify core high-level requirements for interoperable decentralized identity systems (including data modelling, cryptographic requirements, and data representations)
-   2. Talk about importance of standards and conventions in facilitating interop, increasing adoption, and accelerating innovation
-Come up with top categories of standards for interoperability - conventions for use of DIDDoc elements, key types and purposes, data format, and others
-   3. Identify current applicable standards and specifications
-   4. Identify gaps in current standards and specifications and propose ways to fill them
-   5. Identify the four or five most used cryptographic key types and finalize their descriptions
+*Abstract:* Use of applicable standards is critical to the interoperability of decentralized identity systems.  This paper provides high-level guidance for architects and builders of interoperable decentralized identity systems (including data models, cryptographic requirements, and data representations).  It inventories existing and emerging standards appropriate for building these systems, identifies gaps in the standards, and proposes means to fill them.  These include standards for representation of cryptographic inputs and outputs.  The final section focuses on issues specific to systems using DIDs and the DID specification itself.
 
-   * [Resource Integrity Use Cases](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource_integrity_use_cases.md)
+   * [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/resource-integrity-proofs.md)
 
-*Abstract:* Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via hyperlinks. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. Resource Integrity Proofs enable verification of any representation of a resource from any type of link. This paper describes how RIP solves use cases inspired by production deployments of self-sovereign technologies. One is the problem of Verifiable Displays, which seeks to ensure the rendering of the VC content matches what the issuer intended. Another is verifying integrity of referenced data; for example, if the referenced data is in a mutable store. Lastly, we discuss how RIPs can be used to layer Object Capabilities on top of legacy systems.
+*Abstract:* Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via links. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. Would it be possible to create an extensible and multipurpose cryptographic link that provides discoverability, integrity, and scheme agility?
+
+This paper proposes a linking solution that decouples integrity information from link and resource syntaxes, enabling verification of any representation of a resource from any type of link. We call this approach Resource Integrity Proofs (RIPs). RIPs provide a succinct way to link to resources with cryptographically verifiable content integrity. RIPs can be combined with blockchain technology to create discoverable proofs of existence to off-chain resources.
 
    * [Use Cases and Proposed Solutions for Verifiable Offline Credentials](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Use%20Cases%20and%20Proposed%20Solutions%20for%20Verifiable%20Offline%20Credentials.md)
 

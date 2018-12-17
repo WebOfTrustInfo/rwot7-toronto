@@ -3,6 +3,8 @@ How to Convince Dad\* of the Importance of Self-Sovereign Identity
 
 ### \* and your sister and your daughter and your best friend and your nephew
 
+##### by Shannon Appelcline, Kenneth Bok, Lucas Parker, Peter Scott, and Matthew Wong
+
 Abstract
 --------
 

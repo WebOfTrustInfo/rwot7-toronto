@@ -1,6 +1,8 @@
-If you will be attending Rebooting the Web of Trust Fall 2018 in Toronto, Canada, please upload your topic papers and advanced readings to this directory with a pull request (or, if you don't know how, post an issue).
+# Rebooting the Web of Trust VII: Toronto (September 2018)
 
-_Please see the [Web of Trust Info website](http://www.weboftrust.info/) for more information about our community. Go to [Eventbrite](http://rwot6.eventbrite.com) to register for this event._
+This repository contains documents related to RWOT7, the seventh Rebooting the Web of Trust design workshop, which ran near Toronto, Canada, on September 26th to 28th, 2018. The goal of the workshop was to generate five technical white papers and/or proposals on topics decided by the group that would have the greatest impact on the future.
+
+_Please see the [Web of Trust Info website](http://www.weboftrust.info/) for more information about our community. Watch for our [next event](https://www.weboftrust.info/next-event-page.html) February 27th-March 1st, 2019, tentatively planned for Europe._
 
 ##  Topics & Advance Readings
 
