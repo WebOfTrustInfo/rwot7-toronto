@@ -16,14 +16,14 @@ In this paper, we demostrate how IPLD could be used as a general pattern for rep
 
 ## IPLD
 
-IPLD uses an abstract model for linking data via cryptographic hashes, which enables the ability to traverse this link to the referenced data via path `"/"` notation.  This path notation has its roots in the Linux [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard).  A link in IPLD is represented in JSON as a "link object" and uses the path syntax `"/"` as the key to the object that is followed by the CID of the link.  
+IPLD uses an abstract model for linking data via cryptographic hashes, which enables link traversal to the referenced data via path `"/"` notation.  This path notation has its roots in the Linux [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard).  A link in IPLD is represented in JSON as a "link object" and uses the path syntax `"/"` as the key to the object that is followed by the CID of the link.  
 
 For example:   
 ```
 { "/" : "zdpuAmoZixxJjvosviGeYcqduzDhSwGV2bL6ZTTXo1hbEJHfq" }
 ```
 
-This syntax for repsenting linked data can be expanded and used for other JSON structures. For instance, building on this example we can leverage JSON-LD sematics by inserting a `@context` to our IPLD object and apply the above as a link that resolves to the JSON-LD document that describes the attributes for our IPLD object. 
+This syntax for representing linked data can be expanded and used for other JSON structures. For instance, building on this example we can leverage JSON-LD semantics by inserting a `@context` to our IPLD object and apply the above as a link that resolves to the JSON-LD document that describes the attributes for our IPLD object. 
 
 ```
 { "@context" : 
