@@ -436,6 +436,8 @@ This can be extended to any arbitrarily complicated tree of processing transform
 
 Because each DAD embeds a DID and is signed by the associated private key belonging to the DID, provenance of both the controller of the transformation step and the integrity of the associated data can be determined.  Because each subsequent DAD in a processing flow or DAD chain contains the DID and signature of the prior DAD or DADs, full traceability can be established back to the originating DAD or DADs that preserves both data integrity and proof of control.  This then is a critically enabling capability for decentralized computing infrastructure.
 
+A few open source projects are providing support of the key management needed for building applications with DIDs and DADs. Notable are the Didery Service [[10]] with web [[11]] and command line [[12]] clients and the SeedQuest [[13]] key recovery application.
+
 
 ## Use Cases
 
