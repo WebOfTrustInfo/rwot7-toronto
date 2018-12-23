@@ -2,6 +2,29 @@
 
 Authors: Kim Hamilton Duffy, Anthony Ronning, Lucas Parker, and Peter Scott
 
+Table of Contents:
+- [Blockcerts -- where we are, and what's next](#blockcerts----where-we-are--and-what-s-next)
+- [About Blockcerts](#about-blockcerts)
+- [Reasons for Success](#reasons-for-success)
+- [Obstacles we faced](#obstacles-we-faced)
+- [Current Challenges](#current-challenges)
+  * [Remove centralization introduced by hosted Issuer Profiles](#remove-centralization-introduced-by-hosted-issuer-profiles)
+  * [Remove centralization introduced by hosted revocation lists](#remove-centralization-introduced-by-hosted-revocation-lists)
+  * [Handle recipient key lifecycle in a first-class way](#handle-recipient-key-lifecycle-in-a-first-class-way)
+  * [Increase flexibility of schema across different use cases -- any privacy/security for sensitive claims](#increase-flexibility-of-schema-across-different-use-cases----any-privacy-security-for-sensitive-claims)
+- [Roadmap](#roadmap)
+  * [Open Badges / Verifiable Credentials Alignment](#open-badges---verifiable-credentials-alignment)
+  * [Verifiable Displays (now Resource Integrity Proofs)](#verifiable-displays--now-resource-integrity-proofs-)
+  * [DIDs](#dids)
+  * [Revocation](#revocation)
+  * [Blockcerts Governance](#blockcerts-governance)
+- [Additional goals](#additional-goals)
+  * [Scaleable distributed timestamps](#scaleable-distributed-timestamps)
+  * [Privacy and security](#privacy-and-security)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 # About Blockcerts
 
 Blockcerts is an open standard and [set of open source libraries](https://github.com/blockchain-certificates) for creating, issuing, viewing, and verifying blockchain-anchored credentials. In addition to commercial deployment by Learning Machine, it's used by hundreds of independent implementers (per github metrics and community discussion) and has a [thriving discussion forum for implementers and researchers](https://community.blockcerts.org/).
