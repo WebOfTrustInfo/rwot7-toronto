@@ -82,7 +82,7 @@ A critical foundational step is alignment of [Open Badges are Verifiable Credent
 More significantly, the Verifiable Credentials specification is intended for a range of credentials, and factors in a range of privacy and security concerns applicable for low-to-high stakes credentials. 
 
 
-## Verifiable Displays
+## Verifiable Displays (now Resource Integrity Proofs)
 
 If all credentials being issued are identical in structure and vocabulary, it is possible to assume a common set of fields in a display. However, when these vary, social exploits are possible. 
 
@@ -92,14 +92,13 @@ This is a problem that's less relevant in machine-to-machine credential verifica
 
 The verifier and viewer must be able to know that the display they are seeing matches what was intended by the issuer and has not been tampered with.
 
-A general solution for this is proposed in [Verifiable Displays](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/verifiable_displays.md)
+A general solution for this is proposed in [Resource Integrity Proofs](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/resource-integrity-proofs.pdf)
 
 ## DIDs
 
 Moving to Decentralized Identifiers removes the issuer profile as a single-point-of-failure. It improves longevity (enabling even life-long recipient ownership) by promoting key lifecycle to a first-class notion. I.e. any viable system must factor in the fact that cryptopgrahic keys should be rotated as a best practice, and should factor in key loss.
 
 [Open Badges are Verifiable Credentials](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf) also outlines how DIDs will appear in the new Blockcerts schema.
-
 
 ## Revocation
 
