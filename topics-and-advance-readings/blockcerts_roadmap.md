@@ -115,24 +115,20 @@ Perhaps our highest priority is setting up an independent foundation to steward 
 
 # Additional goals
 
-## Root of trust
+## Scaleable distributed timestamps
+
+Currently Blockcerts uses the blockchain transaction (associated with a credential) to determine both of these items during verification:
+1. timestamp (proof of existence at a certain time)
+2. issuer signing key
  
-A useful consequence of DIDs is that, in some cases, credentials will not need to be anchored to a blockchain. Informally the idea is that, if the issuer is the source of truth, and you can verify the issuer controlled the signing key at the time of issuance, then you can similarly trust the timestamp inserted by the issuer into the signed payload of the credential. This is exactly what's enabled by DIDs.
+For future versions, we propose using a timestamping service (like Open Timestamps) for #1 and a separate issuer signature for #2. The flow could look like this:
+1. issuer uses Open Timestamps to obtain an ots proof of the content; appends proof
+2. issuer signs payload; appends proof
 
-In the current version of Blockcerts, the timestamp is established (at least within a range of confidence) by the transaction anchoring the credential batch to the blockchain. The verification process compares that signing key and timestamp against the issuer-hosted profile.
+This has an added benefit that the second operation does not need to be on-chain, resulting in a more flexible/scaleable approach.
 
-DIDs allow us to invert that comparison -- since most DID methods use blockchain anchoring, we can now audit keys and their effective timestamps.  
-
-There are corner cases to consider, meaning this approach is not necessarily universally preferred.
-
-Note our assumption that the issuer is the source of truth. For example, a university issuer is the source of truth for credentials they issue. If the timestamp is in the signed credential, and that timestamp occurred in a valid range for the associated key, then everything checks out. 
-
-The problems that stand out are (1) issuer mistakes (inserting the wrong date) and (2) malicious internal users. However, the first would be corrected by the issuer; the second is addressed by auditable key revocation enabled by DIDs. 
-
-If the issuer is not the universally accepted source of truth, there may be problems. This is more of a problem for establishing original provenance, e.g. for a piece of artwork. An independently auditable timestamp on the claim itself would presumably be required.
-
-However, even this can be addressed (for scenarios where fairly-exact, auditable timestamps are critical) is to use a timestamping service, like Open Timestamps. A sketch of a Open Timestamps LD signature was developed by Peter Todd and Kim Duffy at Decentralized Web summit (detail to come).
-
+> TODO: A sketch of a Open Timestamps LD signature was developed woth Peter Todd at Decentralized Web summit (details to come).
+> TODO: Work out the chained signature samples.
 
 ## Privacy and security
 
