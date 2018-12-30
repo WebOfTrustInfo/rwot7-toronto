@@ -5,14 +5,14 @@ Authors: Kim Hamilton Duffy, Christopher Allen, Dan Pape
 Contributors: Ryan Grant, Anthony Ronning, Ganesh Annan, Wolf McNally
 
 ## Abstract
-The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design decisions -- largely scope-cutting in nature -- in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
+The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design and implementation decisions -- largely scope-cutting in nature -- in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
 
 ## Overview
 
 The design decisions include:
 - What's in and out of scope
 - BTCR semantics
-- Wallet functionality
+- Wallet MVP requirements and functionality
 - Credential schema and content
 
 ## Scope clarifications
@@ -62,7 +62,12 @@ Specifically, after tx confirmation, the user must specify:
 
 The decision to store it in github specifically reduces the target audience, since it requires a github account. However, we were already assuming a dev audience for v0.1. 
 
-An advantage is that github allows signed commits, and therefore the DID Document can tie to PGP.
+One advantage is of this restriction is the ability to sign DID Document updates with a PGP key (via github signed commits). The flow would look like this:
+
+1. Create BTCR DID
+2. Create the full BTCR DID document in github, including the PGP key in this document
+    - Note the DID document itself is signed with BTCR transaction signing key, as usual
+3. Commit to github using PGP key from (2).
 
 ### 4. Testnet only
 
@@ -102,7 +107,9 @@ The first factor is important because a missing OP_RETURN is considered valid in
 
 This behavior must be enforced by BTCR resolvers.
 
-## Wallet functionality
+## Wallet requirements and functionality
+
+We will release a v0.1 BTCR wallet as an iPhone app. We wanted to include sufficient features to demonstrate core BTCR features (as described in the rest of this paper). While defining requirements, we to include some usability features, and also realized library limitations affecting our implementation choices.
 
 ### 1. Import previous Bitcoin transactions
 
