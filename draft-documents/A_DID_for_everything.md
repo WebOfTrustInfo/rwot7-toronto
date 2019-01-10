@@ -420,7 +420,7 @@ Image processing is operational in many scientific and engineering disciplines. 
 * X-ray and ultrasonic devices deliver medical images with image processing that the doctor or medical algorithm can interpret more easily. 
 * X-ray machines in security zones automatically inspect luggage and clothing for dangerous objects. 
 * Visual image processing for quality assurance of objects in manufacturing systems.
-* Radarr and visual images for earth-observation applications.
+* Radar and visual images for earth-observation applications.
 
 Image processing can include multiple data sources, parties, algorithms, and processing steps. An image processing end-user needs to be able to validate trustability and accuracy of an image data chain output data. This requirements becomes of critical importance when the output data is used in safety or security-relevant use cases or to make economic decision with significant commercial values involved.
  
