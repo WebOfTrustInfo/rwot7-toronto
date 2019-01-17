@@ -5,7 +5,7 @@ Authors: Kim Hamilton Duffy, Christopher Allen, Dan Pape
 Contributors: Ryan Grant, Anthony Ronning, Ganesh Annan, Wolf McNally
 
 ## Abstract
-The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design and implementation decisions -- largely scope-cutting in nature -- in order to lock down an MVP version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
+The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method's reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design and implementation decisions -- largely scope-cutting in nature -- in order to lock down a Minimum Viable Product (MVP) version, which we'll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.
 
 ## Overview
 
@@ -15,12 +15,12 @@ The design decisions include:
 - Wallet MVP requirements and functionality
 - Credential schema and content
 
-## Scope clarifications
+## Scope Clarifications
 
-To reduce design and implementation complexity, we decided on some reductions for a 0.1 release of BTCR. A variety of factors influenced these decisions, including lack of library support for our MVP scenarios and our desire for simplicity. Later versions of BTCR will address more advanced scenarios, including cost reduction, improved library security, and most significantly, support for the mainnet chain. 
+To reduce design and implementation complexity, we decided on some reductions for a 0.1 release of BTCR. A variety of factors influenced these decisions, including lack of library support for our MVP scenarios and our desire for simplicity. Later versions of BTCR will address more advanced scenarios, including cost reduction, improved library security, and, most significantly, support for the mainnet chain. 
 
 ### 1. Assume P2PKH scripts
-Our initial BTCR prototypes relied on Pay to Public Key Hash (P2PKH) scripts. We explored other script types, but these introduced complications extracting the signing public key directly from the transaction, which we require for the final DID document.
+Our initial BTCR prototypes relied on Pay-to-Public-Key-Hash (P2PKH) scripts. We explored other script types, but these introduced complications for extracting the signing public key directly from the transaction, which we require for the final DID document.
 
 For this reason, we decided that only P2PKH scripts are supported, and other scripts types -- for example P2SH and Segwit -- are out of scope.
 
@@ -30,7 +30,7 @@ Because of the size and cost implications, we will revisit this decision in late
 
 ### 3. Txrefs and Txref-ext
 
-Finalizing the txref spec (BIP-0136) is currently still in progress, but we have decided that BTCR DIDs will use the extended form of the txref, which encodes the TXO index within the transaction, as well as the block height and TX index of the transaction itself. See [here](https://w3c-ccg.github.io/didm-btcr/#txref) for details. 
+The finalization of the txref spec (BIP-0136) is currently still in progress, but we have decided that BTCR DIDs will use the extended form of the txref, which encodes the TXO index within the transaction, as well as the block height and TX index of the transaction itself. See [here](https://w3c-ccg.github.io/didm-btcr/#txref) for details. 
 
 #### Background/Context
 
@@ -38,7 +38,7 @@ A BTCR transaction allows an optional OP_RETURN field pointing to a "continuatio
 
 The storage type of the continuation document introduced a fork during DID document resolution: if the link in the transaction pointed to mutable storage, the document could be updated after the transaction with the known DID (which isn't known until after the tx has been confirmed). However, if the link was a cryptographic hash link, then the document could not be changed without invalidating the hash.
 
-Our original documentation described 2 paths to address these scenarios:
+Our original documentation described two paths to address these scenarios:
 - If the document is in an immutable store, we consider the transaction signature an implicit signature on the immutable content.
 - Otherwise, require a signature on the continuation DID document.
 
@@ -46,13 +46,13 @@ However, this introduces a requirement for the resolvers to be aware of differen
 
 #### v0.1 Scope Reduction: no special path for immutable continuation DID documents
 
-The BTCR team strongly prefers use of immutable storage for its simplicity; however, we considered the burden of ensuring availability of IPFS objects prohibitive for evaluting BTCR DIDs in end-to-end scenarios. This would require the user to run an IPFS node (or have their objects pinned on one) because this isn't feasible on a mobile device. For example, on an iPhone (our MVP target device) the IPFS lib on iPhone has to be running all the time, and can’t be running the in background.
+The BTCR team strongly prefers use of immutable storage for its simplicity; however, we considered the burden of ensuring availability of IPFS objects prohibitive for evaluting BTCR DIDs in end-to-end scenarios. This would require the user to run an IPFS node (or have their objects pinned on one), and this isn't feasible on a mobile device. For example, on an iPhone (our MVP target device) the IPFS lib on iPhone has to be running all the time, and can’t be running in the background.
 
-For these reasons, we decided to wait for greater support for IPFS on iPhone, or use something like filecoin. In v0.1 we will assume that, if the OP_RETURN is present, it points to an HTTP URL. We also assume that the target content could have been altered.
+For these reasons, we decided to wait for greater support for IPFS on iPhone or to use something like filecoin. In v0.1 we will assume that, if the OP_RETURN is present, it points to an HTTP URL. We also assume that the target content could have been altered.
 
 This allows us to cut scope and address the case of mutable storage only.
 
-### 3. Continuation DID Document in github (if the tx has an OP_RETURN)
+### 4. Continuation DID Document in github (if the tx has an OP_RETURN)
 
 Extending on the previous decision, we've decided in v0.1 to store continuation DID Documents in github. The continuation DID Document must be updated after tx confirmation to explicity list fields we formerly derived as part of the implicit DID document.
 
@@ -69,7 +69,7 @@ One advantage is of this restriction is the ability to sign DID Document updates
     - Note the DID document itself is signed with BTCR transaction signing key, as usual
 3. Commit to github using PGP key from (2).
 
-### 4. Testnet only
+### 5. Testnet only
 
 Perhaps most notably, we've decided to only support testnet (not mainnet) as we work through the initial reference implementations and obtain feedback from test usage.
 
@@ -81,11 +81,11 @@ A BTCR DID document relies partially on transaction structure, partially on the 
 
 #### a. TX Input addresses
 
-In v0.1, the keypair corresponding to the 1st TX input has the following properties:
+In v0.1, the keypair corresponding to the first TX input has the following properties:
 - it is the only key that can be used to verify control of the DID and continuation DID document
 - it must be used to sign the updated continuation DID document (after TX confirmation)
 
-If an OP_RETURN doesn't exist, the keypair corresponding to the 1st TX input is granted the following additional capabilities (by the resolver):
+If an OP_RETURN doesn't exist, the keypair corresponding to the first TX input is granted the following additional capabilities (by the resolver):
 - DID auth
 - Sign/verify Verifiable Credentials
 
@@ -93,7 +93,7 @@ If the OP_RETURN exists, the continuation DID document obviates the need for add
 
 #### b. TX Output address (1st monetary output)
 
-Used for "following the tip". If spent, the BTCR DID has either been rotated or revoked. Resolvers must follow the tip to find the latest transaction. 
+The output address is used for "following the tip". If spent, the BTCR DID has either been rotated or revoked. Resolvers must follow the tip to find the latest transaction. 
 
 Determining whether the DID has been rotated or revoked is described in the next section.
 
@@ -101,15 +101,15 @@ Determining whether the DID has been rotated or revoked is described in the next
 
 A BTCR DID is considered revoked if:
 - The latest transaction has no OP_RETURN, AND
-- There is more than 1 transaction in the BTCR DID "chain"
+- There is more than one transaction in the BTCR DID "chain"
 
-The first factor is important because a missing OP_RETURN is considered valid in the very first tx in the chain. However, all subsequent txs in the chain must have OP_RETURNs or else it is considered revoked.
+The first factor is important because a missing OP_RETURN is considered valid in the very first TX in the chain. However, all subsequent TXs in the chain must have OP_RETURNs, or else it is considered revoked.
 
 This behavior must be enforced by BTCR resolvers.
 
 ## Wallet requirements and functionality
 
-We will release a v0.1 BTCR wallet as an iPhone app. We wanted to include sufficient features to demonstrate core BTCR features (as described in the rest of this paper). While defining requirements, we to include some usability features, and also realized library limitations affecting our implementation choices.
+We will release a v0.1 BTCR wallet as an iPhone app. We wanted to include sufficient features to demonstrate core BTCR features (as described in the rest of this paper). While defining requirements, we included some usability features and also realized library limitations affecting our implementation choices.
 
 ### 1. Import previous Bitcoin transactions
 
@@ -129,21 +129,21 @@ We will achieve this by choosing our own convention about the derivation path.
 
 Many current BTCR prototypes (such as the BTCR playground) use Bitcoin APIs to look up transactions. This introduces many concerns from security to availability (rate-limiting). 
 
-We want our MVP deployment to require minimal resource overhead. To acheive this, our preference is to follow the best practice described in BIP 157/158 (aka Neutrino), which helps preserve the privacy of your DID-related addresses (over SPV). 
+We want our MVP deployment to require minimal resource overhead. To achieve this, our preference is to follow the best practice described in BIP 157/158 (aka Neutrino), which helps preserve the privacy of your DID-related addresses (over SPV). 
 
 > Note that Neutrino is not as efficient as SPV. SPV monitors only the addresses it cares about. In contrast, Neutrino introduces noise in attempt to hide the specific addresses it actually cares about.
 
-The problem we encountered is that library support for Neutrino not readily available. 
+The problem we encountered is that library support for Neutrino is not readily available. 
 
 As a fallback, we will use REST services backed by a bitcoin node (initially maintained by the BTCR team).
 
 ### 4. Pre-revocation
 
-The v0.1 BTCR wallet may support pre-revocation in cases of emergency. This works by pre-signing a transaction spending the tip, which can be stored away, and broadcast later to revoke the DID even without the key material.
+The v0.1 BTCR wallet may support pre-revocation in cases of emergency. This works by pre-signing a transaction spending the tip, which can be stored away and broadcast later to revoke the DID even without the key material.
 
 ## Credential schema and content
 
-This section applies to credential schema and content, which is relevant when demonstrating DID use cases. Consistent with the previous decisions, we urge people to not to issue high-stakes claims (for privacy/security) and use common schemas (for ease of interop)
+This section applies to credential schema and content, which is relevant when demonstrating DID use cases. Consistent with the previous decisions, we urge people to use common schemas (for ease of interop) and not to issue high-stakes claims (for privacy/security).
 
 ### 1. Use JSON-LD 1.1 javascript lib, because 0.1 doesn't need high-stakes verifiers
 
