@@ -118,19 +118,3 @@ http://www.who.int/trade/distance_learning/gpgh/gpgh8/en/
 
 [7] Hacking, tracking, stealing and sinking ships -
  https://www.pentestpartners.com/security-blog/hacking-tracking-stealing-and-sinking-ships/
-Further Research Resource Link
-SCIFS
-Communication for Mining Sites
-Delegative Democracy
-Maritime Identity White paper
--MCP using openid connect for user login to cloud.
-Maritime Communication	-
-
-VHF Data Exchange System (VDES) is a radio communication system that operates between ships, shore stations and satellites on Automatic Identification System (AIS), Application Specific Messages (ASM) and VHF Data Exchange (VDE) frequencies in the Marine Mobile VHF band
-
-IALA is a non profit, international technical association. Established in 1957, it gathers together marine aids to navigation authorities, manufacturers, consultants, and, scientific and training institutes from all parts of the world and offers them the opportunity to exchange and compare their experiences and achievements.
-
-http://www.iala-aism.org/product-category/publications/guidelines/
-
-Pulse effort california, setup disaster response aimed at earthquakes, wildfires
-
