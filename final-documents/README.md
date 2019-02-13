@@ -34,3 +34,8 @@ _This is a listing for the RWOT7 papers to date. [Several more](https://github.c
 > Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via links. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. Would it be possible to create an extensible and multipurpose cryptographic link that provides discoverability, integrity, and scheme agility?
 
 > This paper proposes a linking solution that decouples integrity information from link and resource syntaxes, enabling verification of any representation of a resource from any type of link. We call this approach Resource Integrity Proofs (RIPs). RIPs provide a succinct way to link to resources with cryptographically verifiable content integrity. RIPs can be combined with blockchain technology to create discoverable proofs of existence to off-chain resources.
+
+** [*Use Cases and Proposed Solutions for Verifiable Offline Credentials*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/offline-use-cases.pdf) 
+#### Michael Lodder, Samantha Mathews Chase, and Wolf McNally
+
+> In this paper we cover various scenarios where some or all parties have intermittent, unreliable, untrusted, insecure, or no network access, but require cryptographic verification (message protection and/or proofs). Furthermore, communications between the parties may be only via legacy voice channels. Applicable situations include marine, subterranean, remote expeditions, disaster areas, refugee camps, and high-security installations. This paper then recommends solutions for addressing offline deployments.
