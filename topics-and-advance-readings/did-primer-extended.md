@@ -252,7 +252,7 @@ default for all nearly all forms of Internet communication.
 
 The DID specification is intentionally limited to machine-generated
 decentralized identifiers that are completely lacking in human
-memorability or usability. However there are many use cases it is
+memorability or usability. However for many use cases it is
 desirable to be able to discover a DID using a human-friendly semantic
 name. Such a naming service would look like a flat,
 cryptographically-verifiable version of DNS.
