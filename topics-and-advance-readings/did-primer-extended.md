@@ -221,7 +221,7 @@ would defeat the whole purpose. In short, *decentralized identity
 requires decentralized key management*.
 
 The purpose of the DKMS (Decentralized Key Management System) specification 
-is to specify and interoperable protocol for managing the lifecycle of 
+is to specify an interoperable protocol for managing the lifecycle of 
 private keys and other private metadata associated with a DID in a way 
 that is interoperable across different blockchains, apps, and vendors. 
 This spec is being developed under [a grant from the Science & Technology 
