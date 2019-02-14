@@ -289,7 +289,7 @@ blockchain identified by the DID method.
 The DID Auth specification will standardize this cryptographic
 challenge/response authentication protocol so it can be used with any
 DID that supports it. DID Auth endpoints would then become one of the
-standard DID identity services than can be discovered via a DID
+standard DID identity services that can be discovered via a DID
 document.
 
 ## DIDs and Privacy by Design
