@@ -221,7 +221,7 @@ would defeat the whole purpose. In short, *decentralized identity
 requires decentralized key management*.
 
 The purpose of the DKMS (Decentralized Key Management System) specification 
-is to specify and interoperable protocol for managing the lifecycle of 
+is to specify an interoperable protocol for managing the lifecycle of 
 private keys and other private metadata associated with a DID in a way 
 that is interoperable across different blockchains, apps, and vendors. 
 This spec is being developed under [a grant from the Science & Technology 
@@ -252,7 +252,7 @@ default for all nearly all forms of Internet communication.
 
 The DID specification is intentionally limited to machine-generated
 decentralized identifiers that are completely lacking in human
-memorability or usability. However there are many use cases it is
+memorability or usability. However for many use cases it is
 desirable to be able to discover a DID using a human-friendly semantic
 name. Such a naming service would look like a flat,
 cryptographically-verifiable version of DNS.
@@ -289,7 +289,7 @@ blockchain identified by the DID method.
 The DID Auth specification will standardize this cryptographic
 challenge/response authentication protocol so it can be used with any
 DID that supports it. DID Auth endpoints would then become one of the
-standard DID identity services than can be discovered via a DID
+standard DID identity services that can be discovered via a DID
 document.
 
 ## DIDs and Privacy by Design
