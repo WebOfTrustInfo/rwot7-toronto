@@ -4,7 +4,7 @@ Name | Lead | Link | Status
 ---|---|---|---
 Agent Communication Protocols | Adrian | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Agent-Communication-Protocols.md) | Feb 11
 BTCR | Ryan | [Final](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/btcr_0_1.pdf) | DONE
-Concept Map | Andrew, Ouri | [Map](https://kumu.io/andrewhughes3000/rwot#credentials-concepts) | Dec 1 
+Concept Map | Andrew, Ouri | [Map](https://kumu.io/andrewhughes3000/rwot#credentials-concepts) | DONE
 A DID for Everything | Sam | [Final](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/A_DID_for_everything.pdf) | DONE
 Digital Credential Wallet | Mikerah | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Digital%20Credential%20Wallet.md) | Feb 1
 Digital Identity for the Homeless | Matt | [Topic](https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/Digital-Identity-for-the-Homeless.md) | Dec 5
