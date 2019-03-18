@@ -11,7 +11,7 @@ Digital Identity for the Homeless | Matt | [Topic](https://github.com/WebOfTrust
 Guidance and Standards for Interoperability of Decentralized Identity Systems | Manu, Mike J. | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/Guidance_and_Standards_for_Interoperability_of_Decentralized_Identity_Systems.md) | STALLED
 How to Convince Dad* | Lucas | [Final](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/convincing-dad.pdf) | DONE
 IPLD as a General Pattern | Jonny | [Final](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/ipld-did.pdf) | DONE
-Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | By RWOT8?
+Mental Models | Joe | [Draft](https://github.com/WebOfTrustInfo/rwot7/blob/master/draft-documents/mental-models.md) | March
 Peer to Peer Degrees of Trust | Tyler | [Final](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/peer-to-peer-degrees-of-trust.pdf) | DONE
 Resource Integrity Proofs | Ganesh | [Final](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/resource-integrity-proofs.pdf) | DONE
 Use Cases and Proposed Solutions for Verifiable Offline Credentials | Mike L. | [Final](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/offline-use-cases.pdf)| DONE
