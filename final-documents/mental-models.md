@@ -1,14 +1,8 @@
 # Five Mental Models of Identity
 
-  Joe Andrieu                Nathan George         Andrew Hughes
-  -------------------------- --------------------- ------------------------------
-  *Legendary Requirements*   *Sovrin Foundation*   *ITIM Consulting*
-  *joe@legreq.com*           *nathan@sovrin.org*   *andrewhughes3000@gmail.com*
+### by Joe Andrieu (joe@legreq.com), Legendary Requirements; Nathan George (nathan@sovrin.org), Sovrin Foundation; Andrew Hughes (andrewhughes3000@gmail.com), ITIM Consulting; Christophe MacIntosh (cm@clearmatics.com), Clearmatics; and Antoine Rondelet (ar@clearmatics.com), Clearmatics
 
-  Christophe MacIntosh   Antoine Rondelet
-  ---------------------- ----------------------
-  *Clearmatics*          *Clearmatics*
-  *cm@clearmatics.com*   *ar@clearmatics.com*
+
 
 Abstract
 ========
@@ -41,10 +35,10 @@ Background
 
 The authors have been participants, speakers, and organizers at
 identity-related professional gatherings for over a decade, including
-the Internet Identity Workshop\[1\], Rebooting the Web of Trust\[2\],
-ID2020\[3\], and EIC\[4\], to name just a few. They have held leadership
-roles in identity-related standards efforts at the W3C\[5\], IETF\[6\],
-Kantara Initiative\[7\], and ISO\[8\].
+the Internet Identity Workshop[1], Rebooting the Web of Trust[2],
+ID2020[3], and EIC[4], to name just a few. They have held leadership
+roles in identity-related standards efforts at the W3C[5], IETF[6],
+Kantara Initiative[7], and ISO[8].
 
 As active contributors to industry conversations about interoperable
 digital-identity systems, we have witnessed how different communities
@@ -70,18 +64,18 @@ it is vital that we find simpler, yet more rigorous, ways to communicate
 more clearly about identity.
 
 The ideas behind this paper were initially presented at *Rebooting the
-Web of Trust V* in Boston in 2017\[9\] as a brief one-hour discussion,
+Web of Trust V* in Boston in 2017[9] as a brief one-hour discussion,
 followed by a session the next month at the 25th *Internet Identity
-Workshop* in Mountain View\[10\].
+Workshop* in Mountain View[10].
 
 The initial discussion proposed three mental models. Since then, a
 fourth and fifth mental model have been incorporated based on feedback
 from fellow professionals. The first presentation of the current set of
 five mental models was submitted as an advanced reading topic paper
-\[11\] for the *Rebooting the Web of Trust VII \[12\]* workshop that was
+[11] for the *Rebooting the Web of Trust VII [12]* workshop that was
 held in Toronto in September 2018. The same month, these mental models
 of identity were adopted as a key framework for the design workshop of
-the *International Identity Summit\[13\]* at the University of
+the *International Identity Summit[13]* at the University of
 Washington. It was at *Rebooting the Web of Trust VII* that the current
 authors began collaborating on this paper.
 
@@ -96,7 +90,7 @@ Mental Models
 =============
 
 Mental models are psychological representations of real, hypothetical,
-or imaginary situations \[14\]. In this paper, we are referring to the
+or imaginary situations [14]. In this paper, we are referring to the
 psychological representations people have for “identity”. Our
 experiences have shown that different people approach identity in
 different ways, consistent with the mental models we discuss in this
@@ -136,7 +130,7 @@ stakeholders.
 Identity
 ========
 
-In this paper we use the definition of functional identity \[15\] when
+In this paper we use the definition of functional identity [15] when
 we refer to “identity”. As a consequence, “identity” is how we
 **recognize**, **remember**, and **respond** to specific people and
 things. The processes of identity system*s acquire, correlate, apply,
@@ -212,7 +206,7 @@ restrict, harm, or protect.
 
 The presentation mental model sees identity as how we present ourselves
 to society. This is the mental model behind Vendor Relationship
-Management \[16\], user-centric identity, and self-sovereign identity.
+Management [16], user-centric identity, and self-sovereign identity.
 
 ***Is this how the subject chooses to be known?***
 
@@ -265,7 +259,7 @@ who let a friend borrow a cup of sugar, the jerk in 4th grade who kept
 pulling a girl’s pigtails.
 
 Or as Senator McCarthy famously asked *“Are you now, or have you ever
-been, a member of the communist party?*” \[17\] The relationship of
+been, a member of the communist party?*” [17] The relationship of
 membership in the communist party was used by McCarthy to argue that
 individuals were enemies of the state.
 
@@ -297,7 +291,7 @@ Capabilities combine both the ability and the will to execute. The
 question of an identity’s capability is truly a test of one’s
 willingness and ability to take action.
 
-Sometimes what you really need is a pilot\[18\]. It does not matter if
+Sometimes what you really need is a pilot[18]. It does not matter if
 they are licensed or if they physically have a license. What matters is
 whether or not they can safely land that plane. If they can, that’s a
 defining element of who they are, just as much as if they can’t.
@@ -309,8 +303,8 @@ needs to be done. If you are capable of doing so, this very capability
 defines part of who you are.
 
 To spend bitcoin, you must be able to generate the correct ScriptSig
-\[19\], one that returns TRUE when evaluated against the scriptPubkey
-\[20\] of an input transaction. Bitcoin doesn’t care what your name is
+[19], one that returns TRUE when evaluated against the scriptPubkey
+[20] of an input transaction. Bitcoin doesn’t care what your name is
 or what is recorded in some database. If you can post a transaction that
 produces the right output, you can spend the coins.
 
@@ -332,7 +326,7 @@ models, sometimes without either party realizing they are coming from
 different perspectives.
 
 In the classic science fiction story *Flatland: A Romance of Many
-Dimensions* by Edwin Abbot \[21\], the author uses a fictional world to
+Dimensions* by Edwin Abbot [21], the author uses a fictional world to
 explain how two-dimensional creatures would perceive three-dimensional
 objects as they travel through the plane of their two-dimensional world.
 The hero of the story realizes that these objects are, in fact, three
@@ -385,7 +379,7 @@ occasionally referred to as the “Tyranny of data”. Humorous consequences
 can be seen in fiction when an official record indicates someone is
 dead, when clearly they are not. Less humorous consequences occur, for
 example, when subsidies people need to live are denied as a result of
-errors in the Aadhaar identity service \[22\].
+errors in the Aadhaar identity service [22].
 
 Intersection between Capability and Relationship
 ------------------------------------------------
@@ -431,7 +425,7 @@ but still relevant idea that it is rude to ask a woman about her age, a
 man about his income, or a gender-neutral individual about their Y
 chromosome. These social norms -- based on our relationships with others
 -- shape a framework for presenting information that both enables and
-restricts freedom of presentation \[23\].
+restricts freedom of presentation [23].
 
 Finally, self-asserting information may be enough for relying on certain
 types of data (“this is my favorite food”), but not others (“I am not a
@@ -442,7 +436,7 @@ from the source, filtered and presented by the holder, and interpreted
 through the lens of the relying party. This shared meaning is based on
 multiple relationships and as such, is beyond the sole control of any of
 these parties. The relationships enable and transform the presentations.
-This is the architecture embodied in Verifiable Credentials \[24\] as
+This is the architecture embodied in Verifiable Credentials [24] as
 well as physical credentials such as driver’s licenses and passports.
 
 Intersection between Presentation and Attribute
@@ -530,79 +524,52 @@ together is our best chance at getting it right.
 References 
 ===========
 
-1.  #### “Internet Identity Workshop”, [*https://internetidentityworkshop.com*](https://internetidentityworkshop.com) (Accessed March 23, 2019)
+[1]  #### “Internet Identity Workshop”, [*https://internetidentityworkshop.com*](https://internetidentityworkshop.com) (Accessed March 23, 2019)
 
-2.  “Rebooting the Web of Trust”,
-    > [*http://weboftrust.info*](http://weboftrust.info) (Accessed March
-    > 23, 2019)
+[2]  “Rebooting the Web of Trust”, [*http://weboftrust.info*](http://weboftrust.info) (Accessed March 23, 2019)
 
-3.  “ID2020”, [*https://id2020.org/*](https://id2020.org/) (Accessed
-    > March 23, 2019)
+[3]  “ID2020”, [*https://id2020.org/*](https://id2020.org/) (Accessed March 23, 2019)
 
-4.  “European Identity & Cloud Conference”,
-    > [*https://www.kuppingercole.com/events/eic2019*](https://www.kuppingercole.com/events/eic2019)
-    > (Accessed March 23, 2019)
+[4]  “European Identity & Cloud Conference”, [*https://www.kuppingercole.com/events/eic2019*](https://www.kuppingercole.com/events/eic2019) (Accessed March 23, 2019)
 
-5.  “World Wide Web Consortium”,
-    > [*https://www.w3.org/*](https://www.w3.org/) (Accessed March
-    > 23, 2019)
+[5]  “World Wide Web Consortium”, [*https://www.w3.org/*](https://www.w3.org/) (Accessed March 23, 2019)
 
-6.  “Internet Engineering Task Force”,
-    > [*https://www.ietf.org/*](https://www.ietf.org/) (Accessed March
-    > 23, 2019)
+[6]  “Internet Engineering Task Force”, [*https://www.ietf.org/*](https://www.ietf.org/) (Accessed March 23, 2019)
 
-7.  “Kantara Initiative”,
-    > [*https://kantarainitiative.org/*](https://kantarainitiative.org/)
-    > (Accessed March 23, 2019)
+[7]  “Kantara Initiative”, [*https://kantarainitiative.org/*](https://kantarainitiative.org/) (Accessed March 23, 2019)
 
-8.  “International Organization for Standardization”,
-    > [*https://www.iso.org/home.html*](https://www.iso.org/home.html)
-    > (Accessed March 23, 2019)
+[8]  “International Organization for Standardization”, [*https://www.iso.org/home.html*](https://www.iso.org/home.html) (Accessed March 23, 2019)
 
-9.  “Rebooting the Web of Trust V”,
-    > [*https://github.com/WebOfTrustInfo/rwot5-boston*](https://github.com/WebOfTrustInfo/rwot5-boston)
-    > (Accessed March 23, 2019)
+[9]  “Rebooting the Web of Trust V”, [*https://github.com/WebOfTrustInfo/rwot5-boston*](https://github.com/WebOfTrustInfo/rwot5-boston) (Accessed March 23, 2019)
 
-10. “Internet Identity Workshop 25”, PDF of Proceedings,
-    > [*https://github.com/windley/IIW\_homepage/raw/gh-pages/assets/proceedings/IIWXXV\_Book\_of\_Proceedings.pdf*](https://github.com/windley/IIW_homepage/raw/gh-pages/assets/proceedings/IIWXXV_Book_of_Proceedings.pdf)
-    > (Accessed March 23, 2019)
+[10] “Internet Identity Workshop 25”, PDF of Proceedings, [*https://github.com/windley/IIW\_homepage/raw/gh-pages/assets/proceedings/IIWXXV\_Book\_of\_Proceedings.pdf*](https://github.com/windley/IIW_homepage/raw/gh-pages/assets/proceedings/IIWXXV_Book_of_Proceedings.pdf) (Accessed March 23, 2019)
 
-11. “Five Mental Models of Identity ”,
-    > [*https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md)
-    > (Accessed March 23, 2019)
+[11] “Five Mental Models of Identity ”, [*https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/five-mental-models-of-identity.md) (Accessed March 23, 2019)
 
-12. “Rebooting the Web of Trust VII”,
-    > [*https://github.com/WebOfTrustInfo/rwot7-toronto*](https://github.com/WebOfTrustInfo/rwot7-toronto)
-    > (Accessed March 23, 2019)
+[12] “Rebooting the Web of Trust VII”, [*https://github.com/WebOfTrustInfo/rwot7-toronto*](https://github.com/WebOfTrustInfo/rwot7-toronto) (Accessed March 23, 2019)
 
-13. “International Identity Summit”,
-    > [*http://depts.washington.edu/uwconf/wordpress/idsummit/*](http://depts.washington.edu/uwconf/wordpress/idsummit/)
-    > (Accessed March 23, 2019)
+[13] “International Identity Summit”, [*http://depts.washington.edu/uwconf/wordpress/idsummit/*](http://depts.washington.edu/uwconf/wordpress/idsummit/) (Accessed March 23, 2019)
 
-14. “What are mental models”,
-    > [*http://mentalmodels.princeton.edu/about/what-are-mental-models/*](http://mentalmodels.princeton.edu/about/what-are-mental-models/)
-    > (Accessed January 24, 2019).
+[14] “What are mental models”, [*http://mentalmodels.princeton.edu/about/what-are-mental-models/*](http://mentalmodels.princeton.edu/about/what-are-mental-models/) (Accessed January 24, 2019).
 
-15. “A Primer on Functional Identity”,
-    > [*https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/functional-identity-primer.md*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/functional-identity-primer.md)
-    > (Accessed March 21, 2019)
+[15] “A Primer on Functional Identity”, [*https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/functional-identity-primer.md*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/functional-identity-primer.md) (Accessed March 21, 2019)
 
-16. #### “Vendor Relationship Management”, [*https://en.wikipedia.org/wiki/Vendor\_relationship\_management*](https://en.wikipedia.org/wiki/Vendor_relationship_management) (Accessed March 21, 2019)
+[16] #### “Vendor Relationship Management”, [*https://en.wikipedia.org/wiki/Vendor\_relationship\_management*](https://en.wikipedia.org/wiki/Vendor_relationship_management) (Accessed March 21, 2019)
 
-17. #### “Joseph McCarthy”, [*https://en.wikipedia.org/wiki/Joseph\_McCarthy*](https://en.wikipedia.org/wiki/Joseph_McCarthy) (Accessed March 21, 2019)
+[17] #### “Joseph McCarthy”, [*https://en.wikipedia.org/wiki/Joseph\_McCarthy*](https://en.wikipedia.org/wiki/Joseph_McCarthy) (Accessed March 21, 2019)
 
-18. #### *Airplane.* Clip from YouTube [*https://www.youtube.com/watch?v=KSQyW\_l8OgE*](https://www.youtube.com/watch?v=KSQyW_l8OgE) (Accessed March 23, 2019)
+[18] #### *Airplane.* Clip from YouTube [*https://www.youtube.com/watch?v=KSQyW\_l8OgE*](https://www.youtube.com/watch?v=KSQyW_l8OgE) (Accessed March 23, 2019)
 
-19. #### “Signature Script, ScriptSig”, [*https://bitcoin.org/en/glossary/signature-script*](https://bitcoin.org/en/glossary/signature-script) (Accessed March 21, 2019)
+[19] #### “Signature Script, ScriptSig”, [*https://bitcoin.org/en/glossary/signature-script*](https://bitcoin.org/en/glossary/signature-script) (Accessed March 21, 2019)
 
-20. #### “Pubkey Script, ScriptPubKey”, [*https://bitcoin.org/en/glossary/pubkey-script*](https://bitcoin.org/en/glossary/pubkey-script) (Accessed March 21, 2019)
+[20] #### “Pubkey Script, ScriptPubKey”, [*https://bitcoin.org/en/glossary/pubkey-script*](https://bitcoin.org/en/glossary/pubkey-script) (Accessed March 21, 2019)
 
-21. #### “FLATLAND: A Romance of Many Dimensions”, [*https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf*](https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf) (Accessed March 21, 2019)
+[21] #### “FLATLAND: A Romance of Many Dimensions”, [*https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf*](https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf) (Accessed March 21, 2019)
 
-22. #### “Unique Identification Authority of India”, [*https://uidai.gov.in/*](https://uidai.gov.in/) (Accessed March 21, 2019)
+[22] #### “Unique Identification Authority of India”, [*https://uidai.gov.in/*](https://uidai.gov.in/) (Accessed March 21, 2019)
 
-23. #### “Overton window” [*https://en.wikipedia.org/wiki/Overton\_window*](https://en.wikipedia.org/wiki/Overton_window) (Accessed March 21, 2019)
+[23] #### “Overton window” [*https://en.wikipedia.org/wiki/Overton\_window*](https://en.wikipedia.org/wiki/Overton_window) (Accessed March 21, 2019)
 
-24. #### “Verifiable Credentials Data Model 1.0”, [*https://w3c.github.io/vc-data-model/*](https://w3c.github.io/vc-data-model/) (Accessed March 21, 2019)
+[24] #### “Verifiable Credentials Data Model 1.0”, [*https://w3c.github.io/vc-data-model/*](https://w3c.github.io/vc-data-model/) (Accessed March 21, 2019)
 
 
