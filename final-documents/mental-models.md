@@ -354,11 +354,9 @@ Intersection between Space-time and Attribute
 When space-time-minded people discuss identity with attribute-minded
 people, the conversation often leads to two key questions:
 
--   *“What are the minimum attributes to identify a
-    > particular (physical) individual?”, and *
+-   *“What are the minimum attributes to identify a particular (physical) individual?”, and *
 
--   *“Given the data we have, how can we identify particular
-    > individuals?”*
+-   *“Given the data we have, how can we identify particular individuals?”*
 
 Because all modern information systems rely on data, it is inevitable
 that space-time-minded applications intersect with the attribute mental
@@ -524,7 +522,7 @@ together is our best chance at getting it right.
 References 
 ===========
 
-[1]  #### “Internet Identity Workshop”, [*https://internetidentityworkshop.com*](https://internetidentityworkshop.com) (Accessed March 23, 2019)
+[1]  “Internet Identity Workshop”, [*https://internetidentityworkshop.com*](https://internetidentityworkshop.com) (Accessed March 23, 2019)
 
 [2]  “Rebooting the Web of Trust”, [*http://weboftrust.info*](http://weboftrust.info) (Accessed March 23, 2019)
 
@@ -554,22 +552,22 @@ References
 
 [15] “A Primer on Functional Identity”, [*https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/functional-identity-primer.md*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/functional-identity-primer.md) (Accessed March 21, 2019)
 
-[16] #### “Vendor Relationship Management”, [*https://en.wikipedia.org/wiki/Vendor\_relationship\_management*](https://en.wikipedia.org/wiki/Vendor_relationship_management) (Accessed March 21, 2019)
+[16] “Vendor Relationship Management”, [*https://en.wikipedia.org/wiki/Vendor\_relationship\_management*](https://en.wikipedia.org/wiki/Vendor_relationship_management) (Accessed March 21, 2019)
 
-[17] #### “Joseph McCarthy”, [*https://en.wikipedia.org/wiki/Joseph\_McCarthy*](https://en.wikipedia.org/wiki/Joseph_McCarthy) (Accessed March 21, 2019)
+[17] “Joseph McCarthy”, [*https://en.wikipedia.org/wiki/Joseph\_McCarthy*](https://en.wikipedia.org/wiki/Joseph_McCarthy) (Accessed March 21, 2019)
 
-[18] #### *Airplane.* Clip from YouTube [*https://www.youtube.com/watch?v=KSQyW\_l8OgE*](https://www.youtube.com/watch?v=KSQyW_l8OgE) (Accessed March 23, 2019)
+[18] *Airplane.* Clip from YouTube [*https://www.youtube.com/watch?v=KSQyW\_l8OgE*](https://www.youtube.com/watch?v=KSQyW_l8OgE) (Accessed March 23, 2019)
 
-[19] #### “Signature Script, ScriptSig”, [*https://bitcoin.org/en/glossary/signature-script*](https://bitcoin.org/en/glossary/signature-script) (Accessed March 21, 2019)
+[19] “Signature Script, ScriptSig”, [*https://bitcoin.org/en/glossary/signature-script*](https://bitcoin.org/en/glossary/signature-script) (Accessed March 21, 2019)
 
-[20] #### “Pubkey Script, ScriptPubKey”, [*https://bitcoin.org/en/glossary/pubkey-script*](https://bitcoin.org/en/glossary/pubkey-script) (Accessed March 21, 2019)
+[20] “Pubkey Script, ScriptPubKey”, [*https://bitcoin.org/en/glossary/pubkey-script*](https://bitcoin.org/en/glossary/pubkey-script) (Accessed March 21, 2019)
 
-[21] #### “FLATLAND: A Romance of Many Dimensions”, [*https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf*](https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf) (Accessed March 21, 2019)
+[21] “FLATLAND: A Romance of Many Dimensions”, [*https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf*](https://ned.ipac.caltech.edu/level5/Abbott/paper.pdf) (Accessed March 21, 2019)
 
-[22] #### “Unique Identification Authority of India”, [*https://uidai.gov.in/*](https://uidai.gov.in/) (Accessed March 21, 2019)
+[22] “Unique Identification Authority of India”, [*https://uidai.gov.in/*](https://uidai.gov.in/) (Accessed March 21, 2019)
 
-[23] #### “Overton window” [*https://en.wikipedia.org/wiki/Overton\_window*](https://en.wikipedia.org/wiki/Overton_window) (Accessed March 21, 2019)
+[23] “Overton window” [*https://en.wikipedia.org/wiki/Overton\_window*](https://en.wikipedia.org/wiki/Overton_window) (Accessed March 21, 2019)
 
-[24] #### “Verifiable Credentials Data Model 1.0”, [*https://w3c.github.io/vc-data-model/*](https://w3c.github.io/vc-data-model/) (Accessed March 21, 2019)
+[24] “Verifiable Credentials Data Model 1.0”, [*https://w3c.github.io/vc-data-model/*](https://w3c.github.io/vc-data-model/) (Accessed March 21, 2019)
 
 
