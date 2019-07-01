@@ -1,115 +1,71 @@
-# Digital Credential Wallet
-
-Authors: Mike Brown, Darrell O’Donnell, Michael Ruther, Greg Slepak, Mikerah Quintyne-Collins, Heather Vescent, Christopher Allen
+# Digital Credential Wallets
+### Mikerah Quintyne-Collins, Heather Vescent, Darrell O'Donnell, Greg Slepak, Michael Brown, Christoper Allen, Michael Ruther
 
 ## Abstract
 
+Digital Credential Wallets (DCWs) are becoming more common place as more of our physical credentials become digital. In this paper, we provide requirements for digital credential wallet design, considerations for key management for DCWs and go over several real-life use cases. 
+
 ## Introduction
+Digital credentials are seeing widespread usage as governments, businesses and individuals increasingly come online. These users need to be able to store these credentials for ease of use. Moreover, others validating these credentials need to be able to do so in a secure manner. In order to do this, digital credentials are stored in what are called *Digital Credential Wallets* (DCW). 
 
-## What is a Digital Credential Wallet?
-As methods and protocols to support the exchange of verifiable credentials (e,g. W3C Verifiable Claims Working Group), the need to begin defining the edge points for consumers, enterprises and non-person entities (NPE) interactions is growing. WIth the growth of cryptocurrencies, the associated ‘wallets’ for gathering, managing and exchanging token has grown. With respect to digital credentials some wallets (or often called agents) are emerging - usually specific to particular protocols. 
+The goal of this paper is to provide an overview of the considerations needed to build digital credential wallets and various use cases to put these considerations into perspective.
 
-For the purpose of this paper, a digital credential wallet is considered to be the point through which verifiable credentials can be collected, managed and exchanged with other entities. A wallet may be a mobile app that a consumer is using for this purpose, it may be an application used within an enterprise to manage a very large set of credentials, or it may be a app running in an IOT device. There are some common ‘features’ for all of these wallets, as well as some unique aspects for individuals, enterprises and NPEs.
+### Related Work
+There have been a few papers and reports written on the topic of digital credential wallets. These papers can be divided roughly into two categories: exploring uses cases for digital credential wallets and relating digital credential wallets to identity.
 
-## Requirements of a Digital Credential Wallet
-We identified several main requirements for a digital credential wallet. These may change whether it is a consumer wallet, an an enterprise wallet or a wallet for an NPE, for example, a vehicle, smart object or dumb object. 
+In [1], it is argued that cryptocurrency wallets can be seen as a form of functional identity and as such, for future purposes be combined with other wallets such as DCW to form the digital analog of a physical wallet. [2] concerns itself with the current state of digital wallets and issues surrounding future usage of digital wallets. [3] is an extension of the work discussed in [2] and provides an overview for businesses and governments on the state of digital wallets and goes into detail about every facet of the digital wallet ecosystem. 
 
-## Current Solutions to Digital Credential Wallets
+### Structure of the paper
+The structure of this paper is as follows: first, we provide several definitions of widely used terms followed by requirements of digital credential wallets. Second, we provide an overview of the key challenges of key management of digital credential wallets. In the third section, we provide various use cases for digital credential wallets. Finally, we present and suggest various areas for deeper work and investigation in the area of digital credential wallets.
 
-More complete examples
+## Preliminaries
+Before diving into requirements of digital credential wallets, we provide several definitions of well-known terms.
 
-### Limited examples
-*Apple Wallet* –  Apple wallet can stores a variety of credentials and authorizations, accessible only if a biometric or pin is used to open the wallet. But once opened, the Apple Wallet only supports additional validation/authentication for credit cards, but not for other credentials (which are purely bearer and do not support revocation, post issuance validation, receipts, consent, etc.) The Apple Wallet also does not support personas/multiple identities.
+*Definition 1*: A **Digital Credential** is a digital equivalent of a real-world credential. For example, a digital signature, just like a written signature, attests to the autenticity of a document.
 
-*Verified Organization Network (VON)* - The Verified Organization Book developed by the BC government stores enterprise credentials. This is a proof-of-concept that enables giving digital native credentials to organizations. https://von.pathfinder.gov.bc.ca/ & https://github.com/bcgov/von 
-
-
-## How does a Digital Credential Wallet differ from a Cryptocurrency Wallet? 
-Currently, when one hears the term wallet, one thinks of a cryptocurrency wallet due to the current mainstream attention of cryptocurrencies. Roughly, cryptocurrency wallets are used to store tokens or coins and digital credential wallets are used to store digital credentials. The purpose of this section is to distinguish between what is meant by a digital credential wallet and a cryptocurrency wallet. In outlining the similarities and differences between digital credential wallets and cryptocurrency wallets, we will arrive at constructive definitions of both types of wallets and in particular with regards to digital credential wallets, will complement the definition given in the previous section. 
-
-Similarities 
-The main similarities between digital credential wallets and cryptocurrency wallets are that they can be mobile, desktop and web applications and hardware devices, and  can store multiple addresses/credentials. Both wallets can be implemented as software applications or hardware devices. Software implementation of these wallets are mobile phone applications, desktop applications or web applications. The choice of software manifestation of these wallets give users a choice as to how much they want to control the information stored in these wallets. For example, with web applications wallets, most of them in use don’t give the user of their wallet control over the private/public keys that are associated with the wallet whereas with a desktop application wallet, the user will have full control over the private/public keys associated with the wallet. In the case of hardware wallets, the user has complete control over the private/public keys and have the option to store these completely offline. The issue of key management of cryptocurrency wallets is outside the scope of this paper and with regards to digital credential wallets, will be addressed in a later section of this paper. 
-
-Differences
-
-Both types of wallets require at least 2 parties in order to start and complete an interaction.  Generally, with cryptocurrency wallets, they are programmed to only handle 2 party interactions and not multiple party interaction. However, multi-signature wallets are used to require multiple signatures from different parties in order to authorize a transaction.
-
-## Use Cases of Digital Credential Wallet
-### Account Opening
-When opening an account with a new organization (e.g. telco, utility, bank) that organization requires an individual to provide certain information. This can be provided through the completion of various forms (online or paper) and then proof of some of the details (e.g. presentation of drivers license). Through the use of a digital credential wallet, it would be possible for the organization to request all of the data to that wallet, and for the wallet to then provide the details back, if they are present in the wallet. 
-
-In the scenario of opening account online the following steps could take place:
-- The consumer visits the business’ website and requests to open an account
-- The website indicates that the consumer can complete the various forms and provide proof of government ID (e.g. through selfie and photo of drivers license), or they could choose to use their digital credential wallet
-- Once selecting to use their credential wallet, the site would indicate the information that it requires (e.g. government issued ID, proof of other business (e.g. bank, utility) relationships, proof of employment
-- Through establishing a connection between the site and the digital credential wallet - often through QR code or SMS, the request for credentials would be made
-Through the digital credential wallet the consumer would confirm the information that it would like to share - which may include selecting which credentials to share (e.g. drivers license vs passport, or prior bank relationship or telco relationship)
-- The wallet would then share the verified credentials with the website
-- Depending on the protocol, the website would then verify the validity of the presented credentials
-
-### Employee Onboarding
-Not too dissimilar to the Account Opening use case, employee onboarding requires an employee to present forms of various credentials in order to begin employment. Depending on the type of job, the credentials required may include: 
-- government issued ID
-- SSN/SIN
-- Education
-- Training
-- professional designations
-- prior employment
-- direct deposit bank account 
-
-Some of the above could be provided during the applications process (e.g. prior employment, educations), while some are only relevant once the employee is being hired. 
-
-A possible scenario for this use case could be:
-- An employee accepts an offer and then receives a confirmation email which contains a link to a web page with the employment agreement and a request for credentials
-- The web page could include a QR code that contains a request for the necessary credentials from a digital credential wallet
-- Once scanned with the wallet, the wallet displays a list of what the company is requesting and the employee confirms what details, and from which sources, it will provide
-- The credentials are then shared between the wallet and the organization for their storage
-
-### NPE - Non Person Entitity
-NPE is a non-person based entity, it is a term to describe a non-human object that has an identity. It may be a smart object with specific technical functionality (like collecting or sharing data, e.g. a weather station) or it may be a dumb object that does not integrate with technology for sharing information. These objects need their own wallets to collect and share credentials. 
-
-Another use case class is the introduction of Digital Credential Wallets for objects or machines. This will enable to overcome some of the virulent issues in today’s global industry like provenance, authenticity, tracking, proof of audit trails and compliance. Set up of Digital Credential Wallets are hereby a key credential for so called digital twins of objects, machines or IOT devices. Digital twins are a digital representations of a such objects and keep lifecycle data and events spanning from assembly, across testing, transport, operations to decommission.
-
-### Motorcycle Wallet - A Complex Object
-A motorcycle has a wallet that keeps digitally native credentials. These credentials are given by various entities. The wallet needs to be accessed by the owner of the motorcycle. There may be situations where data from the wallet should be shared. This is a complex object because it is both “smart” and “dumb.”
-
-The wallet needs to hold different kinds of credentials from different entities: human entities, corporate entities, service providers, government and data from the vehicle itself. This data may need to be accessed by a variety of different entities as well, including humans identities, corporate, government and service providers. The wallet needs to address delegation and access transfer in the context of changing ownership of the object itself - a motorcycle.
-
-### Request professional service
-- Request for Graphic Design
-- - Preconditions:
-- - - Unknown Creative
-- - - Unknown Client
-- - - Creative has portfolio
-- - - Client has examples
-- - - Old versions
-- - - Likes
-- - - Dislikes
-- - - Creative has bearer references behind portfolio items
-- - Client validates Creative references
-- - References respond
-- - Scope of Work agreed by Client & Creative
-- - Creative does iteration
-- - Client provides feedback
-- - Milestones approved by client
-- - Deliverable approved
-- - Both Creative & Client issue references
+*Definition 2*: A **Digital Credential Wallet (DCW)** is a either a piece of software or hardware device in charge of storing digital credentials. For example, the Apple Wallet is a mobile application that stores credit card credentials.
 
 
-## Wallet Key Management
+## Digital Credential Wallet Requirements
+
+We identify several main requirements for a digital credential wallet. These may change whether it is a consumer wallet, an an enterprise wallet or a wallet for an NPE, for example, a vehicle, smart object or dumb object. 
+
+### Basic wallet requirements
+There are 2 basic requirements that all DCWs should satisfy:
+- Receive and securely store digital credentials, including requesting a credential or being offered a credential (i.e. who initiates the receipt).
+- Ability to selectively disclose credentials (Minimize disclosure of information)
+
+We go into details about both of these requirements in the following sections.
+
+#### Requesting and Storing Digital Credentials.
+Many will argue that a wallet is merely a storage and retrieval mechanism - it handles the cryptographic keys and the encryption/decryption of the “things” that are stored in the wallet. However, that view ignores how those credential get put into a wallet, how they are updated and deleted, and how they are shared with the outside world.
+
+Getting a credential into a wallet requires multiple approaches:
+- Alice offers to send Bob a Credential; OR
+- Bob requests a Credential from Bob. 
+
+Once that initial offer/request is completed the following happens:
+- The Credential is generated.
+- Bob then sends a Credential to Alice - one that is uniquely controlled by Alice (or her designated Agent).
+
+#### Selective Disclosure
+
+The classic case of using a particular credential for multiple purposes can explain the utility of  *Selective Disclosure*. Using a digital driver license one can easily imaging the following unique presentations of the credential:
+- Full Disclosure - present a full driver license credential, with all Claims exposed, to a law enforcement officer. 
+- Partial - present a very limited portion for proof of “Age of Majority”. Alice presents only her picture and a binary value that says she is “over 19”.
+
+Note that many groups feel that governments can just issue multiple credentials at once, negating the need of Selective Disclosure. What isn’t understood is that government agencies have extremely narrow definitions of what they are allowed to put into a credential. In the case of a DMV, they don’t have the mandate to issue an “Age of Majority” card. That’s a different department/ministry.
+
+
+## Key Management Considerations for Digital Credential Wallets
 
 Digital Credential Wallets (DCWs) are used for *storing* credentials, not issuing them. However, there are circumstances when they may need to manage public/private keypairs. This section will first describe one such scenario, and then will go over methods for recovering from key loss (since that is always a concern when public-private keys are used).
-
-- A DCW *could* do identity management via a Master DID, for example if you want to be able to sign in digitially to websites, but it doesn't have to
-- A bare minimimum DCW does not need to involve a Master DID, and therefore doesn't need to do key management *necessarily* (unless it chooses to involve a Master DID). If it doesn't, then it just needs to store secrets. These secrets could be private keys (to public keys that are signed by the issuer), or they could be blinded secrets that are used in the generation of zero-knowledge proofs of knowledge of DMV signatures. In that latter case, the DCW just needs to protect these secrets (that are used to prevent the credential from being copied, and could be derived from the phone's hardware).
-- An example where a Master DID could be useful is to replace Facebook Login, e.g. using a Master DID as a publicly-known global identity for you. In this case you are not actually using credentials to sign in. However, it's possible to associate a credential with a Master DID in such a way that the issuer knows what your Master DID is, but those you reveal your credential to don't know it. Or something (ask Mike about this). In this use case, no credentials (in the traditional sense) are being used. Instead a self-sovereign identifier is being used directly as an ID, and for this it makes sense to use a seperate app to login (that also includes functionality to manage keys for the Master DID). These should be separate. Whereas you may want people reading your comments online to know that it was you who wrote them and associate that with some globally recognized version of "you", credentials, such as those attesting to the fact that the government says the person owning your face is over 21, is all that is needed to gain entry to a bar, the bartender doesn't need to know your globally identifier/username/persona. Developers of DCWs may still choose to integrate these two separate concepts in the same app (for example, if they want to make it simple for an issuer to associate a Master DID with a credential when issuing it), but they would be wise, for privacy reasons, to keep this functionality clearly separated. **It is important not to confuse the concept of a Self-Sovereign ID with the concept of a credential.**
-- The idea of credentials, and credential management, is very different from the idea of a global digital identifier used as part of a digital identity. Whereas creating a Master DID requires having something like a smart contract that manages (in a decentralized way) authorized devices and keys that can sign on behalf of you, and revocation of those devices (or recovery from key loss), this is fundamentally a different concept and use case from what we consider today as "credentials", which are issued by a third party (usually a government), and are in some way associated with biometric information (typically a photo of your face). Now it's possible to have a credential that includes as part of its attributes as Master DID (similar to having a social security number embedded into a passport), this too doesn't need for the "digital credential wallet" to include the necessary functionality for managing the keys to maintain a Master DID. Although, of course, a DCW *can* certainly combine these two aspects, it is not necessary for them to do so, and some may choose to have their DCW implementation only manage a list of credentials (and their corresponding secrets that prevent those credentials from being copied upon reveal to a verifier).
 
 ### Example: Using Keys As A Second Factor Authentication Method
 
 Airport security checkpoints often ask visitors for their ID, typically a driver's license, as an example of a government-issued identity credential.
 
-Our DCW could simply store a digitially-signed driver's license, and beam that information to the security guard, as proof of ID. And while this could be sufficient proof of identity in some scenarios, there is one issue with this example, and that is that the ID could have been stolen. It would be nice if there were some additional, second factor, showing 
+Our DCW could simply store a digitially-signed driver's license, and beam that information to the security guard, as proof of ID. And while this could be sufficient proof of identity in some scenarios, there is one issue with this example, and that is that the ID could have been stolen. It would be nice if there were some additional, second factor, showing that the information on the ID is indeed valid and belongs to the current credential holder in question.
 
 When a person is asked for ID in the United States, they usually present a driver's license. How does the person asking for ID (the verifier), verify that the driver's license is both *authentic* and actually *belongs* to the holder?
 
@@ -123,17 +79,66 @@ So it seems that holder keys are only relevant when the holder goes to an issuer
 
 ### Recovering from Key Loss
 
-The DPKI overview document [1] describes a recovery method via Shamir's Secret Sharing.
+The DPKI overview document [4] describes various ways in which one can recover from key loss. All of the methods presented make heavy usage of *social key recovery*, a key recovery process in which pieces or shares of private keys are stored with trusted parties such as family and friends. Keys are divided into pieces using *Shamir secret sharing* and *threshold cryptography* [5]. When setting up their DCW, one creates **N** shards of their private key,using the method of their choice, and distributes these shards to trusted parties. Depending on the parameters of the method used, one only needs to retrieve **M** of these **N** shards in order to recreate the private key. Note, however, that this does not help in the case of key compromise. For more details in the case of key compromise, see section 6.2.2 in [4].
 
-## Suggestions for Future work on Digital Credential Data
+## Applications and Use Cases
+In previous sections, we have outlined the requirements and key considerations to take into account when building and handling digital credential wallets. In this section, we aim to present how all of these components come together in practical use cases.
+
+### Account Opening
+When opening an account with a new organization (e.g. telco, utility, bank) that organization requires an individual to provide certain information. This can be provided through the completion of various forms (online or paper) and then proof of some of the details (e.g. presentation of drivers license). Through the use of a digital credential wallet, it would be possible for the organization to request all of the data to that wallet, and for the wallet to then provide the details back, if they are present in the wallet. 
+
+In the scenario of opening account online the following steps could take place:
+ - The consumer visits the business’ website and requests to open an account
+ - The website indicates that the consumer can complete the various forms and provide proof of government ID (e.g. through selfie and photo of drivers license), or they could choose to use their digital credential wallet
+ - Once selecting to use their credential wallet, the site would indicate the information that it requires (e.g. government issued ID, proof of other business (e.g. bank, utility) relationships, proof of employment
+ - Through establishing a connection between the site and the digital credential wallet - often through QR code or SMS, the request for credentials would be made
+ - Through the digital credential wallet the consumer would confirm the information that it would like to share - which may include selecting which credentials to share (e.g. drivers license vs passport, or prior bank relationship or telco relationship)
+ - The wallet would then share the verified credentials with the website
+ - Depending on the protocol, the website would then verify the validity of the presented credentials
+
+### Employee Onboarding
+Not too dissimilar to the Account Opening use case, employee onboarding requires an employee to present forms of various credentials in order to begin employment. Depending on the type of job, the credentials required may include: 
+ - government issued ID
+ - SSN/SIN
+ - Education
+ - Training
+ - professional designations
+ - prior employment
+ - direct deposit bank account 
+
+Some of the above could be provided during the applications process (e.g. prior employment, educations), while some are only relevant once the employee is being hired. 
+
+A possible scenario for this use case could be:
+
+- An employee accepts an offer and then receives a confirmation email which contains a link to a web page with the employment agreement and a request for credentials
+- The web page could include a QR code that contains a request for the necessary credentials from a digital credential wallet
+- Once scanned with the wallet, the wallet displays a list of what the company is requesting and the employee confirms what details, and from which sources, it will provide
+The credentials are then shared between the wallet and the organization for their storage
+
+### NPE - Non Person Entitity
+NPE is a non-person based entity, it is a term to describe a non-human object that has an identity. It may be a smart object with specific technical functionality (like collecting or sharing data, e.g. a weather station) or it may be a dumb object that does not integrate with technology for sharing information. These objects need their own wallets to collect and share credentials. 
+
+Another use case class is the introduction of Digital Credential Wallets for objects or machines. This will enable to overcome some of the virulent issues in today’s global industry like provenance, authenticity, tracking, proof of audit trails and compliance. Set up of Digital Credential Wallets are hereby a key credential for so called digital twins of objects, machines or IoT devices. Digital twins are a digital representations of a such objects and keep lifecycle data and events spanning from assembly, across testing, transport, operations to decommission.
+
+#### Motorcycle Wallet - A Complex Object
+A motorcycle has a wallet that keeps digitally native credentials. These credentials are given by various entities. The wallet needs to be accessed by the owner of the motorcycle. There may be situations where data from the wallet should be shared. This is a complex object because it is both “smart” and “dumb.”
+
+The wallet needs to hold different kinds of credentials from different entities: human entities, corporate entities, service providers, government and data from the vehicle itself. This data may need to be accessed by a variety of different entities as well, including humans identities, corporate, government and service providers. The wallet needs to address delegation and access transfer in the context of changing ownership of the object itself - a motorcycle.
+
+
+## Conclusion and Future Work
+In summary, we have presented requirements for digital credential wallets, key management considerations for such wallets and use cases. Moreover, we have presented definitions of terms that are used colloquially in the self-sovereign identity space so as to facilitate collaboration without ambiguity. 
+
+There are various areas of future work in the area of digital credential wallets. As this is a growing field, we only present a few areas of future consideration. First, improving the user experience of digital credential wallets
 
 ## References
-
-
-Related work:
-
-DIDs In DPKI (Decentralized Public-key Infrastructure): https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md
-
-Decentralized Autonomic Data: https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/DecentralizedAutonomicData.pdf
-
-
+1. Quintyne-Collins M, Mehar A (2018). Cryptocurrency wallets as a form of functional identity. Topics and Advanced Readings for the Rebooting the Web of Trust 7 Workshop. https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/Cryptocurrency%20wallets%20a%20an%20application%20of%20Functional%20Identity.md
+2. O'Donnell, Darrell (2018). Who and what is in your wallet. Topics and Adcanved Readings for the Rebooting the Web of Trust 7 Workshop. https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/what-and-who-is-in-your-wallet.md
+3. O'Donnell, Darrell (2019). The current and future state of digital wallets. Independently published
+4. Allen C, Brock A, Buterin V, Callas J, Dorje D, Lundkvist C, Kravchenko P, Nelson J, Reed D, Sabadello M, Slepak G, Thord N, Wood H.T (2015). Decentralized Public Key Infrastructure. Rebooting the Web of Trust 1 Workshop. https://github.com/WebOfTrustInfo/rwot1-sf/blob/master/final-documents/dpki.pdf 
+5. Shamir, Adi (1979). “How to share a secret”. Communications of the ACM. 22 (11): 612–613. doi:10.1145/359168.359176. https://cs.jhu.edu/~sdoshi/crypto/papers/shamirturing.pdf
+6. Rait, Seth (2016). “Shamir Secret Sharing and Threshold Cryptography” https://sethrait.com/Shamir-Secret-Sharing-and-Threshold-Cryptography
+7. Blakley, G.R. (1979). “Safeguarding Cryptographic Keys”. Managing Requirements Knowledge, International Workshop on (AFIPS). 48: 313–317. doi:10.1109-/AFIPS.1979.98. https://pdfs.semanticscholar.org/32d2/1ccc21a807627fcb21ea829d1acdab23be12.pdf
+8. Smith S.M, Gupta V (2018) Decentralized Autonomic Data and the three R's of key management. Rebooting the Web of Trust 6 Workshop. https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/DecentralizedAutonomicData.pdf
+9. Reed D, Chasen L (2016).Requirements for DIDs (Decentralized Identifiers). Rebooting the Web of Trust 2 Workshop. https://github.com/WebOfTrustInfo/rwot2-id2020/blob/master/final-documents/requirements-for-dids.pdf
+10. Sporny, Manu (2018). A Verifiable Credentials Primer. Topics and Advanced Reasings for the Rebooting the Web of Trust 7 Workshop. https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/verifiable-credentials-primer.md
