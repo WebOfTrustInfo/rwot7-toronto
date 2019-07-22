@@ -129,7 +129,8 @@ The wallet needs to hold different kinds of credentials from different entities,
 ## Conclusion and Future Work
 In summary, we have presented requirements for digital credential wallets, key management considerations for such wallets, and use cases. Moreover, we have presented definitions of terms that are used colloquially in the self-sovereign identity space so as to facilitate collaboration without ambiguity. 
 
-There are various areas of future work in the area of digital credential wallets. As this is a growing field, we only present a few areas of future consideration. First, improving the user experience of digital credential wallets
+There are various areas of future work in the area of digital credential wallets. As this is a growing field, we only present a few areas of future consideration. First, improving the user experience of digital credential wallets is multifaceted and involves many components. Easy to use interfaces are paramount to making digital credential wallets widespread. Second, even though we have presented core considerations for key management in digital credential wallets, there is a wide design space in which to make it easier for both digital credential wallet users and builders to manage and handle private keys. Last but not least, further research into privacy considerations for DCWs is an important area to look into due to both increasing awareness in the public and regulations from governments. This was a non-exhaustive overview of possible areas of research in the field of digital credential wallets.
+
 
 ## References
 1. Quintyne-Collins M, Mehar A (2018). Cryptocurrency wallets as a form of functional identity. Topics and Advanced Readings for the Rebooting the Web of Trust 7 Workshop. https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/topics-and-advance-readings/Cryptocurrency%20wallets%20a%20an%20application%20of%20Functional%20Identity.md
