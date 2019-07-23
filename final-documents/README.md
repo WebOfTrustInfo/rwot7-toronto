@@ -14,6 +14,11 @@ _This is a listing for the RWOT7 papers to date. [Several more](https://github.c
 
 > The paper will present novel use-cases for DIDs and DADs and propose a new cryptographic data structure that is a self-contained blockchain of DADs. This enables the verification of the provenance of a given data flow. It builds on a prior paper and an associated reading.
 
+## [*Digital Credential Wallets*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/digital-credential-wallet.pdf) [(Text)](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/digital-credential-wallet.md)
+#### Mikerah Quintyne-Collins, Heather Vescent, Darrell O'Donnell, Greg Slepak, Michael Brown, Christoper Allen, Michael Ruther
+
+> Digital Credential Wallets (DCWs) are becoming more commonplace as more of our physical credentials become digital. In this paper, we provide requirements for digital credential wallet design, offer considerations for key management of DCWs, and go over several real-life use cases.
+
 ## [*How to Convince Dad\* of the Importance of Self-Sovereign Identity*](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/convincing-dad.pdf) [(Text)](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/convincing-dad.md)
 #### Shannon Appelcline, Kenneth Bok, Lucas Parker, Peter Scott, and Matthew Wong
 
