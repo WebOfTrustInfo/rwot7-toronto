@@ -148,7 +148,7 @@ depends on evaluating available evidence in search of that truth. The
 evidence may be flawed and the interpretation may be flawed, but the
 fundamental goal of each mental model is to answer truthfully its core
 question. We may not be able to determine that objective truth with 100%
-certainty, but we must try. Every identity system attempts to resolve
+certainty, but we try. Every identity system attempts to resolve
 the question of truth to its best ability based on the fundamental needs
 of its stakeholders.
 
@@ -285,7 +285,7 @@ an individual’s actual capability to perform some task, including their
 physical ability now, in the past, or in the future. It is the
 inevitable approach for anyone in an emergency.
 
-***What can a subject actually do?***
+***What can the subject actually do?***
 
 Capabilities combine both the ability and the will to execute. The
 question of an identity’s capability is truly a test of one’s
@@ -337,13 +337,14 @@ eventually prevails. The romance is in the hero’s struggle.
 If we think of our mental models as two-dimensional planes, and accept
 that most of us approach identity from a single perspective, then we can
 consider how the intersection of these planes shape conversations. The
-intersection of two planes is a line, which in both planes and, in our
+intersection of two planes is a line, which is in both planes and, in our
 metaphor, is fully understandable from within each model’s
 two-dimensional context. That is, people speaking from each mental model
 can fully perceive, understand, and discuss the line. In contrast, they
 would each struggle to understand concepts outside their mental model,
-just as people living in a single plane would struggle to understand the
-idea of things outside that plane.
+just as two dimensional people living in a single plane would struggle 
+to understand the idea of three dimentional objects somehow outside that 
+plane.
 
 The following sections provide a few examples of intersections between
 mental models.
@@ -425,8 +426,8 @@ chromosome. These social norms -- based on our relationships with others
 -- shape a framework for presenting information that both enables and
 restricts freedom of presentation [23].
 
-Finally, self-asserting information may be enough for relying on certain
-types of data (“this is my favorite food”), but not others (“I am not a
+Finally, self-asserting information may be enough for certain types 
+of data (“this is my favorite food”), but not others (“I am not a
 crook”). Many systems build trust or authority by involving other
 parties, using systems of credentials to establish a sense of truth
 based on the assertions of known actors. This information is projected
