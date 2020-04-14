@@ -19,6 +19,13 @@ _This is a listing for the RWOT7 papers to date. [Several more](https://github.c
 
 > Digital Credential Wallets (DCWs) are becoming more commonplace as more of our physical credentials become digital. In this paper, we provide requirements for digital credential wallet design, offer considerations for key management of DCWs, and go over several real-life use cases.
 
+## [*Five Mental Models of Identity*](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/mental-models.pdf) [(Text)](https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/mental-models.md)
+#### Joe Andrieu, Nathan George, Andrew Hughes, Christophe MacIntosh, and Antoine Rondelet
+
+> Engineers of identity systems, both digital and non-digital, have assumptions and requirements that often lead to fundamentally different ideas about useful solutions. One’s preferred use cases establish mental models tailored to those uses, which in turn shape discussion and engineering of identity systems. The differences between these mental models consistently cause confusion and disagreement when advocates of different models collaborate, often without the parties realizing that others may be speaking from a distinctly different, yet valid, notion of identity. Considering different mental models allows for constructive dialogue and reconciliation of requirements, creating opportunities to address a wider set of use cases and to build systems with better overall applicability and quality.
+
+> We present five distinct mental models observed in conversations among technologists and laypeople when discussing identity. We then discuss observed patterns of discussion and design that result from the intersection of some pairs of mental models. Finally, we close with guidance for incorporating all five mental models when evaluating or designing any real-world or digital-identity system. We propose that understanding and considering these different mental models will result in more fruitful collaboration and ultimately in better identity systems.
+
 ## [*How to Convince Dad\* of the Importance of Self-Sovereign Identity*](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/convincing-dad.pdf) [(Text)](https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/convincing-dad.md)
 #### Shannon Appelcline, Kenneth Bok, Lucas Parker, Peter Scott, and Matthew Wong
 
